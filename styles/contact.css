@@ -1,0 +1,16 @@
+#contact .content {
+    width: 50%;
+    max-width: 500px;
+}
+
+.form-control {
+    width: 100%;
+    background-color: rgba(137, 238, 240, 0.48);
+}
+
+
+@media (max-width: 768px) {
+    #contact .content {
+        width: 100%;
+    }
+}
