@@ -266,3 +266,16 @@ li.slider {
     top: 20% !important;
 
 }
+@media (max-width: 720px) {
+    .flip-container .flip-text {
+        font-family: 'Asap' !important;
+        font-weight: 900 !important;
+        font-size: 4em !important;
+        left: 5%;
+        max-width: 75% !important;
+        text-align: center !important;
+        position: absolute !important;
+        bottom: 5% !important;
+        top: initial !important; /* Reset the 'top' property */
+    }
+}
