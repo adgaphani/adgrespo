@@ -1,111 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADGA</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@900&family=IBM+Plex+Mono:wght@200;300;500&family=Lato:wght@300;400&family=Nunito:wght@300&family=Open+Sans:wght@400;600&family=Quicksand:wght@300;400&family=Victor+Mono:wght@100&family=Ysabeau+SC:wght@100;300;500&display=swap" rel="stylesheet">
-
-    <style>
-        #S1P1, #S1P2, #S2P1, #S2P2, #S3P1, #S3P2 {
-            font-family: 'Asap', 'IBM Plex Mono', 'Lato', 'Nunito', 'Open Sans', 'Quicksand', 'Victor Mono', 'Ysabeau SC', sans-serif;
-            font-weight: 900;
-            font-size: 4em;
-            display:none;
-        }
-        
-    </style>
-    <!-- <script src="scripts/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" defer crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="scripts/bootstrap.min.js" defer ></script>
-    <script src="scripts/particles.min.js" defer ></script>
-    <script src="scripts/stats.min.js" defer ></script>
-    <script src="scripts/part.js" defer ></script>
-    <script src="scripts/main.js" defer ></script>
+    <script src="scripts/bootstrap.min.js" defer></script>
+    <script src="scripts/particles.min.js" defer></script>
+    <script src="scripts/stats.min.js" defer></script>
+    <script src="scripts/part.js" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
 
-    <script>
-        jQuery(function ($) {
-            function animateParagraphs($section) {
-                const firstPara = $section.find('#S' + $section.attr('id').charAt($section.attr('id').length-1) + 'P1');
-                const secondPara = $section.find('#S' + $section.attr('id').charAt($section.attr('id').length-1) + 'P2');
-                const thirdPara = $section.find('.S' + $section.attr('id').charAt($section.attr('id').length-1) + 'P3');
-    
-                if (firstPara.length && secondPara.length && thirdPara.length) {
-                    // Add a 1-second delay before the animation starts
-                    setTimeout(function() {
-                        firstPara.fadeIn(1500).fadeOut(1500);
-                        secondPara.delay(3000).fadeIn(1500).fadeOut(1500);
-                        thirdPara.delay(4500).fadeIn(1500);
-                    }, 1000);
-                }
+    <header>
+        <style>
+            .flip-text{
+                font-family: 'Asap' !important;
+                font-weight: 900 !important;
+                font-size: 4em !important;
+                left:35%;
+                max-width: 45% !important;
+                text-align: center !important;
+                position: absolute !important;
+                top: 20% !important;
+            
             }
-    
-            function updateActive() {
-                const sectionName = window.location.hash || '#home';
-                const $section = $(sectionName);
-    
-                $('.section').not($section).removeClass('active').find('p').hide();
-                $section.addClass('active');
-                animateParagraphs($section);
+            form{
+                position: fixed;
+                top: 28%;
             }
-    
-            // Execute updateActive on initial page load
-            updateActive();
-    
-            $(window).on('hashchange', function (e) {
-                updateActive();
-            });
-        });
-    </script>
-    
-    
+        </style>
+        <div class="logo">
+            <img src="images/adg-ani-1-B.gif" alt="Logo">
+            <p id="tagP">Reflecting your tech needs with an edge of creativity and expertise</p>
+        </div>
 
-<header>
-    <div class="logo">
-        <img src="images/adg-ani-1-B.gif" alt="Logo">
-        <p id="tagP">Reflecting your tech needs with an edge of creativity and expertise</p>
-    </div>
+        <ul class="menu">
+            <li class="active"><a href="#home">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#whyus">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="slider"></li>
+        </ul>
+    </header>
 
-    <ul class="menu">
-        <li class="active"><a href="#home">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#whyus">Why Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="slider"></li>
-    </ul>
-</header>
-<body>
-
-    
     <div class="section active" id="home">
         <div class="content">
             <h2 style="margin-top: 0; font-size: 4em; text-decoration: none; font-family: sans-serif, 'Open Sans'; -webkit-text-stroke: 1px #000; color: transparent; background-clip: text;">We Are ...</h2>
             <p id="S1P1">Need a technical ally for creativity</p>
             <p id="S1P2">That's us!</p>
             <p id="S1P3" class="intro-text">
-                An experienced U.S. based firm, we hold a unique position in serving the technical needs
-                of leading Advertising and Design Agencies across the nation.
-                With over 15 years of collective experience, our team is accustomed to navigating high-profile projects,
-                meeting tight deadlines, and adapting to shifting priorities seamlessly.
-
-                At ADGA, we understand the essence of creativity and its cultural nuances
-                within the American context. Our mission is simple yet ambitious:
-                to shoulder your technical complexities and translate your creative vision
-                into highly tailored application and web development solutions.
-                Our expertise spans across a wide spectrum, from building comprehensive websites on WordPress
-                to designing captivating splash pages, to providing immediate programming support
-                when your technical requirements demand it. Your project will be handled by seasoned professionals committed
-                to your success, and dedicated to offering consistent support beyond project completion.
+                An experienced U.S. based firm, we hold a unique position in serving the technical needs of leading Advertising and Design Agencies across the nation. With over 15 years of collective experience, our team is accustomed to navigating high-profile projects, meeting tight deadlines, and adapting to shifting priorities seamlessly. At ADGA, we understand the essence of creativity and its cultural nuances within the American context. Our mission is simple yet ambitious: to shoulder your technical complexities and translate your creative vision into highly tailored application and web development solutions. Our expertise spans across a wide spectrum, from building comprehensive websites on WordPress to designing captivating splash pages, to providing immediate programming support when your technical requirements demand it. Your project will be handled by seasoned professionals committed to your success, and dedicated to offering consistent support beyond project completion.
             </p>
         </div>
         <img src="images/We-are.png" alt="Image 1" class="image">
     </div>
-    
+
     <div class="section" id="whyus">
         <div class="content">
             <h2 style="margin-top: 0; font-size: 4em; text-decoration: none; font-family: sans-serif, 'Open Sans'; -webkit-text-stroke: 1px #000; color: transparent; background-clip: text;">Why Us</h2>
@@ -116,46 +73,32 @@
         </div>
         <img src="images/why-us.png" alt="Image 2" class="image">
     </div>
-    
+
     <div class="section" id="services">
         <div class="content">
             <h2 style="margin-top: 0; font-size: 4em; text-decoration: none; font-family: sans-serif, 'Open Sans'; -webkit-text-stroke: 1px #000; color: transparent; background-clip: text;">Services</h2>
             <p id="S3P1">Seeking a tech partner who gets America?</p>
             <p id="S3P2">We're homegrown!</p>
-            <p id="S3P3" class="S3P3 intro-text">
-                Our diverse range of services reflects our commitment to being your all-inclusive tech partner.
-                From WordPress web design to custom application development, we cater to your unique needs,
-                ensuring your creative vision is translated seamlessly into the digital realm.
-                For more on our services, feel free to get in touch.
-   
-                <br>
-                Full WordPress site builds
-                <br>
-                UI/UX Design and Consultation
-                <br>
-                Landing and Splash Pages
-                <br>
-                Responsive Design for mobile platforms
-                <br>
-                Custom QR Codes
-                <br>
-                Logo Design
-                <br>
-                Web Scraping
-                <br>
-                E-commerce Solutions
-                <br>
-                Hourly Support
-                <br>
-                And any digital burden you'd rather not bear!
+            <p id="S3P3" class="S3P3 intro-text">Our diverse range of services reflects our commitment to being your all-inclusive tech partner. From WordPress web design to custom application development, we cater to your unique needs, ensuring your creative vision is translated seamlessly into the digital realm. For more on our services, feel free to get in touch.
+                <span style="line-height: 2.0;">
+            <br> • Full WordPress site builds
+            <br> • UI/UX Design and Consultation
+            <br> • Landing and Splash Pages
+            <br> • Responsive Design for mobile platforms
+            <br> • Custom QR Codes
+            <br> • Logo Design
+            <br> • Web Scraping
+            <br> • E-commerce Solutions
+            <br> • Hourly Support
+            <br> • And any digital burden you'd rather not bear!</span>
 
         </p>
         </div>
         <img src="images/services.png" alt="Image 3" class="image">
     </div>
-    
+
     <div class="section" id="contact">
-        <h2>Contact</h2>
+        <h2 style="margin-top: 0; font-size: 4em; text-decoration: none; font-family: sans-serif, 'Open Sans'; -webkit-text-stroke: 1px #000; color: transparent; background-clip: text;">Contact</h2>
         <div class="content">
             <form id="contact-form" action="https://formspree.io/f/mnqknvyn" method="POST">
                 <div class="form-group">
@@ -173,11 +116,62 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-    
+        <div class="flip-container">
+            <p class="flip-text" id="text-1">Want more creative vision, less tech hassle?</p>
+            <p class="flip-text" id="text-2">Free your creativity with us!</p>
+        </div>
+        
     </div>
+    <script>
+        jQuery(function ($) {
+            function animateParagraphs($section) {
+                const firstPara = $section.find('#S' + $section.attr('id').charAt($section.attr('id').length-1) + 'P1');
+                const secondPara = $section.find('#S' + $section.attr('id').charAt($section.attr('id').length-1) + 'P2');
+                const thirdPara = $section.find('.S' + $section.attr('id').charAt($section.attr('id').length-1) + 'P3');
     
+                if (firstPara.length && secondPara.length && thirdPara.length) {
+                    setTimeout(function() {
+                        firstPara.fadeIn(1500).delay(2000).fadeOut(1500);
+                        secondPara.delay(3500).fadeIn(1500).delay(2000).fadeOut(1500);
+                        thirdPara.delay(4500).fadeIn(1500);
+                    }, 2000);
+                }
+            }
     
+            function updateActive() {
+                const sectionName = window.location.hash || '#home';
+                const $section = $(sectionName);
+    
+                $('.section').not($section).removeClass('active').find('p').hide();
+                $section.addClass('active');
+                animateParagraphs($section);
+            }
+    
+            updateActive();
+    
+            let currentText = 1;
+    
+            function animateFlip() {
+                const textToShow = "#text-" + currentText;
+                const textToHide = "#text-" + (3 - currentText);
+    
+                $(textToShow).fadeIn(1000, function () {
+                    setTimeout(function () {
+                        $(textToShow).fadeOut(1500, function () {
+                            currentText = 3 - currentText; // Toggle between 1 and 2
+                            animateFlip();
+                        });
+                    }, 1000); // Delay before fading out
+                });
+            }
+    
+            animateFlip();
+        });
+    </script>
+    
+
     <div id="particles-js"></div>
 
 </body>
+
 </html>

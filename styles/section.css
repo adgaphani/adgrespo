@@ -28,15 +28,28 @@
     color: transparent;
     background-clip: text;
 }
-
+#S1P1, #S1P2, #S2P1, #S2P2, #S3P1, #S3P2 {
+    font-family: 'Asap', 'IBM Plex Mono', 'Lato', 'Nunito', 'Open Sans', 'Quicksand', 'Victor Mono', 'Ysabeau SC', sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    display:none;
+}
 
 .section p {
     margin-top: 0;
+    position:fixed;
+    top:28%;
     font-family: sans-serif, 'Open Sans';
     font-size: 16px;
     display: none;
 }
-
+.flipped .intro-text {
+    transform: rotateX(180deg);
+    font-family: 'Asap', 'IBM Plex Mono', 'Lato', 'Nunito', 'Open Sans', 'Quicksand', 'Victor Mono', 'Ysabeau SC', sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    display:none;
+}
 .section .intro-text {
     max-width: max(40vw, 500px);
 }
@@ -48,31 +61,42 @@
     z-index: -1;
     width: 30vw;
     pointer-events: none;
-    opacity: 0.8;
 }
+.flip-text{
+    font-family: 'Asap', 'IBM Plex Mono', 'Lato', 'Nunito', 'Open Sans', 'Quicksand', 'Victor Mono', 'Ysabeau SC', sans-serif;
+    font-weight: 900 !important;
+    font-size: 4em !important;
+    left:35%;
+    max-width: 45% !important;
+    text-align: center !important;
+    position: absolute !important;
+    top: 20% !important;
 
+}
 .section .content {
     overflow-y: hidden;
 }
-
-
+form{
+    position: fixed;
+    top:28%;
+}
 
 @media (max-width: 768px) {
     .section .image {
         width: 40vw;
-        opacity: 0.6;
+
     }
 }
 
 @media (max-width: 650px) {
     .section .image {
         width: 70vw;
-        opacity: 0.5;
+
     }
 }
 @media (max-width: 650px) {
     .section .image {
         width: 70vw;
-        opacity: 0.3;
+
     }
 }

@@ -225,7 +225,6 @@ li.slider {
     margin-top: 0;
     font-family: sans-serif, 'Open Sans';
     font-size: 16px;
-    display: none;
 }
 
 .section .image {
@@ -255,4 +254,15 @@ li.slider {
 #section4 {
     z-index: 0;
     opacity: 0;
+}
+.flip-text{
+    font-family: 'Asap' !important;
+    font-weight: 900 !important;
+    font-size: 4em !important;
+    left:35%;
+    max-width: 45% !important;
+    text-align: center !important;
+    position: absolute !important;
+    top: 20% !important;
+
 }
