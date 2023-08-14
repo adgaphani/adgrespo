@@ -136,6 +136,7 @@ li.slider {
     .logo {
         position: relative;
         top: -30px;
+        left: 0;
         width: 100%;
         height: auto;
         display: flex;
@@ -150,6 +151,8 @@ li.slider {
 
     #tagP {
         position: static;
+        text-align: center;
+        margin-top: 5px;
     }
 
     .menu {
