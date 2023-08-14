@@ -15,6 +15,7 @@
     }
 
 }
+
 @media (max-width: 720px) {
     .flip-container .flip-text {
         font-family: 'Asap' !important;
