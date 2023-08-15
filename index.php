@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADGA</title>
-    <base href="https://agencydg.com/beta/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@900&family=IBM+Plex+Mono:wght@200;300;500&family=Lato:wght@300;400&family=Nunito:wght@300&family=Open+Sans:wght@400;600&family=Quicksand:wght@300;400&family=Victor+Mono:wght@100&family=Ysabeau+SC:wght@100;300;500&display=swap"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.bundle.css">
+    <link rel="stylesheet" href="styles.bundle.css?time=<?php echo time() ?>">
 </head>
 
 <body>
@@ -23,10 +22,10 @@
         </div>
 
         <ul class="menu">
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><span data-href="#about-us">About Us</span></li>
+            <li><span data-href="#services">Services</span></li>
+            <li><span data-href="#why-us">Why Us</span></li>
+            <li><span data-href="#contact">Contact</span></li>
             <li class="slider"></li>
         </ul>
     </header>
@@ -80,11 +79,13 @@
         <div class="content">
             <h2>Services</h2>
             <div class="flip-container" data-flip-loop="false">
-                <p class="sub-title">Seeking a tech partner who gets America?</p>
-                <p class="sub-title">We're homegrown!</p>
+                <p class="sub-title">Want tech solutions that fit your needs?</p>
+                <p class="sub-title">We custom-craft solutions!</p>
                 <div class="intro-text">
-                    <p>Our diverse range of services reflects our commitment to being your all-inclusive tech
-                        partner.</p>
+                    <p>
+                        Our diverse range of services reflects our commitment to being your all-inclusive tech
+                        partner.
+                    </p>
                     <p>
                         From WordPress web design to custom application development, we cater to your unique needs,
                         ensuring your creative vision is translated seamlessly into the digital realm.
@@ -178,7 +179,7 @@
 <!--<script src="scripts/stats.min.js" defer></script>-->
 <script src="scripts/particles.min.js" defer></script>
 <script src="scripts/part.js" defer></script>
-<script src="scripts/main.js" defer></script>
+<script src="scripts/main.js?time=<?php echo time() ?>" defer></script>
 </body>
 
 </html>

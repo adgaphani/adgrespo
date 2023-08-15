@@ -90,9 +90,9 @@
 
     .intro-text {
         @include font('text');
-        max-width: max(70vw, 500px);
-        background: #ffffff99;
-        padding: 15px 25px;
+        max-width: max(50vw, 500px);
+        padding: 0 0 25px;
+
         @media (max-width: 1024px) {
             max-width: unset;
         }

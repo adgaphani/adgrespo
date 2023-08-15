@@ -14,13 +14,13 @@ jQuery(function ($) {
         function animateFlipShow() {
             const $child = $($children[id]);
             $children.stop().hide(0);
-            $child.stop().fadeIn(1500);
+            $child.stop().fadeIn(1300);
 
             if (!loop && id + 1 >= count) {
                 return false;
             }
 
-            $($child).delay(2000).fadeOut(1500);
+            $($child).delay(1800).fadeOut(1300);
             id = (id + 1) % count;
         }
 
@@ -30,23 +30,21 @@ jQuery(function ($) {
             if (animateFlipShow() === false) {
                 return clearInterval(window.flipInterval);
             }
-        }, 1500 + 2000 + 1500);
+        }, 1300 + 1800 + 1300);
     }
 
-    function updateActive() {
-        const availableHashes = $('.menu li a')
+    function updateActive(sectionName = null) {
+        const availableHashes = $('.menu li span')
             .map(function (i, a) {
-                return a.hash
+                return $(a).data('href')
             })
             .toArray();
 
-        let sectionName = window.location.hash;
         if (!availableHashes.includes(sectionName)) {
-            return window.location.href = availableHashes[0];
+            return updateActive(availableHashes[0]);
         }
 
         const $section = $(sectionName);
-
 
         $('.section').not($section).removeClass('active');
         $section.addClass('active');
@@ -54,16 +52,21 @@ jQuery(function ($) {
         $section.find('.flip-container > *').stop().hide(0);
         animateFlip($section);
 
-        const link = $(`.menu li a[href='${sectionName}']`);
+        const link = $(`.menu li span[data-href='${sectionName}']`);
         const li = link.parent('li');
         $('.menu li').not(li).removeClass('active');
         $(li).addClass('active');
 
     }
 
-    $(window).on('hashchange', function () {
-        updateActive();
+    $('.menu li span').on('click touchstart',function (e) {
+        e.preventDefault();
+        const url = $(e.target).data('href');
+        console.log(url);
+        updateActive(url);
+        return false;
     });
+
     // update on init
     updateActive();
 })

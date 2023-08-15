@@ -3,7 +3,7 @@ $header-height: 110px;
 @mixin font($size) {
     @if ($size == 'title') {
         font-family: sans-serif, 'Open Sans';
-        font-size: 5rem;
+        font-size: 4.8rem;
         -webkit-text-stroke: 1px #000;
         text-decoration: none;
         color: transparent;
