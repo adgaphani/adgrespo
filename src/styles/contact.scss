@@ -1,0 +1,40 @@
+
+#contact {
+    .sub-title {
+        text-align: center;
+    }
+
+    .form-group {
+        margin: 10px 0;
+
+        label {
+            color: #343434;
+        }
+    }
+
+    .form-control {
+        width: 100%;
+        background-color: rgba(137, 238, 240, 0.29);
+
+        ::placeholder {
+            color: #727272;
+        }
+    }
+
+    button {
+        background: #8caea2;
+        border: #8caea2;
+
+        &:hover, &:active, &:focus {
+            background: #73988b;
+            border: #73988b;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #contact .content {
+        width: 100%;
+    }
+
+}

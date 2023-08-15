@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "sass": "npm run sass-build -- --watch",
+    "sass-build": "sass styles.scss:styles.bundle.css --style compressed"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.3.2"
+  }
+}

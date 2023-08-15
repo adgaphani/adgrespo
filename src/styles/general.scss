@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0KEwA.ttf) format('truetype');
-}
-
-
+//noinspection CssReplaceWithShorthandSafely
 body, html {
     height: 100%;
     color: rgb(0, 0, 0);
@@ -17,38 +10,37 @@ body, html {
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-size: 15px;
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 320px) {
+        font-size: 12px;
+    }
+}
+
+#main {
+    position: relative;
+    z-index: 1;
 }
 
 #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
     background-color: #ffffff00;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 }
 
-iframe {
-    position: absolute;
-    top: 85px;
-}
-
 * {
     box-sizing: border-box;
-}
-
-h1 {
-    text-align: center;
-    font-size: 48px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #222;
-}
-
-.text-pop-up-top {
-    -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #overlay {
@@ -59,7 +51,6 @@ h1 {
     left: 80px;
     width: 80%;
     height: 50vh;
-    background-color: transparent;
     overflow: hidden;
     z-index: 9999;
     background: transparent;

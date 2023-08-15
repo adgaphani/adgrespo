@@ -1,0 +1,30 @@
+$header-height: 110px;
+
+@mixin font($size) {
+    @if ($size == 'title') {
+        font-family: sans-serif, 'Open Sans';
+        font-size: 5rem;
+        -webkit-text-stroke: 1px #000;
+        text-decoration: none;
+        color: transparent;
+        background-clip: text;
+
+        &::selection {
+            color: #3b3b3b;
+            background: #aab8c4;
+        }
+
+    } @else if ($size == 'sub-title') {
+        font-family: 'Asap', 'IBM Plex Mono', 'Lato', 'Nunito', 'Open Sans', 'Quicksand', 'Victor Mono', 'Ysabeau SC', sans-serif;
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 1;
+        color: #474747;
+
+    } @else if ($size == 'text') {
+        font-family: 'Open Sans', sans-serif;
+        color: #242424;
+
+        font-size: 1rem;
+    }
+}
