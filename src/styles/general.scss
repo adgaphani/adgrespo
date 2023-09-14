@@ -12,13 +12,31 @@ body, html {
     background-attachment: fixed;
     font-size: 15px;
 
-    @media (max-width: 1024px) {
-        font-size: 15px;
+    @media (max-width: 1440px) {
+        font-size: 14px;
     }
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+
+    //@media (max-width: 1024px) {
+    //    font-size: 15px;
+    //}
 
     @media (max-width: 320px) {
         font-size: 13px;
     }
+}
+
+
+p {
+    margin-bottom: 0.5rem;
+    //@media (max-width: 1440px) {
+    //    margin-bottom: 0.5rem;
+    //}
+    //@media (max-width: 1024px) {
+    //}
 }
 
 #main {
