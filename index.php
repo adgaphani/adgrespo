@@ -7,69 +7,41 @@
     <title>ADGA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@900&family=IBM+Plex+Mono:wght@200;300;500&family=Lato:wght@300;400&family=Nunito:wght@300&family=Open+Sans:wght@400;600&family=Quicksand:wght@300;400&family=Victor+Mono:wght@100&family=Ysabeau+SC:wght@100;300;500&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;900&family=Lato:wght@400;900&family=Open+Sans:wght@400;900&display=swap"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.bundle.css?time=<?php echo time() ?>">
+    <link rel="stylesheet" href="bundle/styles.bundle.css?time=<?php echo time() ?>">
 </head>
 
 <body>
 <div id="main">
     <header>
         <div class="logo">
-            <img src="images/adg-ani-1-B.gif" alt="Logo">
+            <img src="images/logo.gif" alt="Logo">
             <p id="tagP">Reflecting your tech needs with an edge of creativity and expertise</p>
         </div>
 
         <ul class="menu">
-            <li><span data-href="#about-us">About Us</span></li>
+            <li><span data-href="#home">Home</span></li>
             <li><span data-href="#services">Services</span></li>
-            <li><span data-href="#why-us">Why Us</span></li>
-            <li><span data-href="#contact">Contact</span></li>
+            <li><span data-href="#about-us">About Us</span></li>
+            <li><span data-href="#faq">FAQ</span></li>
+            <li><span data-href="#contact">Contact<span class="d-none d-sm-block">&nbsp;Us</span></span></li>
             <li class="slider"></li>
         </ul>
     </header>
 
-    <div class="section" id="about-us">
+    <div class="section" id="home">
         <div class="content">
-            <h2>We Are ...</h2>
-            <div class="flip-container" data-flip-loop="false">
-                <p class="sub-title">
-                    Need a technical ally for creativity
-                </p>
-                <p class="sub-title">
-                    That's us!
-                </p>
-                <div class=intro-text>
-                    <p>
-                        An experienced U.S. based firm, we hold a unique position in serving the technical needs of
-                        leading
-                        Advertising and Design Agencies across the nation.
-                    </p>
-                    <p>
-                        With over 15 years of collective experience, our team is accustomed to navigating high-profile
-                        projects, meeting tight deadlines, and adapting to shifting priorities seamlessly.
-                    </p>
-                    <p>
-                        At ADGA, we understand the essence of creativity and its cultural nuances within the American
-                        context.
-                    </p>
-                    <p>
-                        Our mission is simple yet ambitious: to shoulder your technical complexities
-                        and translate your creative vision into highly tailored application and web development
-                        solutions.
-                    </p>
-                    <p>
-                        Our expertise spans across a wide spectrum, from building comprehensive websites on WordPress to
-                        designing captivating splash pages, to providing immediate programming support when your
-                        technical
-                        requirements demand it.
-                    </p>
-                    <p>
-                        Your project will be handled by seasoned professionals committed to your success,
-                        and dedicated to offering consistent support beyond project completion.
-                    </p>
-                </div>
+            <h1>
+                Extend Your Agency's Reach.
+                Offer Seamless Web Programming.
+            </h1>
+            <h2>
+                Partner with APT and bring robust, in-house web programming capabilities to your agency's offerings.
+            </h2>
+            <div>
+                <a class="btn btn-action">Explore Our Expertise and Unleash Creativity</a>
             </div>
         </div>
     </div>
@@ -77,56 +49,85 @@
 
     <div class="section" id="services">
         <div class="content">
-            <h2>Services</h2>
-            <div class="flip-container" data-flip-loop="false">
-                <p class="sub-title">Want tech solutions that fit your needs?</p>
-                <p class="sub-title">We custom-craft solutions!</p>
-                <div class="intro-text">
-                    <p>
-                        Our diverse range of services reflects our commitment to being your all-inclusive tech
-                        partner.
-                    </p>
-                    <p>
-                        From WordPress web design to custom application development, we cater to your unique needs,
-                        ensuring your creative vision is translated seamlessly into the digital realm.
-                    </p>
-                    <p>For more on our services, feel free to get in touch.</p>
-                    <ul>
-                        <li>Full WordPress site builds</li>
-                        <li>UI/UX Design and Consultation</li>
-                        <li>Landing and Splash Pages</li>
-                        <li>Responsive Design for mobile platforms</li>
-                        <li>Custom QR Codes</li>
-                        <li>Logo Design</li>
-                        <li>Web Scraping</li>
-                        <li>E-commerce Solutions</li>
-                        <li>Hourly Support</li>
-                        <li>And any digital burden you'd rather not bear!</li>
-                    </ul>
-                </div>
+            <div class="content-container">
+                <h1>Our Services</h1>
+
+                <h2>Web Programming</h2>
+                <p>
+                    Transform your creative visions into functional websites with our expert coding services.
+                    We support various CMS platforms, including Webflow, WordPress, and more.
+                </p>
+
+                <h2>Custom Integrations</h2>
+                <p>
+                    Elevate website functionalities with tailor-made integrations designed to meet your clients' unique needs.
+                </p>
+
+                <h2>Ongoing Maintenance</h2>
+                <p>
+                    Ensure your clients' websites run like clockwork with our comprehensive maintenance services.
+                    We handle updates, performance checks, and more.
+                </p>
+
+                <button class="btn btn-action">Code Your Dreams into Reality with Us</button>
             </div>
         </div>
     </div>
 
 
-    <div class="section" id="why-us">
+    <div class="section" id="about-us">
         <div class="content">
-            <h2>Why Us</h2>
-            <div class="flip-container" data-flip-loop="false">
-                <p class="sub-title">Seeking a tech partner who gets America?</p>
-                <p class="sub-title">We're homegrown!</p>
-                <div class="intro-text">
-                    <p>Our dedication to your success is unwavering.</p>
-                    <p>
-                        We work around the clock to ensure that your projects are executed to perfection,
-                        your deadlines are met,
-                        and your vision is brought to life without any technical hurdles.
-                    </p>
-                    <p>
-                        By choosing ADGA, you're choosing a partner who values your partnership,
-                        responds promptly to your queries, and is committed to helping you excel in your creative
-                        endeavors.
-                    </p>
+            <div class="content-container">
+                <h1>About Us</h1>
+
+                <h2>Powering Agencies with Expert Programming</h2>
+                <p>
+                    At APT, we're your secret weapon for exceptional web programming services.
+                    Our team's expertise ensures your designs come alive flawlessly,
+                    enhancing your agency's offerings without the overheads of an in-house team.
+                </p>
+
+                <h2>Why Design Agencies Trust APT for Programming?</h2>
+                <p>
+                    At APT, we eat, breathe, and sleep programming, ensuring that every project is handled
+                    with precision, expertise, and an unwavering passion for the web's intricacies.
+                </p>
+
+                <h2>Programming Pioneers at Your Service</h2>
+                <p>
+                    The APT team brings together top-notch programmers,
+                    ensuring that every piece of code is optimized, clean, and fully aligned with modern web standards.
+                </p>
+
+                <button class="btn btn-action">Schedule a Conversation and Elevate Your Agency</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section" id="faq">
+        <div class="content">
+            <div class="content-container">
+                <h1>Frequently Asked Questions</h1>
+
+                <div class="faq-section">
+                    <p><b>Question:</b> What programming languages and platforms does APT support?</p>
+                    <p><b>Answer:</b> We support almost all contemporary web development technologies.</p>
+                </div>
+
+                <div class="faq-section">
+                    <p><b>Question:</b> How can APT enhance my agency's web offerings?</p>
+                    <p><b>Answer:</b> Our expertise empowers you to turn creative visions into functional websites seamlessly, expanding your agency's capabilities.</p>
+                </div>
+
+                <div class="faq-section">
+                    <p><b>Question:</b> What's the process once we partner with APT?</p>
+                    <p><b>Answer:</b> Let's talk about your specific needs and customize a partnership process tailored just for you.</p>
+                </div>
+
+                <div class="faq-section">
+                    <p><b>Question:</b> Do you offer support post-launch?</p>
+                    <p><b>Answer:</b> Yes, our world-class team will be at your fingertips to ensure your success.</p>
                 </div>
             </div>
         </div>
@@ -134,7 +135,7 @@
 
 
     <div class="section" id="contact">
-        <h2>Contact</h2>
+        <h1>Contact Us</h1>
         <div class="content">
             <div class="row">
                 <div class="col-12 col-sm-7 order-md-last d-none d-sm-block">
@@ -162,6 +163,10 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
+
+                    <h2>Or feel free to contact me at: <a href="mailto:rmeade07@gmail.com" target="_blank">rmeade07@gmail.com</a></h2>
+
+                    <p style="margin-top: 5rem;">Copyright: © 2023 APT. All rights reserved</p>
                 </div>
             </div>
         </div>
@@ -176,7 +181,6 @@
         referrerpolicy="no-referrer"
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" defer></script>
-<!--<script src="scripts/stats.min.js" defer></script>-->
 <script src="scripts/particles.min.js" defer></script>
 <script src="scripts/part.js" defer></script>
 <script src="scripts/main.js?time=<?php echo time() ?>" defer></script>

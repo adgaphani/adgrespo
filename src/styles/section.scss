@@ -9,7 +9,6 @@
 
 .section {
     color: rgb(0, 0, 0);
-    font-family: sans-serif;
     bottom: 0;
     right: 0;
     width: 100%;
@@ -21,8 +20,8 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
-    @media (max-width: 1024px) {
-        padding: 20px;
+    @media (max-width: 768px) {
+        padding: 50px 20px 20px 20px;
     }
 
     &.active {
@@ -65,7 +64,7 @@
     }
 
     &#services:after {
-        background-image: url(images/services.png);
+        background-image: url(bg-1.png);
         content: ' ';
     }
 
@@ -78,20 +77,9 @@
         height: 100%;
     }
 
-    h2 {
-        margin-top: 0;
-        margin-bottom: 15px;
-        @include font('title');
-    }
 
-    .sub-title {
-        @include font('sub-title');
-    }
-
-    .intro-text {
-        @include font('text');
+    .content-container {
         max-width: 50vw;
-        padding: 0 0 25px;
 
         @media (max-width: 1440px) {
             max-width: 60vw;
@@ -114,18 +102,8 @@
         }
     }
 
-}
-
-
-.flip-container {
-    height: calc(100% - 5rem - 15px - 20px); // h2 size + margin
-
-    .intro-text {
-        overflow-y: auto;
-        max-height: 100%;
+    .faq-section {
+        margin-bottom: 1.5rem;
     }
 
-    > * {
-        display: none;
-    }
 }

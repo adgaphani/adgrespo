@@ -2,6 +2,9 @@
 #contact {
     .sub-title {
         text-align: center;
+        font-size: 3rem;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .form-group {
@@ -9,12 +12,15 @@
 
         label {
             color: #343434;
+            margin-top: 0.6rem;
+            margin-bottom: 0.3rem;
         }
     }
 
     .form-control {
         width: 100%;
         background-color: rgba(137, 238, 240, 0.29);
+        border-color: rgba(94, 94, 94, 0.25);
 
         ::placeholder {
             color: #727272;

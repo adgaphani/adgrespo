@@ -66,6 +66,9 @@ header {
 
 /*-----------------------------------------------------------------------------*/
 
+$item-count: 5;
+$width: calc(100% / $item-count);
+
 .menu {
     list-style: none;
     padding: 0;
@@ -89,7 +92,7 @@ header {
     @media (max-width: 650px) {
         position: relative;
         top: -30px;
-        width: min(100%, 300px);
+        width: min(98%, 400px);
         margin: 10px auto;
         float: none;
         height: 30px;
@@ -97,14 +100,15 @@ header {
 
     li {
         float: left;
-        width: 25%;
+        width: $width;
         height: 100%;
         margin: 0;
         padding: 0;
         border-radius: 8px;
+        cursor: pointer;
 
         &.slider {
-            width: 25%;
+            width: $width;
             height: 100%;
             position: absolute;
             left: 0;
@@ -116,7 +120,7 @@ header {
         }
     }
 
-    span {
+    li > span {
         display: flex;
         width: 100%;
         height: 100%;
@@ -125,7 +129,7 @@ header {
         color: #fff;
         text-decoration: none;
         position: relative;
-        font-size: 1rem;
+        font-size: 14px;
         z-index: 9;
 
         @media (max-width: 768px) {
@@ -135,44 +139,13 @@ header {
 
 }
 
-.menu li:nth-child(1).active ~ .slider {
-    left: 0;
-    background-color: #3498db51;
-}
+$colors: #3498db51, #9c59b63c, #e67d223c, #16a0843e, rgba(39, 169, 50, 0.32);
 
-.menu li:nth-child(2).active ~ .slider {
-    left: 25%;
-    background-color: #9c59b63c;
-}
-
-.menu li:nth-child(3).active ~ .slider {
-    left: 50%;
-    background-color: #e67d223c;
-}
-
-.menu li:nth-child(4).active ~ .slider {
-    left: 75%;
-    background-color: #16a0843e;
-}
-
-
-.menu li:nth-child(1):hover ~ .slider {
-    left: 0;
-    background-color: #3498db51;
-}
-
-.menu li:nth-child(2):hover ~ .slider {
-    left: 25%;
-    background-color: #9c59b63c;
-}
-
-
-.menu li:nth-child(3):hover ~ .slider {
-    left: 50%;
-    background-color: #e67d223c;
-}
-
-.menu li:nth-child(4):hover ~ .slider {
-    left: 75%;
-    background-color: #16a0843e;
+@for $i from 1 through $item-count {
+    $color: nth($colors, $i);
+    .menu li:nth-child(#{$i}).active ~ .slider,
+    .menu li:nth-child(#{$i}):hover ~ .slider {
+        left: $width * ($i - 1);
+        background-color: $color;
+    }
 }

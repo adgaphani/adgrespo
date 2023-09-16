@@ -33,8 +33,10 @@ jQuery(function ($) {
         }, 1300 + 1800 + 1300);
     }
 
+    const $menus = $('.menu li span');
+
     function updateActive(sectionName = null) {
-        const availableHashes = $('.menu li span')
+        const availableHashes = $menus
             .map(function (i, a) {
                 return $(a).data('href')
             })
@@ -56,15 +58,18 @@ jQuery(function ($) {
         const li = link.parent('li');
         $('.menu li').not(li).removeClass('active');
         $(li).addClass('active');
-
     }
 
-    $('.menu li span').on('click touchstart',function (e) {
+    $menus.on('click touchstart',function (e) {
         e.preventDefault();
         const url = $(e.target).data('href');
         console.log(url);
         updateActive(url);
         return false;
+    });
+
+    $('.btn-action').on('click touchstart',function (e) {
+        updateActive('#contact');
     });
 
     // update on init

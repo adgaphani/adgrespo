@@ -1,7 +1,7 @@
 {
   "scripts": {
     "sass": "npm run sass-build -- --watch",
-    "sass-build": "sass styles.scss:styles.bundle.css --style compressed"
+    "sass-build": "sass styles.scss:bundle/styles.bundle.css --style compressed"
   },
   "devDependencies": {
     "node-sass": "^9.0.0",

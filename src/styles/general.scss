@@ -10,27 +10,36 @@ body, html {
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size: 15px;
 
+
+    @include font('text');
+    font-size: 18px;
     @media (max-width: 1440px) {
-        font-size: 14px;
+        font-size: 16px;
     }
-
     @media (max-width: 1024px) {
         font-size: 14px;
     }
-
-    //@media (max-width: 1024px) {
-    //    font-size: 15px;
-    //}
-
     @media (max-width: 320px) {
         font-size: 13px;
     }
 }
 
 
-p {
+h1, .title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    @include font('title');
+}
+
+h2, .sub-title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    @include font('sub-title');
+}
+
+p, .text {
+    @include font('text');
     margin-bottom: 0.5rem;
     //@media (max-width: 1440px) {
     //    margin-bottom: 0.5rem;
@@ -61,15 +70,19 @@ p {
     box-sizing: border-box;
 }
 
-#overlay {
-    top: 30%;
-    position: fixed;
-    cursor: none;
-    bottom: 0;
-    left: 80px;
-    width: 80%;
-    height: 50vh;
-    overflow: hidden;
-    z-index: 9999;
-    background: transparent;
+.btn-action {
+    background-color: #25b9b9;
+    padding: 10px 32px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    min-width: 200px;
+    color: #ffffff;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    @include font('action-button');
+
+    &:hover, &:focus, &:active {
+        background-color: #1f8383;
+        color: #ffffff;
+    }
 }
