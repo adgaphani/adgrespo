@@ -22,26 +22,29 @@
         </div>
 
         <ul class="menu">
-            <li><span data-href="#home">Home</span></li>
-            <li><span data-href="#services">Services</span></li>
             <li><span data-href="#about-us">About Us</span></li>
+            <li><span data-href="#services">Services</span></li>
+            <li><span data-href="#why-us">Why Us</span></li>
             <li><span data-href="#faq">FAQ</span></li>
             <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
             <li class="slider"></li>
         </ul>
     </header>
 
-    <div class="section" id="home">
+
+    <div class="section" id="about-us">
         <div class="content">
-            <h1>
-                Extend Your Agency's Reach.
-                Offer Seamless Web Programming.
-            </h1>
-            <h2>
-                Partner with APT and bring robust, in-house web programming capabilities to your agency's offerings.
-            </h2>
-            <div>
-                <a class="btn btn-action">Explore Our Expertise and Unleash Creativity</a>
+            <div class="content-container">
+                <h1>About Us</h1>
+
+                <h2>Powering Agencies with Expert Programming</h2>
+                <p>
+                    At APT, we pride ourselves on being the bridge between vibrant creativity and precise programming.
+                    Our commitment is to ensure that your designs translate into interactive experiences seamlessly.
+                    By partnering with us, your agency harnesses the strength of a dedicated programming team without the logistical challenges of maintaining one.
+                </p>
+
+                <button class="btn btn-action">Schedule a Conversation and Elevate Your Agency's Portfolio</button>
             </div>
         </div>
     </div>
@@ -52,54 +55,59 @@
             <div class="content-container">
                 <h1>Our Services</h1>
 
+                <h2>Extend Your Agency's Reach. Offer Seamless Web Programming</h2>
+                <p>Partner with APT to add robust, in-house web programming to your creative arsenal.</p>
+
                 <h2>Web Programming</h2>
                 <p>
-                    Transform your creative visions into functional websites with our expert coding services.
-                    We support various CMS platforms, including Webflow, WordPress, and more.
+                    Our coding expertise is designed to make your creative visions come alive on the web.
+                    Whether you specialize in minimalist designs or intricate web architectures,
+                    we ensure a smooth transition from design to functionality across platforms like Webflow, WordPress, and more.
                 </p>
+                <button class="btn btn-action">Bring Your Designs to Life with APT</button>
 
                 <h2>Custom Integrations</h2>
                 <p>
-                    Elevate website functionalities with tailor-made integrations designed to meet your clients' unique needs.
+                    Today's web users expect more. With our custom integration services,
+                    your websites will not just look good but will also offer functionalities tailored for your client's specific audience,
+                    ensuring memorable user experiences.
                 </p>
+                <button class="btn btn-action">Go Beyond the Ordinary; Integrate with Precision</button>
 
                 <h2>Ongoing Maintenance</h2>
                 <p>
-                    Ensure your clients' websites run like clockwork with our comprehensive maintenance services.
-                    We handle updates, performance checks, and more.
+                    In the digital realm, consistency is key.
+                    Our maintenance services ensure that your client's websites remain updated,
+                    secure, and high-performing, reflecting the quality your agency stands for.
                 </p>
 
-                <button class="btn btn-action">Code Your Dreams into Reality with Us</button>
+                <button class="btn btn-action">Maintain Excellence with APT's Expertise</button>
             </div>
         </div>
     </div>
 
 
-    <div class="section" id="about-us">
+    <div class="section" id="why-us">
         <div class="content">
             <div class="content-container">
-                <h1>About Us</h1>
+                <h1>Why Us</h1>
 
-                <h2>Powering Agencies with Expert Programming</h2>
+                <h2>Why Partner with APT for Your Programming Needs?</h2>
                 <p>
-                    At APT, we're your secret weapon for exceptional web programming services.
-                    Our team's expertise ensures your designs come alive flawlessly,
-                    enhancing your agency's offerings without the overheads of an in-house team.
+                    Beyond just coding, we understand the nuances of turning creative concepts into digital realities.
+                    We are constantly updated with the latest web trends and technologies,
+                    ensuring that your agency remains at the forefront of innovation.
+                    With APT, you get more than a service provider; you gain a partner dedicated to your success.
                 </p>
-
-                <h2>Why Design Agencies Trust APT for Programming?</h2>
-                <p>
-                    At APT, we eat, breathe, and sleep programming, ensuring that every project is handled
-                    with precision, expertise, and an unwavering passion for the web's intricacies.
-                </p>
+                <button class="btn btn-action">Connect with Us and Transform Your Web Offerings</button>
 
                 <h2>Programming Pioneers at Your Service</h2>
                 <p>
-                    The APT team brings together top-notch programmers,
-                    ensuring that every piece of code is optimized, clean, and fully aligned with modern web standards.
+                    Behind every successful project at APT is a team of seasoned programmers, each bringing specialized skills and experiences.
+                    With a collaborative approach, we ensure that your designs are translated into code
+                    that's both efficient and effective, meeting the high standards of today's digital landscape.
                 </p>
-
-                <button class="btn btn-action">Schedule a Conversation and Elevate Your Agency</button>
+                <button class="btn btn-action">Discover Our Team and Expand Your Capabilities</button>
             </div>
         </div>
     </div>
@@ -108,26 +116,41 @@
     <div class="section" id="faq">
         <div class="content">
             <div class="content-container">
-                <h1>Frequently Asked Questions</h1>
+                <h1>FAQ</h1>
 
                 <div class="faq-section">
-                    <p><b>Question:</b> What programming languages and platforms does APT support?</p>
-                    <p><b>Answer:</b> We support almost all contemporary web development technologies.</p>
+                    <h2>Q: What programming languages and platforms does APT support?</h2>
+                    <p>
+                        From the foundational trio of HTML, CSS, and JavaScript to the rhythmic beats of WordPress and Webflow,
+                        we dance to all the digital tunes. What's your jam? Let's jam together!
+                    </p>
                 </div>
 
                 <div class="faq-section">
-                    <p><b>Question:</b> How can APT enhance my agency's web offerings?</p>
-                    <p><b>Answer:</b> Our expertise empowers you to turn creative visions into functional websites seamlessly, expanding your agency's capabilities.</p>
+                    <h2>Q: How can APT amplify my agency's web offerings?</h2>
+                    <p>
+                        Think of APT as the backstage crew to your rockstar agency.
+                        We set the stage, handle the tech, and let you take the spotlight.
+                        Together, we'll make sure your agency's web gig is a sold-out show!
+                    </p>
                 </div>
 
                 <div class="faq-section">
-                    <p><b>Question:</b> What's the process once we partner with APT?</p>
-                    <p><b>Answer:</b> Let's talk about your specific needs and customize a partnership process tailored just for you.</p>
+                    <h2>Q: What's the process once we partner with APT?</h2>
+                    <p>
+                        Picture this: a cozy coffee chat to understand your dreams,
+                        followed by a master plan handcrafted just for you.
+                        We're all about harmonizing our code with your creativity.
+                    </p>
                 </div>
 
                 <div class="faq-section">
-                    <p><b>Question:</b> Do you offer support post-launch?</p>
-                    <p><b>Answer:</b> Yes, our world-class team will be at your fingertips to ensure your success.</p>
+                    <h2>Q: Do you offer support post-launch?</h2>
+                    <p>
+                        The show must go on, right?
+                        Even after the curtains drop, we're behind the scenes,
+                        ensuring your digital masterpiece keeps getting standing ovations!
+                    </p>
                 </div>
             </div>
         </div>
@@ -158,14 +181,14 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
 
-                    <h2>Feel free to contact me at: <a href="mailto:rmeade07@gmail.com" target="_blank">rmeade07@gmail.com</a></h2>
+                    <h2>Feel free to contact me at: <a href="mailto:ryan.meade@agencypt.com" target="_blank">ryan.meade@agencypt.com</a></h2>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Copyright: © 2023 APT. All rights reserved</p>
+        <p><b>Copyright</b>: © 2023 APT. All rights reserved</p>
     </footer>
 </div>
 
