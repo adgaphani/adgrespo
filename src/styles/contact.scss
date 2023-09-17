@@ -30,11 +30,18 @@
     button {
         background: #8caea2;
         border: #8caea2;
+        margin-top: 1rem;
 
         &:hover, &:active, &:focus {
             background: #73988b;
             border: #73988b;
         }
+    }
+
+    #form-result {
+        display: none;
+        @include font('text');
+        margin: 1rem 0;
     }
 }
 

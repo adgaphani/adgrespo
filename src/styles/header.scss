@@ -72,7 +72,7 @@ $width: calc(100% / $item-count);
 .menu {
     list-style: none;
     padding: 0;
-    width: 40%;
+    width: min(40%, 500px);
     height: 40px;
     position: relative;
     top: 10px;
@@ -86,7 +86,7 @@ $width: calc(100% / $item-count);
     align-items: center;
 
     @media (max-width: 768px) {
-        width: 60%;
+        width: min(60%, 500px);
     }
 
     @media (max-width: 650px) {
@@ -130,10 +130,18 @@ $width: calc(100% / $item-count);
         text-decoration: none;
         position: relative;
         font-size: 14px;
+        white-space: nowrap;
         z-index: 9;
 
         @media (max-width: 768px) {
             color: #151515;
+            font-size: 13px;
+        }
+
+        @media (max-width: 320px) {
+            span.hide-320 {
+                display: none;
+            }
         }
     }
 

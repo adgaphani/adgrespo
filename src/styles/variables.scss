@@ -1,4 +1,5 @@
 $header-height: 110px;
+$footer-height: 30px;
 
 @mixin font($size) {
     @if ($size == 'title') {
@@ -14,6 +15,10 @@ $header-height: 110px;
         &::selection {
             color: transparent;
             background: #aab8c4;
+        }
+
+        @media (max-width: 425px) {
+            font-size: 2.5rem;
         }
 
     } @else if ($size == 'sub-title') {

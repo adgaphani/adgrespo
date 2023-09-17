@@ -12,7 +12,7 @@
     bottom: 0;
     right: 0;
     width: 100%;
-    height: calc(100vh - $header-height);
+    min-height: calc(100vh - $header-height - $footer-height);
     padding: 50px 20px 20px 50px;
     display: none;
 
@@ -21,7 +21,11 @@
     animation-fill-mode: forwards;
 
     @media (max-width: 768px) {
-        padding: 50px 20px 20px 20px;
+        padding: 40px 20px 20px 20px;
+    }
+
+    @media (max-width: 425px) {
+        padding: 20px 10px 20px 10px;
     }
 
     &.active {
@@ -74,7 +78,6 @@
     }
 
     .content {
-        height: 100%;
     }
 
 

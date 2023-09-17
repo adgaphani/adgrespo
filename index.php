@@ -26,7 +26,7 @@
             <li><span data-href="#services">Services</span></li>
             <li><span data-href="#about-us">About Us</span></li>
             <li><span data-href="#faq">FAQ</span></li>
-            <li><span data-href="#contact">Contact<span class="d-none d-sm-block">&nbsp;Us</span></span></li>
+            <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
             <li class="slider"></li>
         </ul>
     </header>
@@ -138,15 +138,8 @@
         <h1>Contact Us</h1>
         <div class="content">
             <div class="row">
-                <div class="col-12 col-sm-7 order-md-last d-none d-sm-block">
-                    <div class="flip-container">
-                        <p class="sub-title">Want more creative vision, less tech hassle?</p>
-                        <p class="sub-title">Free your creativity with us!</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-5 order-md-first">
-                    <form id="contact-form" action="https://formspree.io/f/mnqknvyn" method="POST">
+                <div class="col-12 col-md-6">
+                    <form id="contact-form" action="https://formspree.io/f/xgejzznn" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
@@ -161,16 +154,19 @@
                             <textarea class="form-control" id="description" name="description" rows="4"
                                       placeholder="Enter your message"></textarea>
                         </div>
+                        <div id="form-result"></div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
 
-                    <h2>Or feel free to contact me at: <a href="mailto:rmeade07@gmail.com" target="_blank">rmeade07@gmail.com</a></h2>
-
-                    <p style="margin-top: 5rem;">Copyright: © 2023 APT. All rights reserved</p>
+                    <h2>Feel free to contact me at: <a href="mailto:rmeade07@gmail.com" target="_blank">rmeade07@gmail.com</a></h2>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>Copyright: © 2023 APT. All rights reserved</p>
+    </footer>
 </div>
 
 <div id="particles-js"></div>
