@@ -51,7 +51,7 @@ p, .text {
 .flip-title {
     @include font('sub-title');
     font-size: 3.9rem;
-
+    line-height: normal;
 }
 
 #main, footer {

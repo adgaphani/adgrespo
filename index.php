@@ -30,7 +30,7 @@
         </ul>
     </header>
 
-    <div>
+    <div class="section-container">
         <div class="section" id="about-us">
             <div class="content">
                 <div class="content-container">

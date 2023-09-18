@@ -7,13 +7,13 @@
     }
 }
 
-.section {
-    color: rgb(0, 0, 0);
-    bottom: 0;
-    right: 0;
-    width: 100%;
+.section-container {
     min-height: calc(100vh - $header-height - $footer-height);
+}
+.section {
+    width: 100%;
     padding: 50px 20px 20px 50px;
+    min-height: calc(100vh - $header-height - $footer-height);
     display: none;
 
     animation: fadeInAnimation ease 3s;
