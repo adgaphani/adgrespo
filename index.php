@@ -36,14 +36,20 @@
                 <div class="content-container">
                     <h1>About Us</h1>
 
-                    <h2>Powering Agencies with Expert Programming</h2>
-                    <p>
-                        At APT, we pride ourselves on being the bridge between vibrant creativity and precise programming.
-                        Our commitment is to ensure that your designs translate into interactive experiences seamlessly.
-                        By partnering with us, your agency harnesses the strength of a dedicated programming team without the logistical challenges of maintaining one.
-                    </p>
+                    <div class="flip-container">
+                        <h2 class="flip-title">Need a technical ally for creativity?</h2>
+                        <h2 class="flip-title">That's us!</h2>
+                        <div>
+                            <h2>Powering Agencies with Expert Programming</h2>
+                            <p>
+                                At APT, we pride ourselves on being the bridge between vibrant creativity and precise programming.
+                                Our commitment is to ensure that your designs translate into interactive experiences seamlessly.
+                                By partnering with us, your agency harnesses the strength of a dedicated programming team without the logistical challenges of maintaining one.
+                            </p>
 
-                    <button class="btn btn-action">Schedule a Conversation and Elevate Your Agency's Portfolio</button>
+                            <button class="btn btn-action">Schedule a Conversation and Elevate Your Agency's Portfolio</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,33 +60,39 @@
                 <div class="content-container">
                     <h1>Our Services</h1>
 
-                    <h2>Extend Your Agency's Reach. Offer Seamless Web Programming</h2>
-                    <p>Partner with APT to add robust, in-house web programming to your creative arsenal.</p>
+                    <div class="flip-container">
+                        <h2 class="flip-title">Want tech solutions that fit your needs?</h2>
+                        <h2 class="flip-title">We custom-craft solutions!</h2>
+                        <div>
+                            <h2>Extend Your Agency's Reach. Offer Seamless Web Programming</h2>
+                            <p>Partner with APT to add robust, in-house web programming to your creative arsenal.</p>
 
-                    <h2>Web Programming</h2>
-                    <p>
-                        Our coding expertise is designed to make your creative visions come alive on the web.
-                        Whether you specialize in minimalist designs or intricate web architectures,
-                        we ensure a smooth transition from design to functionality across platforms like Webflow, WordPress, and more.
-                    </p>
-                    <button class="btn btn-action">Bring Your Designs to Life with APT</button>
+                            <h2>Web Programming</h2>
+                            <p>
+                                Our coding expertise is designed to make your creative visions come alive on the web.
+                                Whether you specialize in minimalist designs or intricate web architectures,
+                                we ensure a smooth transition from design to functionality across platforms like Webflow, WordPress, and more.
+                            </p>
+                            <button class="btn btn-action">Bring Your Designs to Life with APT</button>
 
-                    <h2>Custom Integrations</h2>
-                    <p>
-                        Today's web users expect more. With our custom integration services,
-                        your websites will not just look good but will also offer functionalities tailored for your client's specific audience,
-                        ensuring memorable user experiences.
-                    </p>
-                    <button class="btn btn-action">Go Beyond the Ordinary; Integrate with Precision</button>
+                            <h2>Custom Integrations</h2>
+                            <p>
+                                Today's web users expect more. With our custom integration services,
+                                your websites will not just look good but will also offer functionalities tailored for your client's specific audience,
+                                ensuring memorable user experiences.
+                            </p>
+                            <button class="btn btn-action">Go Beyond the Ordinary; Integrate with Precision</button>
 
-                    <h2>Ongoing Maintenance</h2>
-                    <p>
-                        In the digital realm, consistency is key.
-                        Our maintenance services ensure that your client's websites remain updated,
-                        secure, and high-performing, reflecting the quality your agency stands for.
-                    </p>
+                            <h2>Ongoing Maintenance</h2>
+                            <p>
+                                In the digital realm, consistency is key.
+                                Our maintenance services ensure that your client's websites remain updated,
+                                secure, and high-performing, reflecting the quality your agency stands for.
+                            </p>
 
-                    <button class="btn btn-action">Maintain Excellence with APT's Expertise</button>
+                            <button class="btn btn-action">Maintain Excellence with APT's Expertise</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,22 +103,28 @@
                 <div class="content-container">
                     <h1>Why Us</h1>
 
-                    <h2>Why Partner with APT for Your Programming Needs?</h2>
-                    <p>
-                        Beyond just coding, we understand the nuances of turning creative concepts into digital realities.
-                        We are constantly updated with the latest web trends and technologies,
-                        ensuring that your agency remains at the forefront of innovation.
-                        With APT, you get more than a service provider; you gain a partner dedicated to your success.
-                    </p>
-                    <button class="btn btn-action">Connect with Us and Transform Your Web Offerings</button>
+                    <div class="flip-container">
+                        <h2 class="flip-title">Seeking a tech partner who gets America?</h2>
+                        <h2 class="flip-title">We're homegrown!</h2>
+                        <div>
+                            <h2>Why Partner with APT for Your Programming Needs?</h2>
+                            <p>
+                                Beyond just coding, we understand the nuances of turning creative concepts into digital realities.
+                                We are constantly updated with the latest web trends and technologies,
+                                ensuring that your agency remains at the forefront of innovation.
+                                With APT, you get more than a service provider; you gain a partner dedicated to your success.
+                            </p>
+                            <button class="btn btn-action">Connect with Us and Transform Your Web Offerings</button>
 
-                    <h2>Programming Pioneers at Your Service</h2>
-                    <p>
-                        Behind every successful project at APT is a team of seasoned programmers, each bringing specialized skills and experiences.
-                        With a collaborative approach, we ensure that your designs are translated into code
-                        that's both efficient and effective, meeting the high standards of today's digital landscape.
-                    </p>
-                    <button class="btn btn-action">Discover Our Team and Expand Your Capabilities</button>
+                            <h2>Programming Pioneers at Your Service</h2>
+                            <p>
+                                Behind every successful project at APT is a team of seasoned programmers, each bringing specialized skills and experiences.
+                                With a collaborative approach, we ensure that your designs are translated into code
+                                that's both efficient and effective, meeting the high standards of today's digital landscape.
+                            </p>
+                            <button class="btn btn-action">Discover Our Team and Expand Your Capabilities</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,6 +202,12 @@
 
                         <h2>Feel free to contact me at: <a href="mailto:ryan.meade@agencypt.com" target="_blank">ryan.meade@agencypt.com</a></h2>
                     </div>
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <div class="flip-container" data-flip-loop="true">
+                            <h2 class="flip-title">Want more creative vision, less tech hassle?</h2>
+                            <h2 class="flip-title">Free your creativity with us!</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,7 +219,6 @@
 </div>
 
 <div id="particles-js"></div>
-
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
