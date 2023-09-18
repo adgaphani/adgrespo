@@ -3,11 +3,10 @@ $footer-height: 30px;
 
 @mixin font($size) {
     @if ($size == 'title') {
-        font-family: 'Lato', sans-serif;
         font-size: 3.5rem;
         font-weight: 900;
         letter-spacing: 0.03rem;
-        -webkit-text-stroke: 1px #000;
+        -webkit-text-stroke: 2px #000;
         text-decoration: none;
         color: transparent;
         background-clip: text;
@@ -22,7 +21,6 @@ $footer-height: 30px;
         }
 
     } @else if ($size == 'sub-title') {
-        font-family: 'Asap', 'Lato', sans-serif;
         font-weight: 900;
         font-size: 1.3rem;
         letter-spacing: 0.03rem;
@@ -30,12 +28,10 @@ $footer-height: 30px;
         color: #474747;
 
     } @else if ($size == 'text') {
-        font-family: 'Lato', sans-serif;
         font-weight: 400;
         color: #242424;
 
     } @else if ($size == 'action-button') {
-        font-family: 'Asap', sans-serif;
         font-weight: 400;
         font-size: 1rem;
     }
