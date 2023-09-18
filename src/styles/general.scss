@@ -70,7 +70,6 @@ p, .text {
 }
 
 .btn-action {
-    background-color: #3498db51;
     padding: 10px 32px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -80,9 +79,16 @@ p, .text {
     cursor: pointer;
     @include font('action-button');
 
-    &:hover, &:focus, &:active {
-        background-color: rgba(37, 185, 185, 0.63);
-        color: #ffffff;
+    @for $i from 1 through $item-count {
+        $color: nth($colors, $i);
+        .section:nth-child(#{$i}) & {
+            background-color: $color;
+
+            &:hover, &:focus, &:active {
+                background-color: rgba(37, 185, 185, 0.63);
+                color: #ffffff;
+            }
+        }
     }
 
     @media (max-width: 425px) {

@@ -40,8 +40,6 @@ header {
 
 /*-----------------------------------------------------------------------------*/
 
-$item-count: 5;
-$width: calc(100% / $item-count);
 
 .menu {
     list-style: none;
@@ -65,7 +63,7 @@ $width: calc(100% / $item-count);
     @media (max-width: 650px) {
         width: min(98%, 400px);
         height: 30px;
-        margin: 0px auto;
+        margin: 0 auto;
         float: none;
     }
 
@@ -117,8 +115,6 @@ $width: calc(100% / $item-count);
     }
 
 }
-
-$colors: #3498db51, #9c59b63c, #e67d223c, #16a0843e, rgba(39, 169, 50, 0.32);
 
 @for $i from 1 through $item-count {
     $color: nth($colors, $i);
