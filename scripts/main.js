@@ -115,20 +115,17 @@ jQuery(function ($) {
                 }
             }).then(response => {
                 if (response.ok) {
-                    showMessage("Thanks for your submission!", 'text-success');
+                    showMessage("We received your message. Our finest will get in touch with you shortly.", 'text-success');
                     form.reset();
                 } else {
                     response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            showMessage(data["errors"].map(error => error["message"]).join(", "), 'text-danger');
-                        } else {
-                            showMessage("Oops! There was a problem submitting your form", 'text-danger');
-                        }
+                        console.error(data);
+                        showMessage("Oops! Our gears seem to have jammed up. Please give it another whirl or reach out directly. Our finest are on it.", 'text-danger');
                     })
                 }
             }).catch((error) => {
-                console.log(error);
-                showMessage("Oops! There was a problem submitting your form", 'text-danger');
+                console.error(error);
+                showMessage("Oops! Our gears seem to have jammed up. Please give it another whirl or reach out directly. Our finest are on it.", 'text-danger');
             });
         });
     });
