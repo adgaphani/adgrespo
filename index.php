@@ -17,8 +17,7 @@
 <div id="main">
     <header>
         <div class="logo">
-            <img src="images/logo.gif" alt="Logo">
-            <p id="tagP">Reflecting your tech needs with an edge of creativity and expertise</p>
+            <img src="images/logo.svg" alt="Logo" width="150" height="90">
         </div>
 
         <ul class="menu">

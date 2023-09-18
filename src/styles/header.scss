@@ -1,64 +1,38 @@
 header {
     height: $header-height;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .logo {
     display: block;
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    width: 240px;
-    height: $header-height - 10px;
+    width: auto;
 
     @media (max-width: 650px) {
-        & {
-            position: relative;
-            top: -20px;
-            left: 0;
-            width: 100%;
-            height: auto;
             display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        }
+    flex-direction: column;
     }
 
     & img {
         display: block;
-        position: absolute;
-        top: -15px;
-        left: -20px;
-        width: 150px;
-        height: auto;
-        @media (max-width: 650px) {
-            & {
-                position: relative;
-                left: 0;
-            }
+        height: $header-height;
+        width: auto;
+        padding: 20px 50px;
+
+        @media (max-width: 768px) {
+            padding: 20px 20px;
         }
-    }
-
-    & #tagP {
-        z-index: 10;
-        font-size: 11px;
-        color: rgb(0, 0, 0);
-        font-family: sans-serif, 'Open Sans';
-        text-align: left;
-        position: absolute;
-        top: 65px;
-        left: 65px;
-        width: 175px;
-        margin-bottom: 0;
 
         @media (max-width: 650px) {
-            & {
-                position: relative;
-                top: -10px;
-                left: 0;
-                text-align: center;
-                margin-top: 5px;
-            }
+            padding: 0;
+            margin: 10px 0;
+            height: 70px;
         }
     }
 }
@@ -72,15 +46,14 @@ $width: calc(100% / $item-count);
 .menu {
     list-style: none;
     padding: 0;
-    width: min(40%, 500px);
+    width: min(60%, 500px);
     height: 40px;
-    position: relative;
-    top: 10px;
     background-color: rgba(165, 169, 172, 0);
+    position: relative;
     z-index: 7;
     border-radius: 8px;
     float: right;
-    margin: 2%;
+    margin: 2% 2% 2% auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,12 +63,10 @@ $width: calc(100% / $item-count);
     }
 
     @media (max-width: 650px) {
-        position: relative;
-        top: -30px;
         width: min(98%, 400px);
-        margin: 10px auto;
-        float: none;
         height: 30px;
+        margin: 0px auto;
+        float: none;
     }
 
     li {
