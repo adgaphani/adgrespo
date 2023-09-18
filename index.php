@@ -17,7 +17,7 @@
 <div id="main">
     <header>
         <div class="logo">
-            <img src="images/logo.svg" alt="Logo" width="150" height="90">
+            <img src="images/logo.svg" alt="Logo" width="259" height="80">
         </div>
 
         <ul class="menu">
@@ -161,24 +161,26 @@
             <div class="content">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <form id="contact-form" action="https://formspree.io/f/xgejzznn" method="POST">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                       placeholder="Enter your email">
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <textarea class="form-control" id="description" name="description" rows="4"
-                                          placeholder="Enter your message"></textarea>
-                            </div>
-                            <div id="form-result"></div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                        <div id="contact-form">
+                            <form action="https://formspree.io/f/xgejzznn" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                           placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <textarea class="form-control" id="description" name="description" rows="4"
+                                              placeholder="Enter your message"></textarea>
+                                </div>
+                                <div id="form-result"></div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
 
                         <h2>Feel free to contact me at: <a href="mailto:ryan.meade@agencypt.com" target="_blank">ryan.meade@agencypt.com</a></h2>
                     </div>
@@ -194,9 +196,7 @@
 
 <div id="particles-js"></div>
 
-<div id="canvasContainer">
-    <canvas id="myCanvas"></canvas>
-</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="

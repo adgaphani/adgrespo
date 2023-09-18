@@ -41,7 +41,6 @@ jQuery(function ($) {
 });
 
 jQuery(function ($) {
-    const form = document.getElementById("contact-form");
 
     function showMessage(message, cssClass) {
         const $result = $("#form-result");
@@ -56,15 +55,20 @@ jQuery(function ($) {
         return (1 - t) * (1 - t) * p0 + 2 * (1 - t) * t * p1 + t * t * p2;
     }
 
-    function amimateSubmit(form) {
+    function animateSubmit(callback) {
+        const form = document.getElementById("contact-form");
         html2canvas(form).then(function (canvas) {
-            const canvasContainer = document.getElementById('canvasContainer');
-            canvasContainer.style.display = 'block';
+            const canvasContainer = document.createElement('div');
+            canvasContainer.style.position = 'absolute';
+            canvasContainer.style.top = '0';
+            canvasContainer.style.left = '0';
+            document.body.appendChild(canvasContainer);
+
             canvasContainer.appendChild(canvas);
 
             // Overlay canvas on top of form
             const rect = form.getBoundingClientRect();
-            canvas.style.position = 'absolute';
+            canvas.style.position = 'fixed';
             canvas.style.top = `${rect.top}px`;
             canvas.style.left = `${rect.left}px`;
 
@@ -84,45 +88,48 @@ jQuery(function ($) {
 
                 if (progress >= 1) {
                     clearInterval(animateOut);
+                    document.body.removeChild(canvasContainer);
+                    callback();
                 }
             }, 20);
         });
     }
 
-    async function handleSubmit(event) {
-        event.preventDefault();
-        const $result = $("#form-result");
-        const data = new FormData(event.target);
 
+    $('#contact-form form').on('submit', function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const data = new FormData(form);
+
+        const $result = $("#form-result");
         $result
             .text('')
             .removeClass('text-success text-danger')
             .hide();
 
-        amimateSubmit(form);
-        // fetch(event.target.action, {
-        //     method: form.method,
-        //     body: data,
-        //     headers: {
-        //         'Accept': 'application/json'
-        //     }
-        // }).then(response => {
-        //     if (response.ok) {
-        //         showMessage("Thanks for your submission!", 'text-success');
-        //         form.reset();
-        //     } else {
-        //         response.json().then(data => {
-        //             if (Object.hasOwn(data, 'errors')) {
-        //                 showMessage(data["errors"].map(error => error["message"]).join(", "), 'text-danger');
-        //             } else {
-        //                 showMessage("Oops! There was a problem submitting your form", 'text-danger');
-        //             }
-        //         })
-        //     }
-        // }).catch(error => {
-        //     showMessage("Oops! There was a problem submitting your form", 'text-danger');
-        // });
-    }
-
-    form.addEventListener("submit", handleSubmit)
+        animateSubmit(function () {
+            fetch(event.target.action, {
+                method: form.method, body: data, headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    showMessage("Thanks for your submission!", 'text-success');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            showMessage(data["errors"].map(error => error["message"]).join(", "), 'text-danger');
+                        } else {
+                            showMessage("Oops! There was a problem submitting your form", 'text-danger');
+                        }
+                    })
+                }
+            }).catch((error) => {
+                console.log(error);
+                showMessage("Oops! There was a problem submitting your form", 'text-danger');
+            });
+        });
+    });
 });

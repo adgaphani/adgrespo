@@ -12,9 +12,10 @@ body, html {
 
 
     @include font('text');
-    font-size: 18px;
+    font-size: 15px;
+
     @media (max-width: 1440px) {
-        font-size: 16px;
+        font-size: 15px;
     }
     @media (max-width: 1024px) {
         font-size: 14px;
