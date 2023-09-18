@@ -7,7 +7,7 @@
     <title>ADGA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=family=Open+Sans:wght@400;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;900&display=swap"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bundle/styles.bundle.css?time=<?php echo time() ?>">
@@ -194,12 +194,17 @@
 
 <div id="particles-js"></div>
 
+<div id="canvasContainer">
+    <canvas id="myCanvas"></canvas>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <script src="scripts/particles.min.js" defer></script>
 <script src="scripts/part.js" defer></script>
 <script src="scripts/main.js?time=<?php echo time() ?>" defer></script>

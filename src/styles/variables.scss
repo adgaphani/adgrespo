@@ -8,9 +8,9 @@ $colors: #3498db51, #9c59b63c, #e67d223c, #16a0843e, rgba(39, 169, 50, 0.32);
 @mixin font($size) {
     @if ($size == 'title') {
         font-size: 3.5rem;
-        font-weight: 900;
+        font-weight: 400;
         letter-spacing: 0.03rem;
-        -webkit-text-stroke: 2px #000;
+        -webkit-text-stroke: 1px #000;
         text-decoration: none;
         color: transparent;
         background-clip: text;
