@@ -38,7 +38,7 @@
 
     &::after {
         display: block;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
@@ -62,18 +62,18 @@
         }
     }
 
-    &#about-us:after {
-        background-image: url(images/We-are.png);
+    &:nth-child(3n + 1):after {
+        background-image: url(/images/We-are.png);
         content: ' ';
     }
 
-    &#services:after {
-        background-image: url(bg-1.png);
+    &:nth-child(3n + 2):after {
+        background-image: url(/images/bg-1.png);
         content: ' ';
     }
 
-    &#why-us:after {
-        background-image: url(images/why-us.png);
+    &:nth-child(3n + 3):after {
+        background-image: url(/images/why-us.png);
         content: ' ';
     }
 
