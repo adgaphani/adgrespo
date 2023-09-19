@@ -125,40 +125,43 @@ function animateSubmit() {
 }
 
 jQuery(function ($) {
+    const $result = $("#form-result");
+    const $resultText = $result.find('span');
 
     function showMessage(success, error = null) {
-        const $result = $("#form-result");
-
         const message = success
             ? "We received your message. Our finest will get in touch with you shortly."
             : "Oops! Our gears seem to have jammed up. Please give it another whirl or reach out directly. Our finest are on it.";
         const cssClass = success
-            ? 'text-success'
-            : 'text-danger';
+            ? 'bg-success'
+            : 'bg-danger';
 
-        $result.text(message)
-            .addClass(cssClass)
-            .show();
+        $resultText.text(message);
+        $result.addClass(cssClass).show();
 
         if (error) {
             console.error(error);
         }
     }
 
+    function hideMessage() {
+        $resultText.text('');
+        $result.removeClass('bg-success bg-danger').hide();
+    }
+
+    $('#closeButton').on('click touchstart', function (e) {
+        e.preventDefault();
+        hideMessage();
+    })
 
     grecaptcha.ready(function () {
         $('#contact-form form').on('submit', function (event) {
             event.preventDefault();
-
-            $('#contact-form form input, #contact-form form button').prop("disabled", true);
+            hideMessage();
 
             const form = event.target;
 
-            const $result = $("#form-result");
-            $result
-                .text('')
-                .removeClass('text-success text-danger')
-                .hide();
+            $('#contact-form form input, #contact-form form button').prop("disabled", true);
 
             Promise.all([
                 grecaptcha.execute('6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF', {action: 'submit'}),

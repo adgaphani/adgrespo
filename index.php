@@ -199,7 +199,12 @@
                                     <textarea class="form-control" id="description" name="description" rows="4"
                                               placeholder="Enter your message"></textarea>
                                 </div>
-                                <div id="form-result"></div>
+                                <div id="form-result">
+                                    <div>
+                                        <span></span>
+                                        <button id="closeButton">×</button>
+                                    </div>
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
