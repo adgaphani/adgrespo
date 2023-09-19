@@ -160,15 +160,16 @@ jQuery(function ($) {
             hideMessage();
 
             const form = event.target;
+            const data = new FormData(form);
 
-            $('#contact-form form input, #contact-form form button').prop("disabled", true);
+            $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", true);
 
             Promise.all([
                 grecaptcha.execute('6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF', {action: 'submit'}),
                 animateSubmit(),
             ]).then(function (response) {
                 const token = response[0];
-                const data = new FormData(form);
+                console.log(data.values());
                 data.append('g-recaptcha-response', token);
 
                 return fetch(event.target.action, {
@@ -178,7 +179,7 @@ jQuery(function ($) {
                         'Accept': 'application/json'
                     }
                 }).then(response => {
-                    $('#contact-form form input, #contact-form form button').prop("disabled", false);
+                    $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", true);
                     if (response.ok) {
                         showMessage(true);
                         form.reset();
@@ -189,7 +190,7 @@ jQuery(function ($) {
                     }
                 });
             }).catch((error) => {
-                $('#contact-form form input, #contact-form form button').prop("disabled", false);
+                $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", true);
                 showMessage(false, error);
             });
         });
