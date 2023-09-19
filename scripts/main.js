@@ -78,92 +78,116 @@ jQuery(function ($) {
     updateActive();
 });
 
+
+// Quadratic Bezier curve function
+function bezier(p0, p1, p2, t) {
+    return (1 - t) * (1 - t) * p0 + 2 * (1 - t) * t * p1 + t * t * p2;
+}
+
+function animateSubmit() {
+    const form = document.getElementById("contact-form");
+
+    return html2canvas(form).then(function (canvas) {
+        const canvasContainer = document.createElement('div');
+        canvasContainer.style.position = 'absolute';
+        canvasContainer.style.top = '0';
+        canvasContainer.style.left = '0';
+        document.body.appendChild(canvasContainer);
+
+        canvasContainer.appendChild(canvas);
+
+        // Overlay canvas on top of form
+        const rect = form.getBoundingClientRect();
+        canvas.style.position = 'fixed';
+        canvas.style.top = `${rect.top}px`;
+        canvas.style.left = `${rect.left}px`;
+
+        // Animate shrinking and movement with Bezier curve
+        let progress = 0;  // From 0 to 1 for Bezier curve
+        window.animateOut = setInterval(function () {
+            progress += 0.020;
+            const scale = 1 - 0.95 * progress;  // Shrink from 100% to 5%
+            const positionX = bezier(0, 1, 4, progress) * canvas.width;
+            const positionY = bezier(0, -2, -2, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
+            canvas.style.transform = `scale(${scale}) translate(${positionX}px, ${positionY}px)`;
+
+            // Fade out as it reaches the top right
+            if (progress >= 0.95) {
+                canvas.style.opacity = 1 - (progress - 0.95) * 30;
+            }
+
+            if (progress >= 1) {
+                clearInterval(window.animateOut);
+                document.body.removeChild(canvasContainer);
+            }
+        }, 20);
+    });
+}
+
 jQuery(function ($) {
 
-    function showMessage(message, cssClass) {
+    function showMessage(success, error = null) {
         const $result = $("#form-result");
+
+        const message = success
+            ? "We received your message. Our finest will get in touch with you shortly."
+            : "Oops! Our gears seem to have jammed up. Please give it another whirl or reach out directly. Our finest are on it.";
+        const cssClass = success
+            ? 'text-success'
+            : 'text-danger';
 
         $result.text(message)
             .addClass(cssClass)
             .show();
-    }
 
-    // Quadratic Bezier curve function
-    function bezier(p0, p1, p2, t) {
-        return (1 - t) * (1 - t) * p0 + 2 * (1 - t) * t * p1 + t * t * p2;
-    }
-
-    function animateSubmit(callback) {
-        const form = document.getElementById("contact-form");
-        html2canvas(form).then(function (canvas) {
-            const canvasContainer = document.createElement('div');
-            canvasContainer.style.position = 'absolute';
-            canvasContainer.style.top = '0';
-            canvasContainer.style.left = '0';
-            document.body.appendChild(canvasContainer);
-
-            canvasContainer.appendChild(canvas);
-
-            // Overlay canvas on top of form
-            const rect = form.getBoundingClientRect();
-            canvas.style.position = 'fixed';
-            canvas.style.top = `${rect.top}px`;
-            canvas.style.left = `${rect.left}px`;
-
-            // Animate shrinking and movement with Bezier curve
-            let progress = 0;  // From 0 to 1 for Bezier curve
-            const animateOut = setInterval(function () {
-                progress += 0.020;
-                const scale = 1 - 0.95 * progress;  // Shrink from 100% to 5%
-                const positionX = bezier(0, 1, 4, progress) * canvas.width;
-                const positionY = bezier(0, -2, -2, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
-                canvas.style.transform = `scale(${scale}) translate(${positionX}px, ${positionY}px)`;
-
-                // Fade out as it reaches the top right
-                if (progress >= 0.95) {
-                    canvas.style.opacity = 1 - (progress - 0.95) * 30;
-                }
-
-                if (progress >= 1) {
-                    clearInterval(animateOut);
-                    document.body.removeChild(canvasContainer);
-                    callback();
-                }
-            }, 20);
-        });
+        if (error) {
+            console.error(error);
+        }
     }
 
 
-    $('#contact-form form').on('submit', function (event) {
-        event.preventDefault();
+    grecaptcha.ready(function () {
+        $('#contact-form form').on('submit', function (event) {
+            event.preventDefault();
 
-        const form = event.target;
-        const data = new FormData(form);
+            $('#contact-form form input, #contact-form form button').prop("disabled", true);
 
-        const $result = $("#form-result");
-        $result
-            .text('')
-            .removeClass('text-success text-danger')
-            .hide();
+            const form = event.target;
 
-        animateSubmit(function () {
-            fetch(event.target.action, {
-                method: form.method, body: data, headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    showMessage("We received your message. Our finest will get in touch with you shortly.", 'text-success');
-                    form.reset();
-                } else {
-                    response.json().then(data => {
-                        console.error(data);
-                        showMessage("Oops! Our gears seem to have jammed up. Please give it another whirl or reach out directly. Our finest are on it.", 'text-danger');
-                    })
-                }
+            const $result = $("#form-result");
+            $result
+                .text('')
+                .removeClass('text-success text-danger')
+                .hide();
+
+            Promise.all([
+                grecaptcha.execute('6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF', {action: 'submit'}),
+                animateSubmit(),
+            ]).then(function (response) {
+                const token = response[0];
+                const data = new FormData(form);
+                data.append('g-recaptcha-response', token);
+
+                return fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    $('#contact-form form input, #contact-form form button').prop("disabled", false);
+                    if (response.ok) {
+                        showMessage(true);
+                        form.reset();
+                    } else {
+                        response.json().then(data => {
+                            showMessage(false, data);
+                        })
+                    }
+                });
             }).catch((error) => {
-                console.error(error);
-                showMessage("Oops! Our gears seem to have jammed up. Please give it another whirl or reach out directly. Our finest are on it.", 'text-danger');
+                $('#contact-form form input, #contact-form form button').prop("disabled", false);
+                showMessage(false, error);
             });
         });
     });
