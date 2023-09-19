@@ -113,15 +113,15 @@ jQuery(function ($) {
             // Animate shrinking and movement with Bezier curve
             let progress = 0;  // From 0 to 1 for Bezier curve
             const animateOut = setInterval(function () {
-                progress += 0.025;
+                progress += 0.020;
                 const scale = 1 - 0.95 * progress;  // Shrink from 100% to 5%
-                const positionX = bezier(0, -2, 4, progress) * canvas.width;
-                const positionY = bezier(0, 4, 1, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
+                const positionX = bezier(0, 1, 4, progress) * canvas.width;
+                const positionY = bezier(0, -2, -2, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
                 canvas.style.transform = `scale(${scale}) translate(${positionX}px, ${positionY}px)`;
 
                 // Fade out as it reaches the top right
                 if (progress >= 0.95) {
-                    canvas.style.opacity = 1 - (progress - 0.95) * 20;
+                    canvas.style.opacity = 1 - (progress - 0.95) * 30;
                 }
 
                 if (progress >= 1) {
