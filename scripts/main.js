@@ -86,6 +86,10 @@ function bezier(p0, p1, p2, t) {
 
 function animateSubmit() {
     return new Promise(function(resolve) {
+        if(window.innerWidth < 768) {
+            return resolve();
+        }
+
         const form = document.getElementById("contact-form");
 
         html2canvas(form).then(function (canvas) {
