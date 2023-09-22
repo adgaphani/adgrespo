@@ -199,17 +199,18 @@
                                     <textarea class="form-control" id="description" name="description" rows="4"
                                               placeholder="Enter your message"></textarea>
                                 </div>
-                                <div id="form-result">
-                                    <div>
-                                        <span></span>
-                                        <button id="closeButton">×</button>
-                                    </div>
-                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
+
+                            <div id="form-result">
+                                <div>
+                                    <span></span>
+                                    <button id="closeButton">×</button>
+                                </div>
+                            </div>
                         </div>
 
-                        <h2>Feel free to contact me at: <a href="mailto:ryan.meade@agencypt.com" target="_blank">ryan.meade@agencypt.com</a></h2>
+                        <h2>Feel free to contact me at: <a href="mailto:ryan@agencypt.com" target="_blank">ryan@agencypt.com</a></h2>
                     </div>
                     <div class="col-12 col-md-6 d-none d-md-block">
                         <div class="flip-container" data-flip-loop="true">

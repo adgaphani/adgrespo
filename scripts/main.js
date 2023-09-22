@@ -85,42 +85,45 @@ function bezier(p0, p1, p2, t) {
 }
 
 function animateSubmit() {
-    const form = document.getElementById("contact-form");
+    return new Promise(function(resolve) {
+        const form = document.getElementById("contact-form");
 
-    return html2canvas(form).then(function (canvas) {
-        const canvasContainer = document.createElement('div');
-        canvasContainer.style.position = 'absolute';
-        canvasContainer.style.top = '0';
-        canvasContainer.style.left = '0';
-        document.body.appendChild(canvasContainer);
+        html2canvas(form).then(function (canvas) {
+            const canvasContainer = document.createElement('div');
+            canvasContainer.style.position = 'absolute';
+            canvasContainer.style.top = '0';
+            canvasContainer.style.left = '0';
+            document.body.appendChild(canvasContainer);
 
-        canvasContainer.appendChild(canvas);
+            canvasContainer.appendChild(canvas);
 
-        // Overlay canvas on top of form
-        const rect = form.getBoundingClientRect();
-        canvas.style.position = 'fixed';
-        canvas.style.top = `${rect.top}px`;
-        canvas.style.left = `${rect.left}px`;
+            // Overlay canvas on top of form
+            const rect = form.getBoundingClientRect();
+            canvas.style.position = 'fixed';
+            canvas.style.top = `${rect.top}px`;
+            canvas.style.left = `${rect.left}px`;
 
-        // Animate shrinking and movement with Bezier curve
-        let progress = 0;  // From 0 to 1 for Bezier curve
-        window.animateOut = setInterval(function () {
-            progress += 0.020;
-            const scale = 1 - 0.95 * progress;  // Shrink from 100% to 5%
-            const positionX = bezier(0, 1, 4, progress) * canvas.width;
-            const positionY = bezier(0, -2, -2, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
-            canvas.style.transform = `scale(${scale}) translate(${positionX}px, ${positionY}px)`;
+            // Animate shrinking and movement with Bezier curve
+            let progress = 0;  // From 0 to 1 for Bezier curve
+            window.animateOut = setInterval(function () {
+                progress += 0.020;
+                const scale = 1 - 0.95 * progress;  // Shrink from 100% to 5%
+                const positionX = bezier(0, 1, 4, progress) * canvas.width;
+                const positionY = bezier(0, -2, -2, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
+                canvas.style.transform = `scale(${scale}) translate(${positionX}px, ${positionY}px)`;
 
-            // Fade out as it reaches the top right
-            if (progress >= 0.95) {
-                canvas.style.opacity = 1 - (progress - 0.95) * 30;
-            }
+                // Fade out as it reaches the top right
+                if (progress >= 0.95) {
+                    canvas.style.opacity = 1 - (progress - 0.95) * 30;
+                }
 
-            if (progress >= 1) {
-                clearInterval(window.animateOut);
-                document.body.removeChild(canvasContainer);
-            }
-        }, 20);
+                if (progress >= 1) {
+                    clearInterval(window.animateOut);
+                    document.body.removeChild(canvasContainer);
+                    resolve();
+                }
+            }, 20);
+        });
     });
 }
 
@@ -136,6 +139,11 @@ jQuery(function ($) {
             ? 'bg-success'
             : 'bg-danger';
 
+
+        const title = document.querySelector(".section.active h1");
+        const rect = title.getBoundingClientRect();
+        $result.css('top', `${rect.top + 20}px`);
+
         $resultText.text(message);
         $result.addClass(cssClass).show();
 
@@ -145,6 +153,7 @@ jQuery(function ($) {
     }
 
     function hideMessage() {
+
         $resultText.text('');
         $result.removeClass('bg-success bg-danger').hide();
     }
@@ -169,7 +178,6 @@ jQuery(function ($) {
                 animateSubmit(),
             ]).then(function (response) {
                 const token = response[0];
-                console.log(data.values());
                 data.append('g-recaptcha-response', token);
 
                 return fetch(event.target.action, {
@@ -179,7 +187,7 @@ jQuery(function ($) {
                         'Accept': 'application/json'
                     }
                 }).then(response => {
-                    $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", true);
+                    $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", false);
                     if (response.ok) {
                         showMessage(true);
                         form.reset();
@@ -190,7 +198,7 @@ jQuery(function ($) {
                     }
                 });
             }).catch((error) => {
-                $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", true);
+                $('#contact-form form input, #contact-form form textarea, #contact-form form button').prop("disabled", false);
                 showMessage(false, error);
             });
         });
