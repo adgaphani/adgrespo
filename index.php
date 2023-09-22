@@ -187,12 +187,13 @@
                             <form action="https://formspree.io/f/xgejzznn" method="POST">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                           required placeholder="Enter your name">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Your Email</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                           placeholder="Enter your email">
+                                           required placeholder="Enter your email">
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description</label>
