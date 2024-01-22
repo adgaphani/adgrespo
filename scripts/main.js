@@ -1,39 +1,54 @@
 jQuery(function ($) {
     const $menus = $('.menu li span');
 
+    // Object to track if a section has been visited
+    let sectionVisited = {};
 
     function animateFlip($section) {
+        const sectionId = $section.attr('id');
+        const isVisited = sectionVisited[sectionId];
+
         if (window.flipInterval) {
             clearInterval(window.flipInterval);
         }
 
         const $flipContainer = $section.find('.flip-container');
         const loop = $flipContainer.data('flip-loop') === true;
-        const $children = $flipContainer.find('> *');
+        const $children = $flipContainer.find('.flip-title');
 
-        let id = 0;
-        let count = $children.length;
+        if (isVisited) {
+            $children.hide();
+            $section.find('.flip-container > div').show();
+        } else {
+            let id = 0;
+            let count = $children.length;
 
-        function animateFlipShow() {
-            const $child = $($children[id]);
-            $children.stop().hide(0);
-            $child.stop().fadeIn(1300);
+            function animateFlipShow() {
+                const $child = $($children[id]);
+                $children.hide();
+                $child.fadeIn(1300);
 
-            if (!loop && id + 1 >= count) {
-                return false;
+                if (!loop && id + 1 >= count) {
+                    $child.delay(1800).fadeOut(1300, function() {
+                        $section.find('.flip-container > div').show();
+                    });
+                    return false;
+                }
+
+                $child.delay(1800).fadeOut(1300);
+                id = (id + 1) % count;
             }
 
-            $($child).delay(1800).fadeOut(1300);
-            id = (id + 1) % count;
+            $children.hide();
+            animateFlipShow();
+            window.flipInterval = setInterval(function () {
+                if (animateFlipShow() === false) {
+                    clearInterval(window.flipInterval);
+                }
+            }, 1300 + 1800 + 1300);
         }
 
-        $children.stop().hide();
-        animateFlipShow();
-        window.flipInterval = setInterval(function () {
-            if (animateFlipShow() === false) {
-                return clearInterval(window.flipInterval);
-            }
-        }, 1300 + 1800 + 1300);
+        sectionVisited[sectionId] = true;
     }
 
     function updateActive(sectionName = null) {
@@ -61,7 +76,6 @@ jQuery(function ($) {
         $(li).addClass('active');
     }
 
-
     $menus.on('click touchstart', function (e) {
         e.preventDefault();
         const url = $(e.target).data('href');
@@ -74,19 +88,16 @@ jQuery(function ($) {
         updateActive('#contact');
     });
 
-    // update on init
     updateActive();
 });
 
-
-// Quadratic Bezier curve function
 function bezier(p0, p1, p2, t) {
     return (1 - t) * (1 - t) * p0 + 2 * (1 - t) * t * p1 + t * t * p2;
 }
 
 function animateSubmit() {
-    return new Promise(function(resolve) {
-        if(window.innerWidth < 768) {
+    return new Promise(function (resolve) {
+        if (window.innerWidth < 768) {
             return resolve();
         }
 
@@ -101,22 +112,19 @@ function animateSubmit() {
 
             canvasContainer.appendChild(canvas);
 
-            // Overlay canvas on top of form
             const rect = form.getBoundingClientRect();
             canvas.style.position = 'fixed';
             canvas.style.top = `${rect.top}px`;
             canvas.style.left = `${rect.left}px`;
 
-            // Animate shrinking and movement with Bezier curve
-            let progress = 0;  // From 0 to 1 for Bezier curve
+            let progress = 0;
             window.animateOut = setInterval(function () {
                 progress += 0.020;
-                const scale = 1 - 0.95 * progress;  // Shrink from 100% to 5%
+                const scale = 1 - 0.95 * progress;
                 const positionX = bezier(0, 1, 4, progress) * canvas.width;
-                const positionY = bezier(0, -2, -2, progress) * canvas.height;  // Adjusted Bezier curve for a U-shape trajectory
+                const positionY = bezier(0, -2, -2, progress) * canvas.height;
                 canvas.style.transform = `scale(${scale}) translate(${positionX}px, ${positionY}px)`;
 
-                // Fade out as it reaches the top right
                 if (progress >= 0.95) {
                     canvas.style.opacity = 1 - (progress - 0.95) * 30;
                 }
@@ -143,7 +151,6 @@ jQuery(function ($) {
             ? 'bg-success'
             : 'bg-danger';
 
-
         const title = document.querySelector(".section.active h1");
         const rect = title.getBoundingClientRect();
         $result.css('top', `${rect.top + 20}px`);
@@ -157,7 +164,6 @@ jQuery(function ($) {
     }
 
     function hideMessage() {
-
         $resultText.text('');
         $result.removeClass('bg-success bg-danger').hide();
     }
@@ -165,7 +171,7 @@ jQuery(function ($) {
     $('#closeButton').on('click touchstart', function (e) {
         e.preventDefault();
         hideMessage();
-    })
+    });
 
     grecaptcha.ready(function () {
         $('#contact-form form').on('submit', function (event) {
@@ -180,8 +186,8 @@ jQuery(function ($) {
             Promise.all([
                 grecaptcha.execute('6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF', {action: 'submit'}),
                 animateSubmit(),
-            ]).then(function (response) {
-                const token = response[0];
+            ]).then(function (responses) {
+                const token = responses[0];
                 data.append('g-recaptcha-response', token);
 
                 return fetch(event.target.action, {
@@ -198,7 +204,7 @@ jQuery(function ($) {
                     } else {
                         response.json().then(data => {
                             showMessage(false, data);
-                        })
+                        });
                     }
                 });
             }).catch((error) => {
