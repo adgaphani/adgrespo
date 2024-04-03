@@ -1,0 +1,57 @@
+$header-height: 100px;
+$footer-height: 30px;
+
+$item-count: 7;
+$width: calc(100% / $item-count);
+$colors: rgba(217, 0, 25, 0.47),
+#3498db51,
+#9c59b63c,
+#e67d223c,
+#16a0843e,
+rgba(39, 169, 50, 0.32),
+rgba(232, 195, 74, 0.65);
+
+@mixin font($size) {
+    @if ($size == 'title') {
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 0.03rem;
+        -webkit-text-stroke: 1px #000;
+        text-decoration: none;
+        color: transparent;
+        background-clip: text;
+
+        &::selection {
+            color: transparent;
+            background: #aab8c4;
+        }
+
+        @media (max-width: 425px) {
+            font-size: 3rem;
+        }
+
+    } @else if ($size == 'sub-title') {
+        font-weight: 900;
+        font-size: 1.3rem;
+        letter-spacing: 0.03rem;
+        color: #474747;
+
+    } @else if ($size == 'bullet-animation') {
+        font-family: 'Dosis', sans-serif;
+        font-size: 3.9rem;
+        font-weight: 700;
+        color: #474747;
+
+        @media (max-width: 425px) {
+            font-size: 2.9rem;
+        }
+
+    } @else if ($size == 'text') {
+        font-weight: 400;
+        color: #242424;
+
+    } @else if ($size == 'action-button') {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

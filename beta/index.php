@@ -1,3 +1,4 @@
+<?php $base = '/beta' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Open+Sans:wght@400;900&display=swap"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="bundle/styles.bundle.css?time=<?php echo time() ?>">
+    <link rel="stylesheet" href="<?php echo $base ?>/bundle/styles.bundle.css?time=<?php echo time() ?>">
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF"></script>
     <style>
@@ -59,15 +60,16 @@
     <header>
         <div class="logo">
             <img src="images/logo.svg" alt="Logo" width="259" height="80">
-           
-     </div>
+        </div>
 
         <ul class="menu">
+            <li><span><a href="/index.html">Home</a></span></li>
             <li><span data-href="#about-us">About Us</span></li>
             <li><span data-href="#services">Services</span></li>
             <li><span data-href="#why-us">Why Us</span></li>
             <li><span data-href="#faq">FAQ</span></li>
             <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
+            <li><span><a href="/experience.html">Experience</a></span></li>
             <li class="slider"></li>
         </ul>
     </header>
