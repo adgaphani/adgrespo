@@ -15,6 +15,43 @@
     <link rel="stylesheet" href="bundle/styles.bundle.css?time=<?php echo time() ?>">
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF"></script>
+    <style>
+.button-3d {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    color: #ecf0f1;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: solid 1px #0b619a;
+    background: #16a085;
+    text-align: center;
+    padding: 16px 18px 14px;
+    margin: 12px;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+    -webkit-box-shadow: 0px 6px 0px #1abc9c;
+  -moz-box-shadow: 0px 6px 0px #1abc9c;
+  box-shadow: 0px 6px 0px #1abc9c;
+}
+
+.button-3d:active {
+    -webkit-box-shadow: 0px 2px 0px #1abc9c;
+    -moz-box-shadow: 0px 2px 0px #1abc9c;
+    box-shadow: 0px 2px 0px #1abc9c;
+    position: relative;
+    top: 4px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+        
+        
+    </style>
 </head>
 
 <body>
@@ -22,7 +59,8 @@
     <header>
         <div class="logo">
             <img src="images/logo.svg" alt="Logo" width="259" height="80">
-        </div>
+           
+     </div>
 
         <ul class="menu">
             <li><span data-href="#about-us">About Us</span></li>
