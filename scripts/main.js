@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    const $menus = $('.menu li span');
+    const $menus = $('.menu li span[data-href]');
 
     // Object to track if a section has been visited
     let sectionVisited = {};
@@ -54,7 +54,7 @@ jQuery(function ($) {
     function updateActive(sectionName = null) {
         const availableHashes = $menus
             .map(function (i, a) {
-                return $(a).data('href')
+                return $(a).data('href');
             })
             .toArray();
 

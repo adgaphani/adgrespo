@@ -1,9 +1,15 @@
 $header-height: 100px;
 $footer-height: 30px;
 
-$item-count: 5;
+$item-count: 7;
 $width: calc(100% / $item-count);
-$colors: #3498db51, #9c59b63c, #e67d223c, #16a0843e, rgba(39, 169, 50, 0.32);
+$colors: rgba(217, 0, 25, 0.47),
+#3498db51,
+#9c59b63c,
+#e67d223c,
+#16a0843e,
+rgba(39, 169, 50, 0.32),
+rgba(232, 195, 74, 0.65);
 
 @mixin font($size) {
     @if ($size == 'title') {
