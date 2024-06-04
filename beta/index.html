@@ -4,7 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <title>Welcome to Our Digital Frontier</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script>
+    function detectDeviceAndRedirect() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Check for mobile and tablet devices
+      if (/android|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|kindle|maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(userAgent) ||
+          /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a(3|6)0|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|ric)|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v|w)|bumb|bw\-n|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-m|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt(\-| )|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|o(2|ma)|p800|pan(a|d|t)|pdxg|pg(13|\-[1-8]|c(\-|\_))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc07|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(userAgent)) {
+        // Redirect to index.php if on mobile or tablet
+        window.location.href = '/index.php';
+      } else {
+        // Redirect to index.html if on desktop
+        window.location.href = '/index.html';
+      }
+    }
+
+    detectDeviceAndRedirect();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/23.1.1/tween.umd.js"></script>
   <style>
     body,
     html {
@@ -15,10 +32,15 @@
       background-color: black;
       color: white;
       font-family: "Victor Mono", monospace;
+      overflow: hidden !important;
     }
 
     #smiley {
       font-size: 54pt;
+    }
+
+    #userNameDisplay {
+      text-transform: uppercase;
     }
 
     input,
@@ -31,23 +53,16 @@
       background: none;
       background-image: none;
       border: 1px solid lightgreen;
-      /* Updated color reference without quotes */
       color: white;
-      /* Updated color reference without quotes */
       border-radius: 5px;
-      /* Rounded corners */
       transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
 
-      &:focus {
-        outline: 0;
-        border-color: rgba(15,
-            165,
-            60,
-            1);
-        /* Ensure the border color is visible on focus */
-        box-shadow: 0 0 0 2px rgba(15, 165, 60, 0.5);
-        /* Optional: Add a subtle box-shadow on focus */
-      }
+    input:focus,
+    textarea:focus {
+      outline: 0;
+      border-color: rgba(15, 165, 60, 1);
+      box-shadow: 0 0 0 2px rgba(15, 165, 60, 0.5);
     }
 
     #main-container {
@@ -62,185 +77,331 @@
       height: 80%;
       top: 20%;
       left: 10%;
-      z-index: 2;
+      z-index: 13;
     }
+
+    .note-part:first-child {
+      display: none;
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 240px;
+      left: 105px;
+      font-size: 24pt;
+      opacity: 0;
+      margin-top: 25px;
+  }
+  
+  .note-part:nth-child(2) { /* This targets the second child */
+      display: none;
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 340px;
+      left: 105px;
+      font-size: 24pt;
+      opacity: 0;
+      margin-top: 40px;
+  }
+  
+  .note-part:last-child {
+      display: none;
+      position: absolute;
+      width: 75%;
+      height: 80%;
+      top: 450px;
+      left: 105px;
+      font-size: 24pt;
+      opacity: 0;
+      margin-top: 50px;
+  }
+  
 
     .narrative-part {
       display: none;
       height: 50px;
       font-size: 24pt;
       opacity: 0;
-      margin: 35px;
+      margin-top: 35px;
     }
-    .narrative-part>p{
-        margin-top:75px;
-        line-height:2;
+
+    #narrative-one {
+      margin-top: 50px;
     }
+
+    #narrative-two {
+      margin-top: 30px;
+    }
+
 
     canvas {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 1;
-      opacity: 0.7;
+      z-index: 10;
     }
 
-    .button {
-      text-align: center;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-size: 20px;
-      letter-spacing: 4px;
-      position: relative;
-      background-color: #16a085;
-      border: none;
-      color: #fff;
-      padding: 20px;
-      width: 200px;
-      text-align: center;
-      transition-duration: 0.4s;
-      overflow: hidden;
-      box-shadow: 0 5px 15px #193047;
-      border-radius: 4px;
-      
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      pointer-events: none;
     }
 
-    .button:hover {
-      background: #fff;
-      box-shadow: 0px 2px 10px 5px #1abc9c;
-      color: #000;
-    }
-
-    .button:after {
-      content: "";
-      background: #1abc9c;
-      display: block;
-      position: absolute;
-      padding-top: 0%;
-      padding-left: 0%;
-      margin-left: -20px !important;
-      margin-top: -0%;
+    #preloader-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
       opacity: 0;
-      transition: all 0.8s;
+      z-index: 1;
+      transition: opacity 1s ease;
+      pointer-events: none;
     }
 
-    .button:active:after {
-      padding: 0;
-      margin: 0;
-      opacity: 1;
-      transition: 0s;
+    .cube {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCube 20s infinite linear;
+      display: block;
+      margin-bottom: 20px;
     }
 
-    .button:focus {
-      outline: 0;
+    .cube .face {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: transparent;
+      border: 2px solid aliceblue;
+      opacity: 0.8;
+      overflow: hidden;
     }
 
-    input {
-      font-size: 44pt;
-      padding: 10px;
+    .front {
+      transform: translateZ(75px);
     }
-    
-    @media (min-width: 1745px) {
-  .button {
-    display: inline-block;
-  }
 
-  .text-link {
-    display: none;
-  }
-}
+    .back {
+      transform: rotateY(180deg) translateZ(75px);
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(75px);
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(75px);
+    }
+
+    .top {
+      transform: rotateX(90deg) translateZ(75px);
+    }
+
+    .bottom {
+      transform: rotateX(-90deg) translateZ(75px);
+    }
+
+    .wave {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      transition: height 1s ease;
+    }
+
+    .wave::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      top: -50px;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      border-radius: 40%;
+      background: rgba(255, 255, 255, 0.8);
+      animation: wave 5s linear infinite;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+      }
+    }
+
+    @keyframes rotateCube {
+      from {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+
+      to {
+        transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
+
+    #extended-note {
+      position: absolute;
+      top: -20%;
+      left: 5%;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 24pt;
+      color: white;
+      z-index: 11;
+    }
+
+    .loading_text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    .loading_dots {
+      display: inline-block;
+      width: 300px;
+      text-align: center;
+      animation: loadingDots 1.5s infinite step-start;
+    }
+
+    @keyframes loadingDots {
+
+      0%,
+      20% {
+        content: ".";
+      }
+
+      40%,
+      60% {
+        content: "..";
+      }
+
+      80%,
+      100% {
+        content: "...";
+      }
+    }
+
+    #experience-iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 1s ease, z-index 0s ease 1s;
+    }
   </style>
 </head>
 
 <body>
-  <div id="main-container">
-    <canvas id="matrix-rain-canvas"></canvas>
-    <div id="narrative">
-      <!-- Initial narrative parts -->
-      <div class="narrative-part">
-        Welcome to APT! Your Behind-the-Scenes Coding Powerhouse.
+  <div id="personalized-welcome"></div>
+  <div id="preloader">
+    <div class="cube">
+      <div class="face front">
+        <div class="wave" style="background-color: #ff0000;"></div>
       </div>
+      <div class="face back">
+        <div class="wave" style="background-color: #00ff00;"></div>
+      </div>
+      <div class="face right">
+        <div class="wave" style="background-color: #0000ff;"></div>
+      </div>
+      <div class="face left">
+        <div class="wave" style="background-color: #ffff00;"></div>
+      </div>
+      <div class="face top">
+        <div class="wave" style="background-color: #ff00ff;"></div>
+      </div>
+      <div class="face bottom">
+        <div class="wave" style="background-color: #00ffff;"></div>
+      </div>
+    </div>
+    <p class="loading_text"><span class="loading_dots"></span></p>
+  </div>
+  <div id="preloader-background"></div>
+
+  <div id="extended-note">
+    <div class="note-part">
+      Thank you, <span id="userNameDisplay"></span>. Get ready to explore our world of innovation!
+    </div>
+    <div class="note-part">
+      We're about to take you on a journey to see our creative coding.
+    </div>
+    <div class="note-part">
+      Soon, you'll be able to engage with a dynamic cube—just a brief wait and you can explore its exciting features
+    </div>
+  </div>
+  <canvas id="matrix-rain-canvas"></canvas>
+  <div id="main-container">
+
+    <div id="narrative">
       <div class="narrative-part">
+        Welcome to Agency Programming Team(APT)!<br> Your Behind-the-Scenes Coding Powerhouse.
+      </div>
+      <div class="narrative-part" id="narrative-one">
         Embark on a journey tailored to your curiosity and professional
         interests.
       </div>
-      <div class="narrative-part">
+      <div class="narrative-part" id="narrative-two">
         Please enter your name (only 3 characters please)
-        <span id="smiley">&#9786;</span> you will thank us later!:
+        <span id="smiley">&#9786;</span> you will thank us later!
         <input type="text" id="userName" maxlength="3" />
-      </div>
-
-      <!-- Parts to be displayed after name entry -->
-      <div class="narrative-part" id="personalized-welcome">
-        Thank you, <span id="userNameDisplay"></span>. Please, choose how you
-        wish to delve into our world:
-      </div>
-      <div class="narrative-part" id="explore">
-       <p> <span class="button">Explore</span>
-         <span class="text-link" onclick="exploreLink()">Explore</span>our foundation, principles, and
-        the vision that drives us.</p>
-      </div>
-      <div class="narrative-part" id="experience">
-        <p><span class="button">Experience</span> 
-        <span class="text-link" onclick="experienceLink()">Experience</span>our expertise through
-        interactive demonstrations that highlight our innovative solutions.</p>
       </div>
     </div>
   </div>
+  <iframe id="experience-iframe" src="experience.html"></iframe>
   <script>
+    const mainContainer = document.getElementById("main-container");
     const canvas = document.getElementById("matrix-rain-canvas");
     const ctx = canvas.getContext("2d");
     let isNamed = false;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    document.addEventListener("DOMContentLoaded", function () {
-      // Select the 'Explore' button span directly within the '#explore' div
-      const exploreSpan = document.querySelector("#explore .button");
-      exploreSpan.addEventListener("click", function () {
-        fetch("index.php") // Make sure the path to 'index.php' is correct
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.text();
-          })
-          .then((html) => {
-            document.open();
-            document.write(html);
-            document.close();
-          })
-          .catch((error) => console.error("Failed to load page: ", error));
-      });
-    });
-    const experienceSpan = document.querySelector("#experience .button");
-    experienceSpan.addEventListener("click", function () {
-      fetch("experience.html") // Make sure the path to 'experience.html' is correct
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.text();
-        })
-        .then((html) => {
-          document.open();
-          document.write(html);
-          document.close();
-        })
-        .catch((error) => console.error("Failed to load page: ", error));
-    });
+    let charset = getCharset();
 
-    // Matrix rain effect initialization
-    let charset = "<A P T / >".split(""); // Initial charset assignment based on current localStorage
+    document.addEventListener('click', function (event) {
+      console.log('Clicked element:', event.target);
+      console.log('Clicked element ID:', event.target.id);
+      console.log('Clicked element classes:', event.target.className);
+    }, true);
+
+    function animateLoadingDots() {
+      const dots = document.querySelector('.loading_dots');
+      let dotCount = 0;
+      setInterval(() => {
+        dotCount = (dotCount % 3) + 1;
+        dots.textContent = '.'.repeat(dotCount);
+      }, 500);
+    }
 
     function getCharset() {
       const storedName = localStorage.getItem("userName");
-      return isNamed && storedName
-        ? storedName.split("")
-        : "<A P T / >".split("");
+      return isNamed && storedName ? storedName.split("") : "<A P T / >".split("");
     }
 
     function updateCharset() {
-      charset = getCharset(); // Update charset from localStorage
+      charset = getCharset();
     }
 
     const columns = canvas.width / 20;
@@ -254,82 +415,178 @@
       ctx.font = "22px 'Victor Mono'";
       for (let i = 0; i < drops.length; i++) {
         const text = charset[Math.floor(Math.random() * charset.length)];
-        ctx.fillStyle = "#0F0";
+        ctx.fillStyle = "rgba(0, 255, 0, 0.5)";
         ctx.fillText(text, i * 20, drops[i] * 30);
-        if (drops[i] * 30 > canvas.height && Math.random() > 0.975)
-          drops[i] = 0;
+        if (drops[i] * 30 > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
       }
     }
+
     setInterval(drawMatrixRain, 50);
 
     window.onload = function () {
+      animateLoadingDots();
       const userNameInput = document.getElementById("userName");
       let narrativeParts = document.querySelectorAll(".narrative-part");
+      let noteParts = document.querySelectorAll(".note-part");
 
-      function fadeInElement(index, onCompleteCallback) {
-        narrativeParts[index].style.display = "block";
+      // Function to fade in elements
+      function fadeInElement(index, onCompleteCallback, elements) {
+        elements[index].style.display = "block";
         let tween = new TWEEN.Tween({ opacity: 0 })
-          .to({ opacity: 1 }, 1200)
+          .to({ opacity: 1 }, 600)
           .onUpdate(function (object) {
-            narrativeParts[index].style.opacity = object.opacity;
-          })
-          .onComplete(onCompleteCallback)
-          .start();
-      }
-
-      function fadeOutElement(index, onCompleteCallback) {
-        let tween = new TWEEN.Tween({ opacity: 1 })
-          .to({ opacity: 0 }, 200)
-          .onUpdate(function (object) {
-            narrativeParts[index].style.opacity = object.opacity;
+            elements[index].style.opacity = object.opacity;
           })
           .onComplete(function () {
-            narrativeParts[index].style.display = "none";
+            if (userNameInput) userNameInput.focus();
             if (onCompleteCallback) onCompleteCallback();
           })
           .start();
       }
 
-      // Initial display of the first three narrative parts
-      setTimeout(function () {
-        fadeInElement(0, () => fadeInElement(1, () => fadeInElement(2)));
-      }, 4000);
+      // Sequence the initial narrative parts
+      function sequenceNarrativeParts() {
+        fadeInElement(0, () => {
+          setTimeout(() => {
+            fadeInElement(1, () => {
+              setTimeout(() => {
+                fadeInElement(2, null, narrativeParts);
+              }, 500);
+            }, narrativeParts);
+          }, 500);
+        }, narrativeParts);
+      }
 
-      userNameInput.addEventListener("input", function () {
+      // Initialize narrative part animations
+      setTimeout(sequenceNarrativeParts, 1);
+
+      // Event listener for input change
+      userNameInput.addEventListener("input", function (event) {
         const userName = userNameInput.value;
-        isNamed = true;
-        localStorage.setItem("userName", userName);
         if (userName.length === 3) {
-          document.getElementById("userNameDisplay").textContent = userName;
-          // Reverse order of fading out and hiding the first three narrative parts
-          fadeOutElement(2, () =>
-            fadeOutElement(1, () =>
-              fadeOutElement(0, () => {
-                // After fading out and hiding the initial parts, start displaying the subsequent narrative parts
-                fadeInElement(3, () =>
-                  fadeInElement(4, () => fadeInElement(5))
-                );
-                // Adjust canvas opacity
-                new TWEEN.Tween({ opacity: 0.5 })
-                  .to({ opacity: 0.3 }, 2000)
-                  .onUpdate(function (object) {
-                    canvas.style.opacity = object.opacity;
-                  })
-                  .start();
+          setTimeout(() => { // Delay to allow users to see their input
+            localStorage.setItem("userName", userName.toUpperCase());
+            isNamed = true; 
+            document.getElementById("userNameDisplay").textContent = userName;
+            updateCharset();
+            new TWEEN.Tween({ opacity: 1 })
+              .to({ opacity: 0 }, 200)
+              .onUpdate(function (object) {
+                mainContainer.style.opacity = object.opacity;
               })
-            )
-          );
+              .onComplete(function () {
+                mainContainer.style.display = "none";
+                fadeInElement(0, () => {
+                  fadeInElement(1, startPreloader, noteParts);
+                }, noteParts);
+              })
+              .start();
+          }, 500); // 1-second delay before processing
         }
+      }
+      );
+
+      userNameInput.addEventListener("click", function (event) {
+        event.stopPropagation();
       });
 
       function animate(time) {
         requestAnimationFrame(animate);
         TWEEN.update(time);
       }
-      animate(); // Start the animation loop
+      animate();
     };
+
+    function startPreloader() {
+      const personalizedWelcome = document.getElementById("personalized-welcome");
+      const preloader = document.getElementById("preloader");
+      const preloaderBackground = document.getElementById("preloader-background");
+      const experienceIframe = document.getElementById("experience-iframe");
+      const extendedNote = document.getElementById("extended-note");
+      //grab noteparts
+      const narrative = document.getElementById("narrative");
+      const noteParts = document.querySelectorAll(".note-part");
+
+      // Initially hide elements that will be animated in
+      narrative.style.display = "none";
+      personalizedWelcome.style.display = "flex";
+      personalizedWelcome.style.opacity = 0;
+      extendedNote.style.display = "flex";
+      //note part display flex
+      noteParts.forEach(part => {
+        part.style.display = "block";
+        part.style.opacity = 0;
+      });
+
+      new TWEEN.Tween({ opacity: 0 })
+    .to({ opacity: 1 }, 1000)
+    .onUpdate(function (object) {
+      noteParts[0].style.opacity = object.opacity;  // Originally personalizedWelcome
+    })
+    .onComplete(function () {
+      new TWEEN.Tween({ opacity: 0 })
+        .to({ opacity: 1 }, 1000)
+        .onUpdate(function (object) {
+          noteParts[1].style.opacity = object.opacity;  // Originally noteParts[0]
+        })
+        .onComplete(function () {
+          new TWEEN.Tween({ opacity: 0 })
+            .to({ opacity: 1 }, 1000)
+            .onUpdate(function (object) {
+              noteParts[2].style.opacity = object.opacity;  // Originally noteParts[1]
+            })
+            .onComplete(function () {
+              // Delay the fade out to give users time to read
+              setTimeout(() => {
+                new TWEEN.Tween({ opacity: 1 })
+                  .to({ opacity: 0 }, 1000)
+                  .onUpdate(function (object) {
+                    noteParts[0].style.opacity = object.opacity;  // Originally personalizedWelcome
+                    noteParts[1].style.opacity = object.opacity;  // Originally noteParts[0]
+                    noteParts[2].style.opacity = object.opacity;  // Originally noteParts[1]
+                  })
+                  .onComplete(function () {
+                    noteParts.forEach(part => part.style.display = "none");  // Hide all note parts
+                    preloader.style.display = "flex";
+
+                    const waves = document.querySelectorAll('.wave');
+                    const loadingText = document.querySelector('.loading_text');
+                    let progress = 0;
+
+                    const interval = setInterval(() => {
+                      progress += 1;
+                      loadingText.innerHTML = `<span class="loading_dots" style="display: inline;">${progress}% loaded</span>`;
+                      waves.forEach(wave => {
+                        wave.style.height = progress + '%';
+                      });
+
+                      if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(function () {
+                          preloader.style.display = "none";
+                          preloaderBackground.style.opacity = 0;
+                          experienceIframe.style.opacity = 1;
+                          experienceIframe.style.zIndex = 10000;
+                          experienceIframe.src = "experience.html";
+                        }, 1000); // Delay hiding the preloader and showing the iframe by 1 second
+                      }
+                    }, 220);
+                  })
+                  .start();
+              }, 3000); // 3-second delay before starting the fade out
+            })
+            .start();
+        })
+        .start();
+    })
+    .start();
+
+    }
+
   </script>
+
+
 </body>
 
-</html> 
+</html>
