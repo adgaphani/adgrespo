@@ -64,12 +64,12 @@
 
         <ul class="menu">
             <li><span><a href="<?php echo $base ?>/index.html">Home</a></span></li>
+            <li><span><a href="<?php echo $base ?>/experience.html">Experience</a></span></li>
             <li><span data-href="#about-us">About Us</span></li>
             <li><span data-href="#services">Services</span></li>
             <li><span data-href="#why-us">Why Us</span></li>
             <li><span data-href="#faq">FAQ</span></li>
             <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
-            <li><span><a href="<?php echo $base ?>/experience.html">Experience</a></span></li>
             <li class="slider"></li>
         </ul>
     </header>
