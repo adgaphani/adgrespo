@@ -135,3 +135,37 @@ header {
         background-color: $color !important;
     }
 }
+
+/* mobile-L */
+@media (max-width: 425px) {
+//    $colors: rgba(0, 199, 217, 0.47),
+//    #3498db51,
+//    #9c59b63c,
+//    #e67d223c,
+//    #16a0843e,
+//    rgba(39, 169, 50, 0.32),
+//    // rgba(232, 195, 74, 0.65) // ignore demo color since hidden
+//;
+    $item-count: 6;
+    $width: calc(100% / $item-count);
+
+    #demo-link {
+        display: none;
+    }
+    .menu li, .menu .slider {
+        width: $width;
+    }
+
+    @for $i from 1 through $item-count {
+        $color: nth($colors, $i);
+        .menu li:nth-child(#{$i}).active ~ .slider {
+            left: $width * ($i - 1);
+            background-color: $color;
+        }
+
+        .menu li:nth-child(#{$i}):hover ~ .slider {
+            left: $width * ($i - 1) !important;
+            background-color: $color !important;
+        }
+    }
+}

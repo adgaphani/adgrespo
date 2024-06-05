@@ -13,45 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Open+Sans:wght@400;900&display=swap"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $base ?>/bundle/styles.bundle.css?time=<?php echo time() ?>">
+    <link rel="stylesheet" href="/bundle/styles.bundle.css?time=<?php echo time() ?>">
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF"></script>
     <style>
-.button-3d {
-    position: relative;
-    width: auto;
-    display: inline-block;
-    color: #ecf0f1;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 5px;
-    border: solid 1px #0b619a;
-    background: #16a085;
-    text-align: center;
-    padding: 16px 18px 14px;
-    margin: 12px;
-    -webkit-transition: all 0.1s;
-    -moz-transition: all 0.1s;
-    transition: all 0.1s;
-    -webkit-box-shadow: 0px 6px 0px #1abc9c;
-  -moz-box-shadow: 0px 6px 0px #1abc9c;
-  box-shadow: 0px 6px 0px #1abc9c;
-}
+        .button-3d {
+            position: relative;
+            width: auto;
+            display: inline-block;
+            color: #ecf0f1;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+            border: solid 1px #0b619a;
+            background: #16a085;
+            text-align: center;
+            padding: 16px 18px 14px;
+            margin: 12px;
+            -webkit-transition: all 0.1s;
+            -moz-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-box-shadow: 0px 6px 0px #1abc9c;
+          -moz-box-shadow: 0px 6px 0px #1abc9c;
+          box-shadow: 0px 6px 0px #1abc9c;
+        }
 
-.button-3d:active {
-    -webkit-box-shadow: 0px 2px 0px #1abc9c;
-    -moz-box-shadow: 0px 2px 0px #1abc9c;
-    box-shadow: 0px 2px 0px #1abc9c;
-    position: relative;
-    top: 4px;
-}
+        .button-3d:active {
+            -webkit-box-shadow: 0px 2px 0px #1abc9c;
+            -moz-box-shadow: 0px 2px 0px #1abc9c;
+            box-shadow: 0px 2px 0px #1abc9c;
+            position: relative;
+            top: 4px;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-        
-        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -69,7 +67,7 @@
             <li><span data-href="#why-us">Why Us</span></li>
             <li><span data-href="#faq">FAQ</span></li>
             <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
-            <li><span><a href="<?php echo $base ?>/experience.html">Demo</a></span></li>
+            <li id="demo-link"><span><a href="<?php echo $base ?>/experience.html">Demo</a></span></li>
             <li class="slider"></li>
         </ul>
     </header>
