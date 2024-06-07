@@ -263,7 +263,7 @@
     </div>
 
     <footer>
-        <p><b>Copyright</b>: © 2023 APT. All rights reserved</p>
+        <p><b>Copyright</b>: © <?php echo date("Y"); ?> APT. All rights reserved</p>
     </footer>
 </div>
 

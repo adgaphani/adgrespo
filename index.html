@@ -9,7 +9,7 @@
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
 
-    if (isMobile()) {
+    if (isMobile() || navigator.userAgent.indexOf('Android') !== -1) {
       window.location.href = "index.php";
     }
   </script>
