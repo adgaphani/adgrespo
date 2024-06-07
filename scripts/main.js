@@ -67,8 +67,9 @@ jQuery(function ($) {
         $('.section').not($section).removeClass('active');
         $section.addClass('active');
 
-        $section.find('.flip-container > *').stop().hide(0);
-        animateFlip($section);
+        // to remove bullet animation - to enable, uncomment bellow lines
+        // $section.find('.flip-container > *').stop().hide(0);
+        // animateFlip($section);
 
         const link = $(`.menu li span[data-href='${sectionName}']`);
         const li = link.parent('li');

@@ -71,7 +71,6 @@ header {
 
     li {
         float: left;
-        width: $width;
         height: 100%;
         margin: 0;
         padding: 0;
@@ -79,7 +78,6 @@ header {
         cursor: pointer;
 
         &.slider {
-            width: $width;
             height: 100%;
             position: absolute;
             left: 0;
@@ -123,20 +121,29 @@ header {
 
 }
 
-@for $i from 1 through $item-count {
-    $color: nth($colors, $i);
-    .menu li:nth-child(#{$i}).active ~ .slider {
-        left: $width * ($i - 1);
-        background-color: $color;
+/* mobile-L */
+@media (min-width: 577px) {
+    $item-count: 7;
+    $width: calc(100% / $item-count);
+
+    .menu li, .menu li.slider {
+        width: $width;
     }
 
-    .menu li:nth-child(#{$i}):hover ~ .slider {
-        left: $width * ($i - 1) !important;
-        background-color: $color !important;
+    @for $i from 1 through $item-count {
+        $color: nth($colors, $i);
+        .menu li:nth-child(#{$i}).active ~ .slider {
+            left: $width * ($i - 1);
+            background-color: $color;
+        }
+
+        .menu li:nth-child(#{$i}):hover ~ .slider {
+            left: $width * ($i - 1) !important;
+            background-color: $color !important;
+        }
     }
 }
 
-/* mobile-L */
 @media (max-width: 576px) {
     $item-count: 6;
     $width: calc(100% / $item-count);

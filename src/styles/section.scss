@@ -111,11 +111,19 @@
 
 }
 
+//.flip-container {
+//    > * {
+//        display: none;
+//    }
+//    > .active {
+//        display: initial;
+//    }
+//}
 .flip-container {
     > * {
         display: none;
     }
-    > .active {
+    > :last-child {
         display: initial;
     }
 }
