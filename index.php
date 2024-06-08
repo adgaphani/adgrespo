@@ -61,7 +61,7 @@
         </div>
 
         <ul class="menu">
-            <li><span><a href="<?php echo $base ?>/index.html">Home</a></span></li>
+            <li  id="home-link"><span><a href="<?php echo $base ?>/index.html">Home</a></span></li>
             <li><span data-href="#about-us">About Us</span></li>
             <li><span data-href="#services">Services</span></li>
             <li><span data-href="#why-us">Why Us</span></li>

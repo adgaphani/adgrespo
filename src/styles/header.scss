@@ -145,25 +145,25 @@ header {
 }
 
 @media (max-width: 576px) {
-    $item-count: 6;
+    $item-count: 5;
     $width: calc(100% / $item-count);
 
-    #demo-link {
+    #demo-link, #home-link {
         display: none;
     }
     .menu li, .menu li.slider {
         width: $width;
     }
 
-    @for $i from 1 through $item-count {
+    @for $i from 2 through 6 {
         $color: nth($colors, $i);
         .menu li:nth-child(#{$i}).active ~ .slider {
-            left: $width * ($i - 1);
+            left: $width * ($i - 2); // - 2 since home url is hidden
             background-color: $color;
         }
 
         .menu li:nth-child(#{$i}):hover ~ .slider {
-            left: $width * ($i - 1) !important;
+            left: $width * ($i - 2) !important; // - 2 since home url is hidden
             background-color: $color !important;
         }
     }
