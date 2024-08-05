@@ -89,7 +89,7 @@ jQuery(function ($) {
         updateActive('#contact');
     });
 
-    updateActive();
+    updateActive(window.location.hash || null);
 });
 
 function bezier(p0, p1, p2, t) {
