@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .14em;
+      }
+
+      .cls-2 {
+        font-size: 11.92px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+      }
+
+      .cls-2, .cls-5 {
+        fill: #e8c92f;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 10px;
+      }
+
+      .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        letter-spacing: 1.82em;
+      }
+
+      .cls-7 {
+        letter-spacing: .5em;
+      }
+
+      .cls-8 {
+        letter-spacing: .14em;
+      }
+
+      .cls-4 {
+        fill: #25265e;
+      }
+
+      .cls-9 {
+        letter-spacing: 1.63em;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-5" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
+  <text class="cls-3" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-8" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-8" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-8" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-1" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-8" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-8" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
+  <text class="cls-4" transform="translate(11.5 28.42)"><tspan x="0" y="0">GOAL:</tspan><tspan x="0" y="15">The rain drops function aims to create an interactive 3d animation using </tspan><tspan x="0" y="30">babylon.js. It features falling text particles that create ripple effects on a </tspan><tspan x="0" y="45">water surface, customizable based on the user&apos;s name stored in local </tspan><tspan x="0" y="60">storage.</tspan><tspan x="0" y="90">TeCHNOLOGY USED:</tspan><tspan x="0" y="105">WEBgl</tspan><tspan x="0" y="120">Real-time rendering</tspan><tspan x="0" y="135">Dynamic texture mapping</tspan><tspan x="0" y="150">Particle systems</tspan><tspan x="0" y="165">Alpha blending</tspan><tspan x="0" y="180">Collision detection</tspan><tspan x="0" y="195">Html5 canvas</tspan><tspan x="0" y="210">Javascript</tspan><tspan x="0" y="240">Roadblocks eNCOUNTERED:</tspan><tspan x="0" y="255">PERFORMANCE Optimization: ensuring smooth animation for numerous text </tspan><tspan x="0" y="270">particles and real-time ripple effects across devices.</tspan><tspan x="0" y="285">Text particle customization: dynamically generating textures and materials </tspan><tspan x="0" y="300">for each particle based on user input.</tspan><tspan x="0" y="315">Ripple effect simulation: simulating realistic ripple effects required careful </tspan><tspan x="0" y="330">manipulation of mesh properties.</tspan><tspan x="0" y="360">How we solved it:</tspan><tspan x="0" y="375">PERFORMANCE OPTIMIzation: used babylon.js&apos;s optimization techniques, such </tspan><tspan x="0" y="390">as frustum culling and lod rendering, and implemented object pooling for </tspan><tspan x="0" y="405">ripple meshes.</tspan><tspan x="0" y="420">Text particle customization: utilized babylon.js&apos;s dynamictexture class for </tspan><tspan x="0" y="435">generating custom textures and created individual materials for each </tspan><tspan x="0" y="450">particle.</tspan><tspan x="0" y="480">Outcome:</tspan><tspan x="0" y="495">The rain drops function delivers an immersive 3d animation with </tspan><tspan x="0" y="510">personalized text particles and realistic ripple effects. Performance </tspan><tspan x="0" y="525">optimizations ensure smooth rendering, and dynamic customization allows </tspan><tspan x="0" y="540">users to personalize the animation to their preferences.</tspan></text>
+  <text class="cls-2" transform="translate(11.4 425.17) scale(.99 1)"><tspan x="0" y="0" xml:space="preserve">JavaScript    CSS         HTML        Angular             PolymerJS</tspan><tspan class="cls-9" x="320.34" y="0">	</tspan><tspan x="0" y="17.88" xml:space="preserve">StencilJS     JQuery     Node.js     TypeScript        MongoDB</tspan><tspan x="0" y="35.76" xml:space="preserve">Express.js    React      ThreeJS</tspan><tspan class="cls-7" x="162.09" y="35.76">	</tspan><tspan x="171.66" y="35.76" xml:space="preserve">  BabylonJS</tspan><tspan class="cls-6" x="232.22" y="35.76">	</tspan><tspan x="257.49" y="35.76" xml:space="preserve">  WebGL</tspan></text>
+</svg>

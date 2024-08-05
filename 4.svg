@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #25265e;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        font-size: 10px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #e8c92f;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+      }
+
+      .cls-5 {
+        letter-spacing: .06em;
+      }
+
+      .cls-5, .cls-6 {
+        font-size: 59.11px;
+      }
+
+      .cls-7 {
+        fill: #75b161;
+        font-family: MSReferenceSansSerif, 'MS Reference Sans Serif';
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 14px;
+      }
+
+      .cls-6 {
+        letter-spacing: .06em;
+      }
+
+      .cls-4 {
+        fill: #74b160;
+      }
+
+      .cls-8 {
+        font-size: 72px;
+        letter-spacing: .06em;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="399.5 601.06 0 602.06 0 0 399.5 -1 399.5 601.06"/>
+  <text class="cls-3" transform="translate(11.5 211.37)"><tspan x="0" y="0">We understand that every project is unique, with </tspan><tspan x="0" y="15">varying levels of complexity and urgency. That&apos;s why </tspan><tspan x="0" y="30">we offer a flexible pricing structure designed to </tspan><tspan x="0" y="45">provide the best value for our clients while ensuring </tspan><tspan x="0" y="60">high-quality results. Our rates are competitively priced </tspan><tspan x="0" y="75">to reflect the expertise and effort required for </tspan><tspan x="0" y="90">different types of development work.</tspan></text>
+  <text class="cls-3" transform="translate(11.5 369.6)"><tspan x="0" y="0">By offering a tiered pricing approach, we ensure that </tspan><tspan x="0" y="15">you only pay for the level of expertise and time your </tspan><tspan x="0" y="30">project truly requires. Our commitment is to provide </tspan><tspan x="0" y="45">value-driven solutions that align with your budget and </tspan><tspan x="0" y="60">objectives, without compromising on quality or </tspan><tspan x="0" y="75">performance.</tspan><tspan x="0" y="105">Let&apos;s discuss how we can support your next project </tspan><tspan x="0" y="120">with our competitive and transparent pricing. Contact </tspan><tspan x="0" y="135">us today to get started!</tspan></text>
+  <text class="cls-7" transform="translate(111.96 154.78) scale(.99 1)"><tspan class="cls-5" x="0" y="0">PRI</tspan><tspan class="cls-8" x="112.26" y="0">¢</tspan><tspan class="cls-6" x="162.35" y="0">ING</tspan></text>
+  <text class="cls-4" transform="translate(12.5 324.18) scale(.99 1)"><tspan x="0" y="0">JUNIOR DEVELOPMENT WORK- $55/HR.</tspan><tspan x="0" y="17.88">STANDARD DEVELOPMENT WORK- $75/HR.</tspan></text>
+  <text class="cls-2" transform="translate(189.5 595.43)"><tspan x="0" y="0">Copyright: © 2024 APT. All rights reserved</tspan></text>
+</svg>

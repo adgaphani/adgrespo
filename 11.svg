@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 398.5 603.06">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .14em;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+        font-size: 10px;
+      }
+
+      .cls-4 {
+        fill: #e8c92f;
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        letter-spacing: .14em;
+      }
+
+      .cls-3 {
+        fill: #25265e;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-4" points="398.5 602.06 0 603.06 0 1 398.5 0 398.5 602.06"/>
+  <text class="cls-2" transform="translate(189.5 595.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-5" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-5" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-5" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-1" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-5" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-5" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
+  <text class="cls-3" transform="translate(11.5 29.43)"><tspan x="0" y="0">GOAL:</tspan><tspan x="0" y="15">The Wavy Grid function aims to create an interactive 3D animation using </tspan><tspan x="0" y="30">Babylon.js. It features a grid of planes, each displaying a letter from the </tspan><tspan x="0" y="45">user&apos;s name, moving in a wave-like pattern with a glow effect for visual </tspan><tspan x="0" y="60">enhancement.</tspan><tspan x="0" y="90">TecHNOLOGY USED:</tspan><tspan x="0" y="105">WEBGL</tspan><tspan x="0" y="120">Real-Time Rendering</tspan><tspan x="0" y="135">Dynamic Texture Mapping</tspan><tspan x="0" y="150">Procedural Animation</tspan><tspan x="0" y="165">Alpha Blending</tspan><tspan x="0" y="180">HTML5 Canvas</tspan><tspan x="0" y="195">JavaScript</tspan><tspan x="0" y="210">Roadblocks ENCOUNTERED:</tspan><tspan x="0" y="240">DYNAMIC LETTer Texture Generation: Efficiently creating textures for each </tspan><tspan x="0" y="255">letter plane based on the user&apos;s name.</tspan><tspan x="0" y="270">Glow Effect Implementation: Achieving a performance-friendly and visually </tspan><tspan x="0" y="285">appealing glow effect.</tspan><tspan x="0" y="300">Wave-Like Motion: Ensuring smooth, synchronized wave-like motion for the </tspan><tspan x="0" y="315">letter planes.</tspan><tspan x="0" y="345">How We Solved It:</tspan><tspan x="0" y="375">DYNAMIC LETTER TEXture Generation: Utilized Babylon.js&apos;s DynamicTexture </tspan><tspan x="0" y="390">class and a caching mechanism for efficient texture management.</tspan><tspan x="0" y="405">Glow Effect Implementation: Used Babylon.js&apos;s GlowLayer feature with </tspan><tspan x="0" y="420">fine-tuned parameters.</tspan><tspan x="0" y="435">Wave-Like Motion: Applied custom animation loops with trigonometric </tspan><tspan x="0" y="450">functions for precise displacement and rotation.</tspan><tspan x="0" y="465">Outcome:</tspan><tspan x="0" y="480">The Wavy Grid function delivers an engaging 3D animation with personalized </tspan><tspan x="0" y="495">letters moving in a wave pattern. Efficient texture generation and caching </tspan><tspan x="0" y="510">ensure optimal performance, while the glow effect enhances visual appeal.</tspan></text>
+</svg>

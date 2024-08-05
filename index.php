@@ -10,11 +10,17 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Open+Sans:wght@400;900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Open+Sans:wght@400;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/bundle/styles.bundle.css?time=<?php echo time() ?>">
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8LY6DFG8K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J8LY6DFG8K');
+    </script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF"></script>
     <style>
         .button-3d {
@@ -30,17 +36,11 @@
             text-align: center;
             padding: 16px 18px 14px;
             margin: 12px;
-            -webkit-transition: all 0.1s;
-            -moz-transition: all 0.1s;
             transition: all 0.1s;
-            -webkit-box-shadow: 0px 6px 0px #1abc9c;
-          -moz-box-shadow: 0px 6px 0px #1abc9c;
-          box-shadow: 0px 6px 0px #1abc9c;
+            box-shadow: 0px 6px 0px #1abc9c;
         }
 
         .button-3d:active {
-            -webkit-box-shadow: 0px 2px 0px #1abc9c;
-            -moz-box-shadow: 0px 2px 0px #1abc9c;
             box-shadow: 0px 2px 0px #1abc9c;
             position: relative;
             top: 4px;
@@ -61,13 +61,13 @@
         </div>
 
         <ul class="menu">
-            <li  id="home-link"><span><a href="<?php echo $base ?>/index.html">Home</a></span></li>
+            <li id="home-link"><span><a href="/index.html">Home</a></span></li>
             <li><span data-href="#about-us">About Us</span></li>
             <li><span data-href="#services">Services</span></li>
             <li><span data-href="#why-us">Why Us</span></li>
             <li><span data-href="#faq">FAQ</span></li>
             <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
-            <li id="demo-link"><span><a href="<?php echo $base ?>/experience.html">Demo</a></span></li>
+            <li id="demo-link"><span><a href="/experience.html">Demo</a></span></li>
             <li class="slider"></li>
         </ul>
     </header>
@@ -225,18 +225,15 @@
                             <form action="https://formspree.io/f/xgejzznn" method="POST">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
-                                    <input type="text" class="form-control" id="name" name="name"
-                                           required placeholder="Enter your name">
+                                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Your Email</label>
-                                    <input type="email" class="form-control" id="email" name="email"
-                                           required placeholder="Enter your email">
+                                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description</label>
-                                    <textarea class="form-control" id="description" name="description" rows="4"
-                                              placeholder="Enter your message"></textarea>
+                                    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter your message"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
@@ -270,16 +267,88 @@
 <div id="particles-js"></div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
 <script src="scripts/particles.min.js" defer></script>
 <script src="scripts/part.js" defer></script>
 <script src="scripts/main.js?time=<?php echo time() ?>" defer></script>
-</body>
+<script>
+$(document).ready(function() {
+    let turnCount = 0; // Keep track of the number of next turns
+    const totalPages = $("#flipbook").turn("pages");
+    $("#flipbook").turn({
+        width: 800,
+        height: 600,
+        autoCenter: true,
+        display: 'double',
+        pages: 10, // Number of pages
+        page: 1, // Start with the first page open
+        when: {
+            turning: function(event, page, view) {
+                // Hide the left icon if on the first page
+                if (page === 1) {
+                    $('.flip-icon.left').css('opacity', '0');
+                } else {
+                    $('.flip-icon.left').css('opacity', '1');
+                }
+                // Hide the right icon if on the last page
+                if (page >= totalPages) {
+                    $('.flip-icon.right').css('opacity', '0');
+                } else {
+                    $('.flip-icon.right').css('opacity', '1');
+                }
+            },
+            turned: function(event, page, view) {
+                // Initially hide the left icon if on the first page
+                if (page === 1) {
+                    $('.flip-icon.left').css('opacity', '0');
+                } else {
+                    $('.flip-icon.left').css('opacity', '1');
+                }
+                // Initially hide the right icon if on the last page
+                if (page >= totalPages) {
+                    $('.flip-icon.right').css('opacity', '0');
+                } else {
+                    $('.flip-icon.right').css('opacity', '1');
+                }
+            }
+        }
+    });
+    $('.flip-icon.left').click(function() {
+        $('#flipbook').turn('previous');
+        turnCount--;
+        updateIcons();
+    });
+    $('.flip-icon.right').click(function() {
+        $('#flipbook').turn('next');
+        turnCount++;
+        updateIcons();
+    });
+    function updateIcons() {
+        if (turnCount > 0) {
+            $('.flip-icon.left').css('opacity', '1');
+        } else {
+            $('.flip-icon.left').css('opacity', '0');
+        }
+        if (turnCount < (totalPages / 2) - 3) {
+            $('.flip-icon.right').css('opacity', '1');
+        } else {
+            $('.flip-icon.right').css('opacity', '0');
+        }
+    }
 
+    // Check URL parameter to show contact form
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
+
+    if (urlParams.has('showContact')) {
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top
+        }, 1000);
+        $('#contact').addClass('active-section');
+    }
+});
+</script>
+</body>
 </html>

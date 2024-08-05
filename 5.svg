@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #25265e;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        letter-spacing: .14em;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+      }
+
+      .cls-4, .cls-5, .cls-2 {
+        fill: #e8c92f;
+      }
+
+      .cls-4, .cls-6 {
+        font-size: 10px;
+      }
+
+      .cls-8 {
+        font-family: MSReferenceSansSerif, 'MS Reference Sans Serif';
+        font-size: 12px;
+        letter-spacing: .06em;
+      }
+
+      .cls-8, .cls-6 {
+        fill: #231f20;
+      }
+
+      .cls-5, .cls-7 {
+        font-size: 14px;
+      }
+
+      .cls-7 {
+        fill: #74b160;
+      }
+
+      .cls-9 {
+        letter-spacing: .14em;
+      }
+    </style>
+  </defs>
+  <text class="cls-7" transform="translate(-419.5 324.18) scale(.99 1)"><tspan x="0" y="0">JUNIOR DEVELOPMENT WORK- $55/HR.</tspan><tspan x="0" y="17.88">STANDARD DEVELOPMENT WORK- $75/HR.</tspan></text>
+  <polygon class="cls-2" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
+  <text class="cls-6" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-9" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-9" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-9" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-3" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-9" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-9" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
+  <path class="cls-1" d="M-1.94,22.63l548.86-281.53V-72.28S80.86,159.57,80.86,159.57v2.37s466.06,231.85,466.06,231.85v442.62S-1.94,554.87-1.94,554.87V22.63Z"/>
+  <text></text>
+  <text class="cls-8" transform="translate(123.97 164.67) scale(.99 1)"><tspan x="0" y="0">HOW WE WORK</tspan></text>
+  <text class="cls-5" transform="translate(11.03 209.08)"><tspan x="0" y="0">Our goal is to work </tspan><tspan x="0" y="15">with your team, not </tspan><tspan x="0" y="30" xml:space="preserve">replace them.  We have two </tspan><tspan x="0" y="45">primary client models. Our </tspan><tspan x="0" y="60">preferred model is to work as an </tspan><tspan x="0" y="75">embedded member of your team. You </tspan><tspan x="0" y="90">would share access to projects along with </tspan><tspan x="0" y="105">instructions, and we can serve as a daily </tspan><tspan x="0" y="120">release valve. Even if you just need 5 hours of </tspan><tspan x="0" y="135">support to get a project out the door, we would </tspan><tspan x="0" y="150" xml:space="preserve">love to help.  Our second model is the traditional </tspan><tspan x="0" y="165">model- you share project scope and content, we </tspan><tspan x="0" y="180">provide a firm fixed fee SOW based on effort </tspan><tspan x="0" y="195">required.</tspan></text>
+  <text class="cls-4" transform="translate(189.5 595.43)"><tspan x="0" y="0">Copyright: © 2024 APT. All rights reserved</tspan></text>
+</svg>

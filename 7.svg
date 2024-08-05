@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .14em;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+        font-size: 10px;
+      }
+
+      .cls-4 {
+        fill: #e8c92f;
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        letter-spacing: .14em;
+      }
+
+      .cls-3 {
+        fill: #25265e;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-4" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
+  <text class="cls-2" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-5" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-5" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-5" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-1" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-5" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-5" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
+  <text class="cls-3" transform="translate(11.5 28.42)"><tspan x="0" y="0">GOAL:</tspan><tspan x="0" y="15">The Matrix Inspired Background Animation aims to create an immersive </tspan><tspan x="0" y="30">background effect that mimics the iconic &quot;falling code&quot; from the Matrix </tspan><tspan x="0" y="45">movie. This animation enhances user experience by adding a dynamic visual </tspan><tspan x="0" y="60">element to the web page.</tspan><tspan x="0" y="90">TecHNOLOGY USED:</tspan><tspan x="0" y="105">WEBGL</tspan><tspan x="0" y="120">Real-Time Rendering</tspan><tspan x="0" y="135">Dynamic Texture Mapping</tspan><tspan x="0" y="150">Procedural Animation</tspan><tspan x="0" y="165">Particle Systems</tspan><tspan x="0" y="180">Alpha Blending</tspan><tspan x="0" y="195">HTML5 Canvas</tspan><tspan x="0" y="210">JavaScript</tspan><tspan x="0" y="240">Roadblocks EnCOUNTERED:</tspan><tspan x="0" y="255">PERFORMANCE OPtimization: Ensuring smooth performance for numerous </tspan><tspan x="0" y="270">falling characters, especially on high-resolution displays.</tspan><tspan x="0" y="285">Dynamic Character Generation: Efficiently generating random characters to </tspan><tspan x="0" y="300">achieve a realistic Matrix-like effect.</tspan><tspan x="0" y="315">Customization and Flexibility: Allowing user customization of falling </tspan><tspan x="0" y="330">characters required a flexible approach.</tspan><tspan x="0" y="360">How We Solved It:</tspan><tspan x="0" y="375">PERFORMANCE OPTIMIZation: Used time-based animation and </tspan><tspan x="0" y="390">requestAnimationFrame method. Pre-allocated an array for falling </tspan><tspan x="0" y="405">characters to reduce object creation overhead.</tspan><tspan x="0" y="420">Dynamic Character Generation: Developed a getCharset function for </tspan><tspan x="0" y="435">dynamic character set generation with a random selection mechanism.</tspan><tspan x="0" y="450">Customization and Flexibility: Implemented customization options for user </tspan><tspan x="0" y="465">input and a caching mechanism for character sets.</tspan><tspan x="0" y="480">OUTCOME:</tspan><tspan x="0" y="495">The Matrix EffECT CREATes a captivating and dynamic background, enhancing </tspan><tspan x="0" y="510">user engagement. Performance optimizations ensure smooth rendering </tspan><tspan x="0" y="525">across devices and browsers, while dynamic character generation allows for </tspan><tspan x="0" y="540">easy personalization.</tspan></text>
+</svg>

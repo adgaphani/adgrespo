@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #25265e;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        letter-spacing: .06em;
+      }
+
+      .cls-5 {
+        letter-spacing: .06em;
+      }
+
+      .cls-6 {
+        letter-spacing: .14em;
+      }
+
+      .cls-7, .cls-8 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+        font-size: 10px;
+      }
+
+      .cls-7, .cls-3 {
+        fill: #e8c92f;
+      }
+
+      .cls-9 {
+        letter-spacing: .03em;
+      }
+
+      .cls-10 {
+        letter-spacing: .05em;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-11 {
+        fill: #f9d642;
+        font-family: SourceSansRoman-Regular, 'Source Sans Variable';
+        font-size: 14px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-12 {
+        font-family: MSReferenceSansSerif, 'MS Reference Sans Serif';
+        font-size: 12px;
+      }
+
+      .cls-12, .cls-8 {
+        fill: #231f20;
+      }
+
+      .cls-13 {
+        letter-spacing: .06em;
+      }
+
+      .cls-14 {
+        letter-spacing: .14em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
+  <text class="cls-8" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-14" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-14" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-14" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-6" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-14" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-14" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
+  <text/>
+  <text class="cls-12" transform="translate(123.97 157.67) scale(.99 1)"><tspan class="cls-13"><tspan x="0" y="0">OUR CORE STRENGTH: </tspan></tspan><tspan class="cls-4" x="0" y="14.4">J</tspan><tspan class="cls-9" x="6.12" y="14.4">AV</tspan><tspan class="cls-4" x="23.26" y="14.4">A</tspan><tspan class="cls-13" x="32.12" y="14.4">SCRIPT AND BE</tspan><tspan class="cls-10" x="136.77" y="14.4">Y</tspan><tspan class="cls-5" x="144.75" y="14.4">OND</tspan></text>
+  <polygon class="cls-1" points="80.86 159.57 399.08 -.7 39.35 -.7 -1.94 22.63 -1.94 554.87 134.96 602.06 402.92 602.06 402.92 326.78 80.86 161.94 80.86 159.57"/>
+  <text class="cls-11" transform="translate(8.38 305.11) scale(1.17 1)"><tspan x="0" y="0">At the heart of our development expertise lies </tspan><tspan x="0" y="15">JavaScript. As a dynamic and versatile programming </tspan><tspan x="0" y="30">language, JavaScript serves as the foundation for </tspan><tspan x="0" y="45">many of today&apos;s web technologies. Our team not only </tspan><tspan x="0" y="60">excels in JavaScript but also specializes in an array of </tspan><tspan x="0" y="75">related technologies that enhance and expand its </tspan><tspan x="0" y="90">capabilities. </tspan><tspan x="0" y="114">We pride ourselves on our deep knowledge and </tspan><tspan x="0" y="129">practical experience with the following technologies:</tspan></text>
+  <rect class="cls-2" x="8.38" y="475.99" width="391.68" height="82.79"/>
+  <text class="cls-11" transform="translate(8.46 495.29) scale(1.17 1)"><tspan class="cls-15" x="0" y="0">JavaScrip</tspan><tspan x="58.01" y="0">t</tspan></text>
+  <text class="cls-11" transform="translate(93.97 495.29) scale(1.17 1)"><tspan x="0" y="0">CSS</tspan></text>
+  <text class="cls-11" transform="translate(168.73 496.32) scale(1.17 1)"><tspan x="0" y="0">HTML</tspan></text>
+  <text class="cls-11" transform="translate(244.12 496.32) scale(1.17 1)"><tspan x="0" y="0">Angular</tspan></text>
+  <text class="cls-11" transform="translate(321.71 496.32) scale(1.17 1)"><tspan x="0" y="0">Polymer</tspan></text>
+  <text class="cls-11" transform="translate(245.46 518.55) scale(1.17 1)"><tspan x="0" y="0">Stencil</tspan></text>
+  <text class="cls-11" transform="translate(92.97 519.55) scale(1.17 1)"><tspan x="0" y="0">JQuery</tspan></text>
+  <text class="cls-11" transform="translate(167.53 519.59) scale(1.17 1)"><tspan x="0" y="0">NodeJS</tspan></text>
+  <text class="cls-11" transform="translate(9.12 520.59) scale(1.17 1)"><tspan x="0" y="0">TypeScript</tspan></text>
+  <text class="cls-11" transform="translate(321.71 519.59) scale(1.17 1)"><tspan x="0" y="0">MongoDB</tspan></text>
+  <text class="cls-11" transform="translate(8.46 551.14) scale(1.17 1)"><tspan x="0" y="0">ExpressJS</tspan></text>
+  <text class="cls-11" transform="translate(93.97 551.14) scale(1.17 1)"><tspan x="0" y="0">React</tspan></text>
+  <text class="cls-11" transform="translate(167.53 552.18) scale(1.17 1)"><tspan x="0" y="0">ThreeJS</tspan></text>
+  <text class="cls-11" transform="translate(242.12 552.18) scale(1.17 1)"><tspan x="0" y="0">Babylon</tspan></text>
+  <text class="cls-11" transform="translate(321.71 552.18) scale(1.17 1)"><tspan x="0" y="0">WebGL</tspan></text>
+  <text class="cls-7" transform="translate(189.5 595.43)"><tspan x="0" y="0">Copyright: © 2024 APT. All rights reserved</tspan></text>
+</svg>

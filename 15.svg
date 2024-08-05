@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .14em;
+      }
+
+      .cls-2 {
+        fill: #25265e;
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+        font-size: 10px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+      }
+
+      .cls-5 {
+        font-family: TrebuchetMS-Bold, 'Trebuchet MS';
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        fill: #e8c92f;
+        stroke-width: 0px;
+      }
+
+      .cls-7 {
+        letter-spacing: .14em;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-6" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
+  <text class="cls-3" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-7" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-7" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-7" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-1" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-7" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-7" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
+  <text class="cls-2" transform="translate(11.5 40.02)"><tspan class="cls-5"><tspan x="0" y="0">PROJECT: TRANSFORMING ENTERPRISE TRAINING (GE)</tspan></tspan><tspan class="cls-5" x="0" y="22">ClIENT&apos;S REQUIREMENT:</tspan><tspan class="cls-4" x="119.03" y="22" xml:space="preserve"> GE needed a training solution for new </tspan><tspan class="cls-4"><tspan x="0" y="37">employees that wouldn&apos;t impact the live database or disrupt </tspan></tspan><tspan class="cls-4"><tspan x="0" y="52">existing applications.</tspan></tspan><tspan class="cls-5" x="0" y="67">SolUTION: </tspan><tspan class="cls-4" x="56.48" y="67">WE developed simulated web apps that mimicked the </tspan><tspan class="cls-4"><tspan x="0" y="82">enterprise apps&apos; functionality using Flash SW (ActionScript 3.0) </tspan></tspan><tspan class="cls-4"><tspan x="0" y="97">for localized feedback, without connecting to the live </tspan></tspan><tspan class="cls-4"><tspan x="0" y="112">database.</tspan></tspan><tspan class="cls-5" x="0" y="127">OutcOME: </tspan><tspan class="cls-4" x="56.5" y="127">NEW hires were effectively trained before accessing </tspan><tspan class="cls-4"><tspan x="0" y="142">live applications, reducing training time and ensuring a smooth </tspan></tspan><tspan class="cls-4"><tspan x="0" y="157">onboarding process.</tspan></tspan><tspan class="cls-5"><tspan x="0" y="217">ProjecT: REAL-TIME HEART DATA VISUALIZATION </tspan></tspan><tspan class="cls-5"><tspan x="0" y="232">(MEDTRONIC - MINNEAPOLIS, MN)</tspan></tspan><tspan class="cls-5" x="0" y="252">CLIENT&apos;S REQUIREMENT: </tspan><tspan class="cls-4" x="122.64" y="252">MEDTRONIC required live heart data </tspan><tspan class="cls-4"><tspan x="0" y="267">visualization for medical tech applications, managing high data </tspan></tspan><tspan class="cls-4"><tspan x="0" y="282">loads while maintaining browser performance.</tspan></tspan><tspan class="cls-5" x="0" y="297">Solution: </tspan><tspan class="cls-4" x="56.48" y="297">WE DESIGNED a system interfacing with a C# backend </tspan><tspan class="cls-4"><tspan x="0" y="312">using WebSockets to receive live data and used JavaScript </tspan></tspan><tspan class="cls-4"><tspan x="0" y="327">Workers for background data processing.</tspan></tspan><tspan class="cls-5" x="0" y="342">Outcome: </tspan><tspan class="cls-4" x="56.5" y="342">MedTRONIC SUccessfully visualized live heart data, </tspan><tspan class="cls-4"><tspan x="0" y="357">enhancing monitoring and analysis of critical medical </tspan></tspan><tspan class="cls-4"><tspan x="0" y="372">information.</tspan></tspan><tspan class="cls-5"><tspan x="0" y="402">project: geogrAPHIC DATA MAPPING (CBRE - DALLAS, TX)</tspan></tspan><tspan class="cls-5" x="0" y="421">CLIENT&apos;S REQUIReMENT: </tspan><tspan class="cls-4" x="122.64" y="421">CBRE NEEDED TO Visualize and interact </tspan><tspan class="cls-4"><tspan x="0" y="436">with global real estate data.</tspan></tspan><tspan class="cls-5" x="0" y="451">Solution: </tspan><tspan class="cls-4" x="56.48" y="451">IntegraTED GRAPHQl with angular and go, developed </tspan><tspan class="cls-4"><tspan x="0" y="466">financial dashboard.</tspan></tspan><tspan class="cls-5" x="0" y="481">Outcome: </tspan><tspan class="cls-4" x="56.5" y="481">Efficient MAPPING and visualization of real estate </tspan><tspan class="cls-4"><tspan x="0" y="496">data, improving analysis capabilities.</tspan></tspan></text>
+</svg>

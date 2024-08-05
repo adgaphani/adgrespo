@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title>Welcome to Our Digital Frontier</title>
-  <script>
-    function isMobile() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-
-    if (isMobile() || navigator.userAgent.indexOf('Android') !== -1) {
-      window.location.href = "index.php";
-    }
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/23.1.1/tween.umd.js"></script>
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8LY6DFG8K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J8LY6DFG8K');
+    </script>
   <style>
-    body,
-    html {
+    body, html {
       margin: 0;
       padding: 0;
       width: 100%;
@@ -36,8 +32,7 @@
       text-transform: uppercase;
     }
 
-    input,
-    textarea {
+    input, textarea {
       font-size: 22px;
       display: block;
       width: 100%;
@@ -51,8 +46,7 @@
       transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    input:focus,
-    textarea:focus {
+    input:focus, textarea:focus {
       outline: 0;
       border-color: rgba(15, 165, 60, 1);
       box-shadow: 0 0 0 2px rgba(15, 165, 60, 0.5);
@@ -73,41 +67,18 @@
       z-index: 13;
     }
 
-    .note-part:first-child {
+    .note-part {
       display: none;
       position: absolute;
       width: 80%;
       height: 80%;
-      top: 240px;
-      left: 105px;
       font-size: 24pt;
       opacity: 0;
-      margin-top: 25px;
     }
 
-    .note-part:nth-child(2) {
-      display: none;
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      top: 340px;
-      left: 105px;
-      font-size: 24pt;
-      opacity: 0;
-      margin-top: 40px;
-    }
-
-    .note-part:last-child {
-      display: none;
-      position: absolute;
-      width: 75%;
-      height: 80%;
-      top: 450px;
-      left: 105px;
-      font-size: 24pt;
-      opacity: 0;
-      margin-top: 50px;
-    }
+    .note-part:nth-child(1) { top: 240px; left: 105px; }
+    .note-part:nth-child(2) { top: 340px; left: 105px; }
+    .note-part:nth-child(3) { top: 450px; left: 105px; }
 
     .narrative-part {
       display: none;
@@ -117,13 +88,8 @@
       margin-top: 35px;
     }
 
-    #narrative-one {
-      margin-top: 50px;
-    }
-
-    #narrative-two {
-      margin-top: 30px;
-    }
+    #narrative-one { margin-top: 50px; }
+    #narrative-two { margin-top: 30px; }
 
     canvas {
       position: fixed;
@@ -143,20 +109,6 @@
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      pointer-events: none;
-    }
-
-    #preloader-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      opacity: 0;
-      z-index: 1;
-      transition: opacity 1s ease;
-      pointer-events: none;
     }
 
     .cube {
@@ -164,7 +116,6 @@
       height: 150px;
       position: relative;
       transform-style: preserve-3d;
-      animation: rotateCube 20s infinite linear;
       display: block;
       margin-bottom: 20px;
     }
@@ -179,29 +130,12 @@
       overflow: hidden;
     }
 
-    .front {
-      transform: translateZ(75px);
-    }
-
-    .back {
-      transform: rotateY(180deg) translateZ(75px);
-    }
-
-    .right {
-      transform: rotateY(90deg) translateZ(75px);
-    }
-
-    .left {
-      transform: rotateY(-90deg) translateZ(75px);
-    }
-
-    .top {
-      transform: rotateX(90deg) translateZ(75px);
-    }
-
-    .bottom {
-      transform: rotateX(-90deg) translateZ(75px);
-    }
+    .front { transform: translateZ(75px); }
+    .back { transform: rotateY(180deg) translateZ(75px); }
+    .right { transform: rotateY(90deg) translateZ(75px); }
+    .left { transform: rotateY(-90deg) translateZ(75px); }
+    .top { transform: rotateX(90deg) translateZ(75px); }
+    .bottom { transform: rotateX(-90deg) translateZ(75px); }
 
     .wave {
       position: absolute;
@@ -225,23 +159,13 @@
     }
 
     @keyframes wave {
-      0% {
-        transform: translate(-50%, -75%) rotate(0deg);
-      }
-
-      100% {
-        transform: translate(-50%, -75%) rotate(360deg);
-      }
+      0% { transform: translate(-50%, -75%) rotate(0deg); }
+      100% { transform: translate(-50%, -75%) rotate(360deg); }
     }
 
     @keyframes rotateCube {
-      from {
-        transform: rotateX(0deg) rotateY(0deg);
-      }
-
-      to {
-        transform: rotateX(360deg) rotateY(360deg);
-      }
+      from { transform: rotateX(0deg) rotateY(0deg); }
+      to { transform: rotateX(360deg) rotateY(360deg); }
     }
 
     #extended-note {
@@ -275,21 +199,9 @@
     }
 
     @keyframes loadingDots {
-
-      0%,
-      20% {
-        content: ".";
-      }
-
-      40%,
-      60% {
-        content: "..";
-      }
-
-      80%,
-      100% {
-        content: "...";
-      }
+      0%, 20% { content: "."; }
+      40%, 60% { content: ".."; }
+      80%, 100% { content: "..."; }
     }
 
     #experience-iframe {
@@ -303,143 +215,53 @@
       transition: opacity 1s ease, z-index 0s ease 1s;
     }
   </style>
-</head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY170WT4VN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-EY170WT4VN');
+</script>
+</head>
 <body>
   <div id="personalized-welcome"></div>
   <div id="preloader">
-    <div class="cube">
-      <div class="face front">
-        <div class="wave" style="background-color: #ff0000;"></div>
-      </div>
-      <div class="face back">
-        <div class="wave" style="background-color: #00ff00;"></div>
-      </div>
-      <div class="face right">
-        <div class="wave" style="background-color: #0000ff;"></div>
-      </div>
-      <div class="face left">
-        <div class="wave" style="background-color: #ffff00;"></div>
-      </div>
-      <div class="face top">
-        <div class="wave" style="background-color: #ff00ff;"></div>
-      </div>
-      <div class="face bottom">
-        <div class="wave" style="background-color: #00ffff;"></div>
-      </div>
+    <div class="cube" id="animated-cube">
+      <div class="face front"><div class="wave" style="background-color: #ff0000;"></div></div>
+      <div class="face back"><div class="wave" style="background-color: #00ff00;"></div></div>
+      <div class="face right"><div class="wave" style="background-color: #0000ff;"></div></div>
+      <div class="face left"><div class="wave" style="background-color: #ffff00;"></div></div>
+      <div class="face top"><div class="wave" style="background-color: #ff00ff;"></div></div>
+      <div class="face bottom"><div class="wave" style="background-color: #00ffff;"></div></div>
     </div>
     <p class="loading_text"><span class="loading_dots"></span></p>
   </div>
   <div id="preloader-background"></div>
-
   <div id="extended-note">
-    <div class="note-part">
-      Thank you, <span id="userNameDisplay"></span>. Get ready to explore our world of innovation!
-    </div>
-    <div class="note-part">
-      We're about to take you on a journey to see our creative coding.
-    </div>
-    <div class="note-part">
-      Soon, you'll be able to engage with a dynamic cube—just a brief wait and you can explore its exciting features
-    </div>
+    <div class="note-part">Thank you, <span id="userNameDisplay"></span>. Get ready to explore our world of innovation!</div>
+    <div class="note-part">We're about to take you on a journey to see our creative coding.</div>
+    <div class="note-part">Soon, you'll be able to engage with a dynamic cube—just a brief wait and you can explore its exciting features</div>
   </div>
   <canvas id="matrix-rain-canvas"></canvas>
   <div id="main-container">
-
     <div id="narrative">
-      <div class="narrative-part">
-        Welcome to Agency Programming Team(APT)!<br> Your Behind-the-Scenes Coding Powerhouse.
-      </div>
-      <div class="narrative-part" id="narrative-one">
-        Embark on a journey tailored to your curiosity and professional
-        interests.
-      </div>
-      <div class="narrative-part" id="narrative-two">
-        Please enter your name (only 3 characters please)
-        <span id="smiley">&#9786;</span> you will thank us later!
+      <div class="narrative-part">Welcome to Agency Programming Team(APT)!<br> Your Behind-the-Scenes Coding Powerhouse.</div>
+      <div class="narrative-part" id="narrative-one">Embark on a journey tailored to your curiosity and professional interests.</div>
+      <div class="narrative-part" id="narrative-two">Please enter your name (only 3 characters please) <span id="smiley">&#9786;</span> you will thank us later!
         <input type="text" id="userName" maxlength="3" />
       </div>
     </div>
   </div>
-  <iframe id="experience-iframe" src="experience.html"></iframe>
+  <iframe id="experience-iframe" src="about:blank"></iframe>
   <script>
-    window.onload = function() {
-      animateLoadingDots();
-      const userNameInput = document.getElementById("userName");
-      let narrativeParts = document.querySelectorAll(".narrative-part");
-      let noteParts = document.querySelectorAll(".note-part");
-
-      // Function to fade in elements
-      function fadeInElement(index, onCompleteCallback, elements) {
-        elements[index].style.display = "block";
-        let tween = new TWEEN.Tween({ opacity: 0 })
-          .to({ opacity: 1 }, 600)
-          .onUpdate(function (object) {
-            elements[index].style.opacity = object.opacity;
-          })
-          .onComplete(function () {
-            if (userNameInput) userNameInput.focus();
-            if (onCompleteCallback) onCompleteCallback();
-          })
-          .start();
-      }
-
-      // Sequence the initial narrative parts
-      function sequenceNarrativeParts() {
-        fadeInElement(0, () => {
-          setTimeout(() => {
-            fadeInElement(1, () => {
-              setTimeout(() => {
-                fadeInElement(2, null, narrativeParts);
-              }, 500);
-            }, narrativeParts);
-          }, 500);
-        }, narrativeParts);
-      }
-
-      // Initialize narrative part animations
-      setTimeout(sequenceNarrativeParts, 1);
-
-      // Event listener for input change
-      userNameInput.addEventListener("input", function (event) {
-        const userName = userNameInput.value;
-        if (userName.length === 3) {
-          setTimeout(() => { // Delay to allow users to see their input
-            localStorage.setItem("userName", userName.toUpperCase());
-            isNamed = true; 
-            document.getElementById("userNameDisplay").textContent = userName;
-            updateCharset();
-            new TWEEN.Tween({ opacity: 1 })
-              .to({ opacity: 0 }, 200)
-              .onUpdate(function (object) {
-                mainContainer.style.opacity = object.opacity;
-              })
-              .onComplete(function () {
-                mainContainer.style.display = "none";
-                fadeInElement(0, () => {
-                  fadeInElement(1, startPreloader, noteParts);
-                }, noteParts);
-              })
-              .start();
-          }, 500); // 1-second delay before processing
-        }
-      });
-
-      userNameInput.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
-
-      function animate(time) {
-        requestAnimationFrame(animate);
-        TWEEN.update(time);
-      }
-      animate();
-    };
-
     const mainContainer = document.getElementById("main-container");
     const canvas = document.getElementById("matrix-rain-canvas");
     const ctx = canvas.getContext("2d");
     let isNamed = false;
+    let experienceContent = null;
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     let charset = getCharset();
@@ -488,87 +310,163 @@
 
     setInterval(drawMatrixRain, 50);
 
+    async function preloadExperience() {
+      const response = await fetch('experience.html');
+      experienceContent = await response.text();
+    }
+
+    window.onload = function () {
+      animateLoadingDots();
+      preloadExperience();
+      const userNameInput = document.getElementById("userName");
+      let narrativeParts = document.querySelectorAll(".narrative-part");
+      let noteParts = document.querySelectorAll(".note-part");
+
+      function fadeInElement(index, onCompleteCallback, elements) {
+        elements[index].style.display = "block";
+        let tween = new TWEEN.Tween({ opacity: 0 })
+          .to({ opacity: 1 }, 600)
+          .onUpdate(function (object) {
+            elements[index].style.opacity = object.opacity;
+          })
+          .onComplete(function () {
+            if (userNameInput) userNameInput.focus();
+            if (onCompleteCallback) onCompleteCallback();
+          })
+          .start();
+      }
+
+      function sequenceNarrativeParts() {
+        fadeInElement(0, () => {
+          setTimeout(() => {
+            fadeInElement(1, () => {
+              setTimeout(() => {
+                fadeInElement(2, null, narrativeParts);
+              }, 500);
+            }, narrativeParts);
+          }, 500);
+        }, narrativeParts);
+      }
+
+      setTimeout(sequenceNarrativeParts, 1);
+
+      userNameInput.addEventListener("input", function (event) {
+        const userName = userNameInput.value;
+        if (userName.length === 3) {
+          setTimeout(() => {
+            localStorage.setItem("userName", userName.toUpperCase());
+            isNamed = true;
+            document.getElementById("userNameDisplay").textContent = userName;
+            updateCharset();
+            new TWEEN.Tween({ opacity: 1 })
+              .to({ opacity: 0 }, 200)
+              .onUpdate(function (object) {
+                mainContainer.style.opacity = object.opacity;
+              })
+              .onComplete(function () {
+                mainContainer.style.display = "none";
+                fadeInElement(0, () => {
+                  fadeInElement(1, startPreloader, noteParts);
+                }, noteParts);
+              })
+              .start();
+          }, 500);
+        }
+      });
+
+      userNameInput.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+      }
+      animate();
+    };
+
     function startPreloader() {
       const personalizedWelcome = document.getElementById("personalized-welcome");
       const preloader = document.getElementById("preloader");
       const preloaderBackground = document.getElementById("preloader-background");
       const experienceIframe = document.getElementById("experience-iframe");
       const extendedNote = document.getElementById("extended-note");
-      const narrative = document.getElementById("narrative");
       const noteParts = document.querySelectorAll(".note-part");
+
+      document.getElementById("animated-cube").style.animation = "rotateCube 20s infinite linear";
 
       narrative.style.display = "none";
       personalizedWelcome.style.display = "flex";
       personalizedWelcome.style.opacity = 0;
       extendedNote.style.display = "flex";
+
       noteParts.forEach(part => {
         part.style.display = "block";
         part.style.opacity = 0;
       });
 
       new TWEEN.Tween({ opacity: 0 })
+    .to({ opacity: 1 }, 1000)
+    .onUpdate(function (object) {
+      noteParts[0].style.opacity = object.opacity;
+    })
+    .onComplete(function () {
+      new TWEEN.Tween({ opacity: 0 })
         .to({ opacity: 1 }, 1000)
         .onUpdate(function (object) {
-          noteParts[0].style.opacity = object.opacity;
+          noteParts[1].style.opacity = object.opacity;
         })
         .onComplete(function () {
           new TWEEN.Tween({ opacity: 0 })
             .to({ opacity: 1 }, 1000)
             .onUpdate(function (object) {
-              noteParts[1].style.opacity = object.opacity;
+              noteParts[2].style.opacity = object.opacity;
             })
             .onComplete(function () {
-              new TWEEN.Tween({ opacity: 0 })
-                .to({ opacity: 1 }, 1000)
-                .onUpdate(function (object) {
-                  noteParts[2].style.opacity = object.opacity;
-                })
-                .onComplete(function () {
-                  setTimeout(() => {
-                    new TWEEN.Tween({ opacity: 1 })
-                      .to({ opacity: 0 }, 1000)
-                      .onUpdate(function (object) {
-                        noteParts[0].style.opacity = object.opacity;
-                        noteParts[1].style.opacity = object.opacity;
-                        noteParts[2].style.opacity = object.opacity;
-                      })
-                      .onComplete(function () {
-                        noteParts.forEach(part => part.style.display = "none");
-                        preloader.style.display = "flex";
+              setTimeout(() => {
+                new TWEEN.Tween({ opacity: 1 })
+                  .to({ opacity: 0 }, 1000)
+                  .onUpdate(function (object) {
+                    noteParts[0].style.opacity = object.opacity;
+                    noteParts[1].style.opacity = object.opacity;
+                    noteParts[2].style.opacity = object.opacity;
+                  })
+                  .onComplete(function () {
+                    noteParts.forEach(part => part.style.display = "none");
+                    preloader.style.display = "flex";
 
-                        const waves = document.querySelectorAll('.wave');
-                        const loadingText = document.querySelector('.loading_text');
-                        let progress = 0;
+                    const waves = document.querySelectorAll('.wave');
+                    const loadingText = document.querySelector('.loading_text');
+                    let progress = 0;
 
-                        const interval = setInterval(() => {
-                          progress += 1;
-                          loadingText.innerHTML = `<span class="loading_dots" style="display: inline;">${progress}% loaded</span>`;
-                          waves.forEach(wave => {
-                            wave.style.height = progress + '%';
-                          });
+                    const interval = setInterval(() => {
+                      progress += 1;
+                      loadingText.innerHTML = `<span class="loading_dots" style="display: inline;">${progress}% loaded</span>`;
+                      waves.forEach(wave => {
+                        wave.style.height = progress + '%';
+                      });
 
-                          if (progress >= 100) {
-                            clearInterval(interval);
-                            setTimeout(function () {
-                              preloader.style.display = "none";
-                              preloaderBackground.style.opacity = 0;
-                              experienceIframe.style.opacity = 1;
-                              experienceIframe.style.zIndex = 10000;
-                              experienceIframe.src = "experience.html";
-                            }, 1000);
-                          }
-                        }, 220);
-                      })
-                      .start();
-                  }, 3000);
-                })
-                .start();
+                      if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(function () {
+                          preloader.style.display = "none";
+                          preloaderBackground.style.opacity = 0;
+                          experienceIframe.style.opacity = 1;
+                          experienceIframe.style.zIndex = 10000;
+                          experienceIframe.srcdoc = experienceContent;
+                        }, 1000);
+                      }
+                    }, 50); // Reduced interval for faster loading
+                  })
+                  .start();
+              }, 3000);
             })
             .start();
         })
         .start();
+    })
+    .start();
     }
   </script>
 </body>
-
 </html>
