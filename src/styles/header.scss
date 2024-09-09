@@ -123,7 +123,6 @@ header {
 
 /* mobile-L */
 @media (min-width: 577px) {
-    $item-count: 7;
     $width: calc(100% / $item-count);
 
     .menu li, .menu li.slider {
