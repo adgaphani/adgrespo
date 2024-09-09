@@ -356,19 +356,7 @@
         >
           Home
         </button>
-        <button
-          id="exploreButton"
-          class="button"
-          style="
-            position: absolute;
-            top: 20px;
-            left: 250px;
-            z-index: 10;
-            user-select: none;
-          "
-        >
-          About Us
-        </button>
+       
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
         <script type="importmap">
@@ -631,12 +619,12 @@
               toast.style.display = "none";
             };
           }
-          document.addEventListener("DOMContentLoaded", function () {
+        /*  document.addEventListener("DOMContentLoaded", function () {
             const exploreButton = document.getElementById("exploreButton"); // Make sure you have an element with id 'exploreButton'
             exploreButton.addEventListener("click", function () {
               window.location.href = "index.php"; // Redirect to 'index.php'
             });
-          });
+          });*/
           document.addEventListener("DOMContentLoaded", function () {
             const homeButton = document.getElementById("homeButton"); // The 'homeButton' element as you add it to your HTML
             homeButton.addEventListener("click", function () {

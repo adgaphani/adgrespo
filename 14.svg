@@ -18,7 +18,7 @@
 
       .cls-4 {
         fill: #75b161;
-        font-family: MSReferenceSansSerif, 'MS Reference Sans Serif';
+        font-family: Verdana, Verdana;
       }
 
       .cls-5 {

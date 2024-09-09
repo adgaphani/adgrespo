@@ -3,96 +3,239 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #25265e;
+        letter-spacing: -.09em;
       }
 
-      .cls-1, .cls-2, .cls-3 {
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        font-size: 12px;
+      }
+
+      .cls-7, .cls-8 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-7, .cls-9 {
+        font-size: 18px;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.17em;
+      }
+
+      .cls-2 {
+        letter-spacing: .06em;
+      }
+
+      .cls-2, .cls-3, .cls-14, .cls-15, .cls-4, .cls-16, .cls-5, .cls-17, .cls-18 {
+        isolation: isolate;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        font-family: MSReferenceSansSerif, 'MS Reference Sans Serif';
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-17, .cls-18 {
+        fill: #231f20;
+      }
+
+      .cls-19, .cls-20, .cls-21 {
         stroke-width: 0px;
+      }
+
+      .cls-19, .cls-16, .cls-22 {
+        fill: #e7c92b;
+      }
+
+      .cls-23 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-24 {
+        letter-spacing: .03em;
+      }
+
+      .cls-25 {
+        letter-spacing: 0em;
+      }
+
+      .cls-20 {
+        fill: none;
+      }
+
+      .cls-15 {
+        fill: #f9d642;
+        font-size: 14px;
+      }
+
+      .cls-15, .cls-22 {
+        font-family: Verdana, Verdana;
       }
 
       .cls-4 {
         letter-spacing: .06em;
       }
 
-      .cls-5 {
-        letter-spacing: .06em;
+      .cls-26 {
+        letter-spacing: -.03em;
       }
 
-      .cls-6 {
-        letter-spacing: .14em;
-      }
-
-      .cls-7, .cls-8 {
+      .cls-16, .cls-17, .cls-18 {
         font-family: TrebuchetMS, 'Trebuchet MS';
         font-size: 10px;
       }
 
-      .cls-7, .cls-3 {
-        fill: #e8c92f;
+      .cls-27 {
+        letter-spacing: 0em;
       }
 
-      .cls-9 {
-        letter-spacing: .03em;
+      .cls-28 {
+        letter-spacing: 0em;
       }
 
-      .cls-10 {
+      .cls-29 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-30 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-31 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-21 {
+        fill: #25285e;
+      }
+
+      .cls-5 {
         letter-spacing: .05em;
       }
 
-      .cls-2 {
-        fill: none;
+      .cls-32 {
+        letter-spacing: -.1em;
       }
 
-      .cls-11 {
-        fill: #f9d642;
-        font-family: SourceSansRoman-Regular, 'Source Sans Variable';
-        font-size: 14px;
-        font-variation-settings: 'wght' 400;
+      .cls-33 {
+        letter-spacing: -.02em;
       }
 
-      .cls-12 {
-        font-family: MSReferenceSansSerif, 'MS Reference Sans Serif';
-        font-size: 12px;
+      .cls-34 {
+        letter-spacing: 0em;
       }
 
-      .cls-12, .cls-8 {
-        fill: #231f20;
+      .cls-35 {
+        letter-spacing: -.01em;
       }
 
-      .cls-13 {
-        letter-spacing: .06em;
+      .cls-36 {
+        letter-spacing: 0em;
       }
 
-      .cls-14 {
+      .cls-18 {
         letter-spacing: .14em;
       }
 
-      .cls-15 {
+      .cls-37 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+
+      .cls-39 {
         letter-spacing: 0em;
       }
     </style>
   </defs>
-  <polygon class="cls-3" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
-  <text class="cls-8" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan><tspan class="cls-14" x="46.71" y="0"> </tspan><tspan x="51.13" y="0">©</tspan><tspan class="cls-14" x="58.26" y="0"> </tspan><tspan x="62.69" y="0">2024</tspan><tspan class="cls-14" x="83.66" y="0"> </tspan><tspan x="88.09" y="0">APT.</tspan><tspan class="cls-6" x="109.04" y="0"> </tspan><tspan x="113.47" y="0">All</tspan><tspan class="cls-14" x="125.26" y="0"> </tspan><tspan x="129.69" y="0">rights</tspan><tspan class="cls-14" x="154.92" y="0"> </tspan><tspan x="159.35" y="0">reserved</tspan></text>
-  <text/>
-  <text class="cls-12" transform="translate(123.97 157.67) scale(.99 1)"><tspan class="cls-13"><tspan x="0" y="0">OUR CORE STRENGTH: </tspan></tspan><tspan class="cls-4" x="0" y="14.4">J</tspan><tspan class="cls-9" x="6.12" y="14.4">AV</tspan><tspan class="cls-4" x="23.26" y="14.4">A</tspan><tspan class="cls-13" x="32.12" y="14.4">SCRIPT AND BE</tspan><tspan class="cls-10" x="136.77" y="14.4">Y</tspan><tspan class="cls-5" x="144.75" y="14.4">OND</tspan></text>
-  <polygon class="cls-1" points="80.86 159.57 399.08 -.7 39.35 -.7 -1.94 22.63 -1.94 554.87 134.96 602.06 402.92 602.06 402.92 326.78 80.86 161.94 80.86 159.57"/>
-  <text class="cls-11" transform="translate(8.38 305.11) scale(1.17 1)"><tspan x="0" y="0">At the heart of our development expertise lies </tspan><tspan x="0" y="15">JavaScript. As a dynamic and versatile programming </tspan><tspan x="0" y="30">language, JavaScript serves as the foundation for </tspan><tspan x="0" y="45">many of today&apos;s web technologies. Our team not only </tspan><tspan x="0" y="60">excels in JavaScript but also specializes in an array of </tspan><tspan x="0" y="75">related technologies that enhance and expand its </tspan><tspan x="0" y="90">capabilities. </tspan><tspan x="0" y="114">We pride ourselves on our deep knowledge and </tspan><tspan x="0" y="129">practical experience with the following technologies:</tspan></text>
-  <rect class="cls-2" x="8.38" y="475.99" width="391.68" height="82.79"/>
-  <text class="cls-11" transform="translate(8.46 495.29) scale(1.17 1)"><tspan class="cls-15" x="0" y="0">JavaScrip</tspan><tspan x="58.01" y="0">t</tspan></text>
-  <text class="cls-11" transform="translate(93.97 495.29) scale(1.17 1)"><tspan x="0" y="0">CSS</tspan></text>
-  <text class="cls-11" transform="translate(168.73 496.32) scale(1.17 1)"><tspan x="0" y="0">HTML</tspan></text>
-  <text class="cls-11" transform="translate(244.12 496.32) scale(1.17 1)"><tspan x="0" y="0">Angular</tspan></text>
-  <text class="cls-11" transform="translate(321.71 496.32) scale(1.17 1)"><tspan x="0" y="0">Polymer</tspan></text>
-  <text class="cls-11" transform="translate(245.46 518.55) scale(1.17 1)"><tspan x="0" y="0">Stencil</tspan></text>
-  <text class="cls-11" transform="translate(92.97 519.55) scale(1.17 1)"><tspan x="0" y="0">JQuery</tspan></text>
-  <text class="cls-11" transform="translate(167.53 519.59) scale(1.17 1)"><tspan x="0" y="0">NodeJS</tspan></text>
-  <text class="cls-11" transform="translate(9.12 520.59) scale(1.17 1)"><tspan x="0" y="0">TypeScript</tspan></text>
-  <text class="cls-11" transform="translate(321.71 519.59) scale(1.17 1)"><tspan x="0" y="0">MongoDB</tspan></text>
-  <text class="cls-11" transform="translate(8.46 551.14) scale(1.17 1)"><tspan x="0" y="0">ExpressJS</tspan></text>
-  <text class="cls-11" transform="translate(93.97 551.14) scale(1.17 1)"><tspan x="0" y="0">React</tspan></text>
-  <text class="cls-11" transform="translate(167.53 552.18) scale(1.17 1)"><tspan x="0" y="0">ThreeJS</tspan></text>
-  <text class="cls-11" transform="translate(242.12 552.18) scale(1.17 1)"><tspan x="0" y="0">Babylon</tspan></text>
-  <text class="cls-11" transform="translate(321.71 552.18) scale(1.17 1)"><tspan x="0" y="0">WebGL</tspan></text>
-  <text class="cls-7" transform="translate(189.5 595.43)"><tspan x="0" y="0">Copyright: © 2024 APT. All rights reserved</tspan></text>
+  <polygon class="cls-19" points="398.5 601.06 0 602.06 0 0 398.5 -1 398.5 601.06"/>
+  <g class="cls-14">
+    <text class="cls-17" transform="translate(189.5 594.43)"><tspan x="0" y="0">Copyright:</tspan></text>
+    <text class="cls-18" transform="translate(236.21 594.43)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-17" transform="translate(240.63 594.43)"><tspan x="0" y="0">©</tspan></text>
+    <text class="cls-18" transform="translate(247.76 594.43)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-17" transform="translate(252.19 594.43)"><tspan x="0" y="0">2024</tspan></text>
+    <text class="cls-18" transform="translate(273.16 594.43)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-17" transform="translate(277.59 594.43)"><tspan x="0" y="0">AP</tspan><tspan class="cls-13" x="11.47" y="0">T</tspan><tspan x="15.62" y="0">.</tspan></text>
+    <text class="cls-18" transform="translate(298.54 594.43)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-17" transform="translate(302.97 594.43)"><tspan x="0" y="0">All</tspan></text>
+    <text class="cls-18" transform="translate(314.76 594.43)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-17" transform="translate(319.19 594.43)"><tspan x="0" y="0">rights</tspan></text>
+    <text class="cls-18" transform="translate(344.42 594.43)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-17" transform="translate(348.85 594.43)"><tspan x="0" y="0">reserved</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-4" transform="translate(123.97 157.67)"><tspan x="0" y="0">OUR CORE STRENGTH: </tspan></text>
+    <text class="cls-2" transform="translate(123.97 172.07)"><tspan x="0" y="0">J</tspan></text>
+    <text class="cls-3" transform="translate(130.03 172.07)"><tspan class="cls-38" x="0" y="0">A</tspan><tspan class="cls-24" x="8.2" y="0">V</tspan></text>
+    <text class="cls-4" transform="translate(147 172.07)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-4" transform="translate(155.77 172.07)"><tspan x="0" y="0">SCRIPT AND BE</tspan></text>
+    <text class="cls-5" transform="translate(259.37 172.07)"><tspan x="0" y="0">Y</tspan></text>
+    <text class="cls-4" transform="translate(267.27 172.07)"><tspan x="0" y="0">OND</tspan></text>
+  </g>
+  <polygon class="cls-21" points="80.86 159.57 399.08 -.7 39.35 -.7 -1.94 22.63 -1.94 554.87 134.96 602.06 402.92 602.06 402.92 326.78 80.86 161.94 80.86 159.57"/>
+  <rect class="cls-20" x="8.38" y="475.99" width="391.68" height="82.79"/>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(8.46 476.29) scale(1.17 1)"><tspan x="0" y="0">J</tspan><tspan class="cls-34" x="6.36" y="0">a</tspan><tspan class="cls-30" x="14.66" y="0">v</tspan><tspan class="cls-11" x="22.67" y="0">aScrip</tspan></text>
+    <text class="cls-15" transform="translate(76.33 476.29) scale(1.17 1)"><tspan x="0" y="0">t</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(93.97 476.29) scale(1.17 1)"><tspan x="0" y="0">C</tspan><tspan class="cls-35" x="9.78" y="0">S</tspan><tspan x="19.2" y="0">S</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(168.73 477.32) scale(1.17 1)"><tspan x="0" y="0">HTML</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(244.12 477.32) scale(1.17 1)"><tspan x="0" y="0">Angular</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(321.71 477.32) scale(1.17 1)"><tspan class="cls-31" x="0" y="0">P</tspan><tspan x="8.1" y="0">olymer</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(245.46 499.55) scale(1.17 1)"><tspan x="0" y="0">Stencil</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(92.97 500.55) scale(1.17 1)"><tspan x="0" y="0">JQuery</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(167.53 500.59) scale(1.17 1)"><tspan x="0" y="0">NodeJS</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(9.12 501.59) scale(1.17 1)"><tspan class="cls-32" x="0" y="0">T</tspan><tspan class="cls-28" x="7.26" y="0">ypeScript</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(321.71 500.59) scale(1.17 1)"><tspan x="0" y="0">MongoDB</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(8.46 532.14) scale(1.17 1)"><tspan x="0" y="0">ExpressJS</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(93.97 532.14) scale(1.17 1)"><tspan class="cls-23" x="0" y="0">R</tspan><tspan x="9.39" y="0">eact</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(167.53 533.18) scale(1.17 1)"><tspan x="0" y="0">ThreeJS</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(242.12 533.18) scale(1.17 1)"><tspan x="0" y="0">Ba</tspan><tspan class="cls-39" x="18.01" y="0">b</tspan><tspan class="cls-28" x="26.69" y="0">ylon</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-15" transform="translate(321.71 533.18) scale(1.17 1)"><tspan class="cls-29" x="0" y="0">W</tspan><tspan x="13.16" y="0">ebGL</tspan></text>
+  </g>
+  <g class="cls-14">
+    <text class="cls-16" transform="translate(189.5 595.43)"><tspan x="0" y="0">Copyright: © 2024</tspan><tspan class="cls-37" x="80.84" y="0"> </tspan><tspan x="83.3" y="0">AP</tspan><tspan class="cls-13" x="94.78" y="0">T</tspan><tspan x="98.92" y="0">.</tspan><tspan class="cls-37" x="102.59" y="0"> </tspan><tspan x="105.05" y="0">All rights reserved</tspan></text>
+  </g>
+  <text class="cls-22" transform="translate(5.38 265.32)"><tspan class="cls-6"><tspan class="cls-36" x="0" y="0">A</tspan><tspan x="8.09" y="0">t the heart of our de</tspan><tspan class="cls-27" x="131.3" y="0">v</tspan><tspan x="138.3" y="0">elopment expertise </tspan></tspan><tspan class="cls-6"><tspan x="0" y="14.4">lies J</tspan><tspan class="cls-10" x="29.66" y="14.4">a</tspan><tspan class="cls-33" x="36.77" y="14.4">v</tspan><tspan x="43.64" y="14.4">aScript. As a dynamic and </tspan><tspan class="cls-27" x="205.92" y="14.4">v</tspan><tspan x="212.91" y="14.4">ersatile </tspan></tspan><tspan class="cls-6"><tspan x="0" y="28.8">prog</tspan><tspan class="cls-12" x="27.36" y="28.8">r</tspan><tspan x="32.27" y="28.8">amming language, J</tspan><tspan class="cls-10" x="154.44" y="28.8">a</tspan><tspan class="cls-33" x="161.55" y="28.8">v</tspan><tspan x="168.42" y="28.8">aScript ser</tspan><tspan class="cls-27" x="233.44" y="28.8">v</tspan><tspan x="240.43" y="28.8">es as the </tspan></tspan><tspan class="cls-6"><tspan x="0" y="43.2">foundation for ma</tspan><tspan class="cls-36" x="108.21" y="43.2">n</tspan><tspan x="115.69" y="43.2">y of tod</tspan><tspan class="cls-10" x="162.22" y="43.2">a</tspan><tspan x="169.33" y="43.2">y</tspan><tspan class="cls-26" x="176.43" y="43.2">’</tspan><tspan x="179.24" y="43.2">s web technologies. Our </tspan></tspan><tspan class="cls-6"><tspan x="0" y="57.6">team not only e</tspan><tspan class="cls-36" x="95.44" y="57.6">x</tspan><tspan x="102.42" y="57.6">cels in J</tspan><tspan class="cls-10" x="150.15" y="57.6">a</tspan><tspan class="cls-33" x="157.26" y="57.6">v</tspan><tspan x="164.13" y="57.6">aScript but also speciali</tspan><tspan class="cls-25" x="307.11" y="57.6">z</tspan><tspan x="313.35" y="57.6">es in </tspan></tspan><tspan class="cls-6"><tspan x="0" y="72">an ar</tspan><tspan class="cls-12" x="31.35" y="72">r</tspan><tspan class="cls-10" x="36.26" y="72">a</tspan><tspan x="43.37" y="72">y of related technologies that enhance and expand its </tspan></tspan><tspan class="cls-6"><tspan x="0" y="86.4">capabilities.</tspan></tspan><tspan class="cls-6" x="0" y="122.4">Additionall</tspan><tspan class="cls-1" x="63.14" y="122.4">y</tspan><tspan class="cls-6" x="69.13" y="122.4">, we are experts in </tspan><tspan class="cls-7" x="186.9" y="122.4">W</tspan><tspan class="cls-9" x="203.82" y="122.4">ordPress </tspan><tspan class="cls-6" x="287.98" y="122.4">and content </tspan><tspan class="cls-6"><tspan x="0" y="136.8">management technologies, allowing us to create and manage </tspan></tspan><tspan class="cls-6"><tspan x="0" y="151.2">powerful, scalable, and use</tspan><tspan class="cls-36" x="164.74" y="151.2">r</tspan><tspan x="169.75" y="151.2">-friendly websites.</tspan></tspan><tspan class="cls-6"><tspan class="cls-8" x="0" y="180">W</tspan><tspan x="11.28" y="180">e also pride oursel</tspan><tspan class="cls-27" x="122.33" y="180">v</tspan><tspan x="129.32" y="180">es on our deep knowledge and p</tspan><tspan class="cls-12" x="326.26" y="180">r</tspan><tspan x="331.17" y="180">actical </tspan></tspan></text>
 </svg>

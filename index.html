@@ -1,472 +1,278 @@
+<?php $base = '/beta' ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Welcome to Our Digital Frontier</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/23.1.1/tween.umd.js"></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8LY6DFG8K"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APT</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Open+Sans:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bundle/styles.bundle.css?time=<?php echo time() ?>">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY170WT4VN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-J8LY6DFG8K');
+      gtag('config', 'G-EY170WT4VN');
     </script>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      color: white;
-      font-family: "Victor Mono", monospace;
-      overflow: hidden !important;
-    }
 
-    #smiley {
-      font-size: 54pt;
-    }
-
-    #userNameDisplay {
-      text-transform: uppercase;
-    }
-
-    input, textarea {
-      font-size: 22px;
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 5px 10px;
-      background: none;
-      background-image: none;
-      border: 1px solid lightgreen;
-      color: white;
-      border-radius: 5px;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    input:focus, textarea:focus {
-      outline: 0;
-      border-color: rgba(15, 165, 60, 1);
-      box-shadow: 0 0 0 2px rgba(15, 165, 60, 0.5);
-    }
-
-    #main-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    #narrative {
-      position: absolute;
-      width: 75%;
-      height: 80%;
-      top: 20%;
-      left: 10%;
-      z-index: 13;
-    }
-
-    .note-part {
-      display: none;
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      font-size: 24pt;
-      opacity: 0;
-    }
-
-    .note-part:nth-child(1) { top: 240px; left: 105px; }
-    .note-part:nth-child(2) { top: 340px; left: 105px; }
-    .note-part:nth-child(3) { top: 450px; left: 105px; }
-
-    .narrative-part {
-      display: none;
-      height: 50px;
-      font-size: 24pt;
-      opacity: 0;
-      margin-top: 35px;
-    }
-
-    #narrative-one { margin-top: 50px; }
-    #narrative-two { margin-top: 30px; }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-    }
-
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .cube {
-      width: 150px;
-      height: 150px;
-      position: relative;
-      transform-style: preserve-3d;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    .cube .face {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background: transparent;
-      border: 2px solid aliceblue;
-      opacity: 0.8;
-      overflow: hidden;
-    }
-
-    .front { transform: translateZ(75px); }
-    .back { transform: rotateY(180deg) translateZ(75px); }
-    .right { transform: rotateY(90deg) translateZ(75px); }
-    .left { transform: rotateY(-90deg) translateZ(75px); }
-    .top { transform: rotateX(90deg) translateZ(75px); }
-    .bottom { transform: rotateX(-90deg) translateZ(75px); }
-
-    .wave {
-      position: absolute;
-      width: 100%;
-      height: 0;
-      bottom: 0;
-      transition: height 1s ease;
-    }
-
-    .wave::before {
-      content: "";
-      position: absolute;
-      width: 200%;
-      height: 100%;
-      top: -50px;
-      left: 50%;
-      transform: translate(-50%, -75%);
-      border-radius: 40%;
-      background: rgba(255, 255, 255, 0.8);
-      animation: wave 5s linear infinite;
-    }
-
-    @keyframes wave {
-      0% { transform: translate(-50%, -75%) rotate(0deg); }
-      100% { transform: translate(-50%, -75%) rotate(360deg); }
-    }
-
-    @keyframes rotateCube {
-      from { transform: rotateX(0deg) rotateY(0deg); }
-      to { transform: rotateX(360deg) rotateY(360deg); }
-    }
-
-    #extended-note {
-      position: absolute;
-      top: -20%;
-      left: 5%;
-      width: 100%;
-      height: 100%;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      font-size: 24pt;
-      color: white;
-      z-index: 11;
-    }
-
-    .loading_text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin-top: 50px;
-      width: 100%;
-    }
-
-    .loading_dots {
-      display: inline-block;
-      width: 300px;
-      text-align: center;
-      animation: loadingDots 1.5s infinite step-start;
-    }
-
-    @keyframes loadingDots {
-      0%, 20% { content: "."; }
-      40%, 60% { content: ".."; }
-      80%, 100% { content: "..."; }
-    }
-
-    #experience-iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 1s ease, z-index 0s ease 1s;
-    }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY170WT4VN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EY170WT4VN');
-</script>
-</head>
-<body>
-  <div id="personalized-welcome"></div>
-  <div id="preloader">
-    <div class="cube" id="animated-cube">
-      <div class="face front"><div class="wave" style="background-color: #ff0000;"></div></div>
-      <div class="face back"><div class="wave" style="background-color: #00ff00;"></div></div>
-      <div class="face right"><div class="wave" style="background-color: #0000ff;"></div></div>
-      <div class="face left"><div class="wave" style="background-color: #ffff00;"></div></div>
-      <div class="face top"><div class="wave" style="background-color: #ff00ff;"></div></div>
-      <div class="face bottom"><div class="wave" style="background-color: #00ffff;"></div></div>
-    </div>
-    <p class="loading_text"><span class="loading_dots"></span></p>
-  </div>
-  <div id="preloader-background"></div>
-  <div id="extended-note">
-    <div class="note-part">Thank you, <span id="userNameDisplay"></span>. Get ready to explore our world of innovation!</div>
-    <div class="note-part">We're about to take you on a journey to see our creative coding.</div>
-    <div class="note-part">Soon, you'll be able to engage with a dynamic cube—just a brief wait and you can explore its exciting features</div>
-  </div>
-  <canvas id="matrix-rain-canvas"></canvas>
-  <div id="main-container">
-    <div id="narrative">
-      <div class="narrative-part">Welcome to Agency Programming Team(APT)!<br> Your Behind-the-Scenes Coding Powerhouse.</div>
-      <div class="narrative-part" id="narrative-one">Embark on a journey tailored to your curiosity and professional interests.</div>
-      <div class="narrative-part" id="narrative-two">Please enter your name (only 3 characters please) <span id="smiley">&#9786;</span> you will thank us later!
-        <input type="text" id="userName" maxlength="3" />
-      </div>
-    </div>
-  </div>
-  <iframe id="experience-iframe" src="about:blank"></iframe>
-  <script>
-    const mainContainer = document.getElementById("main-container");
-    const canvas = document.getElementById("matrix-rain-canvas");
-    const ctx = canvas.getContext("2d");
-    let isNamed = false;
-    let experienceContent = null;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let charset = getCharset();
-
-    document.addEventListener('click', function (event) {
-      console.log('Clicked element:', event.target);
-      console.log('Clicked element ID:', event.target.id);
-      console.log('Clicked element classes:', event.target.className);
-    }, true);
-
-    function animateLoadingDots() {
-      const dots = document.querySelector('.loading_dots');
-      let dotCount = 0;
-      setInterval(() => {
-        dotCount = (dotCount % 3) + 1;
-        dots.textContent = '.'.repeat(dotCount);
-      }, 500);
-    }
-
-    function getCharset() {
-      const storedName = localStorage.getItem("userName");
-      return isNamed && storedName ? storedName.split("") : "<A P T / >".split("");
-    }
-
-    function updateCharset() {
-      charset = getCharset();
-    }
-
-    const columns = canvas.width / 20;
-    let drops = Array(Math.floor(columns)).fill(1);
-
-    function drawMatrixRain() {
-      updateCharset();
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.font = "22px 'Victor Mono'";
-      for (let i = 0; i < drops.length; i++) {
-        const text = charset[Math.floor(Math.random() * charset.length)];
-        ctx.fillStyle = "rgba(0, 255, 0, 0.5)";
-        ctx.fillText(text, i * 20, drops[i] * 30);
-        if (drops[i] * 30 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      }
-    }
-
-    setInterval(drawMatrixRain, 50);
-
-    async function preloadExperience() {
-      const response = await fetch('experience.html');
-      experienceContent = await response.text();
-    }
-
-    window.onload = function () {
-      animateLoadingDots();
-      preloadExperience();
-      const userNameInput = document.getElementById("userName");
-      let narrativeParts = document.querySelectorAll(".narrative-part");
-      let noteParts = document.querySelectorAll(".note-part");
-
-      function fadeInElement(index, onCompleteCallback, elements) {
-        elements[index].style.display = "block";
-        let tween = new TWEEN.Tween({ opacity: 0 })
-          .to({ opacity: 1 }, 600)
-          .onUpdate(function (object) {
-            elements[index].style.opacity = object.opacity;
-          })
-          .onComplete(function () {
-            if (userNameInput) userNameInput.focus();
-            if (onCompleteCallback) onCompleteCallback();
-          })
-          .start();
-      }
-
-      function sequenceNarrativeParts() {
-        fadeInElement(0, () => {
-          setTimeout(() => {
-            fadeInElement(1, () => {
-              setTimeout(() => {
-                fadeInElement(2, null, narrativeParts);
-              }, 500);
-            }, narrativeParts);
-          }, 500);
-        }, narrativeParts);
-      }
-
-      setTimeout(sequenceNarrativeParts, 1);
-
-      userNameInput.addEventListener("input", function (event) {
-        const userName = userNameInput.value;
-        if (userName.length === 3) {
-          setTimeout(() => {
-            localStorage.setItem("userName", userName.toUpperCase());
-            isNamed = true;
-            document.getElementById("userNameDisplay").textContent = userName;
-            updateCharset();
-            new TWEEN.Tween({ opacity: 1 })
-              .to({ opacity: 0 }, 200)
-              .onUpdate(function (object) {
-                mainContainer.style.opacity = object.opacity;
-              })
-              .onComplete(function () {
-                mainContainer.style.display = "none";
-                fadeInElement(0, () => {
-                  fadeInElement(1, startPreloader, noteParts);
-                }, noteParts);
-              })
-              .start();
-          }, 500);
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeDxzkoAAAAAJeJ3MYg9OfbPAOLBGmj5qg7FzzF"></script>
+    <style>
+        .button-3d {
+            position: relative;
+            width: auto;
+            display: inline-block;
+            color: #ecf0f1;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+            border: solid 1px #0b619a;
+            background: #16a085;
+            text-align: center;
+            padding: 16px 18px 14px;
+            margin: 12px;
+            transition: all 0.1s;
+            box-shadow: 0px 6px 0px #1abc9c;
         }
-      });
 
-      userNameInput.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
+        .button-3d:active {
+            box-shadow: 0px 2px 0px #1abc9c;
+            position: relative;
+            top: 4px;
+        }
 
-      function animate(time) {
-        requestAnimationFrame(animate);
-        TWEEN.update(time);
-      }
-      animate();
-    };
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
 
-    function startPreloader() {
-      const personalizedWelcome = document.getElementById("personalized-welcome");
-      const preloader = document.getElementById("preloader");
-      const preloaderBackground = document.getElementById("preloader-background");
-      const experienceIframe = document.getElementById("experience-iframe");
-      const extendedNote = document.getElementById("extended-note");
-      const noteParts = document.querySelectorAll(".note-part");
+<body>
+<div id="main">
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Logo" width="259" height="80">
+        </div>
 
-      document.getElementById("animated-cube").style.animation = "rotateCube 20s infinite linear";
+        <ul class="menu">
+            <li id="home-link"><span><a href="/index.html">Home</a></span></li>
+            <li><span data-href="#about-us">About Us</span></li>
+            <li><span data-href="#services">Services</span></li>
+            <li><span data-href="#why-us">Why Us</span></li>
+            <li><span data-href="#faq">FAQ</span></li>
+            <li><span data-href="#contact">Contact<span class="hide-320">&nbsp;Us</span></span></li>
+            <li id="demo-link"><span><a href="/demo.html">Demo</a></span></li>
+            <li class="slider"></li>
+        </ul>
+    </header>
+    <div class="section-container">
+        <div class="section" id="about-us">
+            <div class="content">
+                <div class="content-container">
+                    <h1>About Us</h1>
 
-      narrative.style.display = "none";
-      personalizedWelcome.style.display = "flex";
-      personalizedWelcome.style.opacity = 0;
-      extendedNote.style.display = "flex";
+                    <div class="flip-container">
+                        <h2 class="flip-title">Need a technical ally for creativity?</h2>
+                        <h2 class="flip-title">That's us!</h2>
+                        <div>
+                            <h2>Powering Agencies with Expert Programming</h2>
+                            <p>
+                                At APT, we pride ourselves on being the bridge between vibrant creativity and precise programming.
+                                Our commitment is to ensure that your designs translate into interactive experiences seamlessly.
+                                By partnering with us, your agency harnesses the strength of a dedicated programming team without the logistical challenges of maintaining one.
+                            </p>
 
-      noteParts.forEach(part => {
-        part.style.display = "block";
-        part.style.opacity = 0;
-      });
+                            <button class="btn btn-action">Schedule a Conversation and Elevate Your Agency's Portfolio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      new TWEEN.Tween({ opacity: 0 })
-    .to({ opacity: 1 }, 1000)
-    .onUpdate(function (object) {
-      noteParts[0].style.opacity = object.opacity;
-    })
-    .onComplete(function () {
-      new TWEEN.Tween({ opacity: 0 })
-        .to({ opacity: 1 }, 1000)
-        .onUpdate(function (object) {
-          noteParts[1].style.opacity = object.opacity;
-        })
-        .onComplete(function () {
-          new TWEEN.Tween({ opacity: 0 })
-            .to({ opacity: 1 }, 1000)
-            .onUpdate(function (object) {
-              noteParts[2].style.opacity = object.opacity;
-            })
-            .onComplete(function () {
-              setTimeout(() => {
-                new TWEEN.Tween({ opacity: 1 })
-                  .to({ opacity: 0 }, 1000)
-                  .onUpdate(function (object) {
-                    noteParts[0].style.opacity = object.opacity;
-                    noteParts[1].style.opacity = object.opacity;
-                    noteParts[2].style.opacity = object.opacity;
-                  })
-                  .onComplete(function () {
-                    noteParts.forEach(part => part.style.display = "none");
-                    preloader.style.display = "flex";
 
-                    const waves = document.querySelectorAll('.wave');
-                    const loadingText = document.querySelector('.loading_text');
-                    let progress = 0;
+        <div class="section" id="services">
+            <div class="content">
+                <div class="content-container">
+                    <h1>Our Services</h1>
 
-                    const interval = setInterval(() => {
-                      progress += 1;
-                      loadingText.innerHTML = `<span class="loading_dots" style="display: inline;">${progress}% loaded</span>`;
-                      waves.forEach(wave => {
-                        wave.style.height = progress + '%';
-                      });
+                    <div class="flip-container">
+                        <h2 class="flip-title">Want tech solutions that fit your needs?</h2>
+                        <h2 class="flip-title">We custom-craft solutions!</h2>
+                        <div>
+                            <h2>Extend Your Agency's Reach. Offer Seamless Web Programming</h2>
+                            <p>Partner with APT to add robust, in-house web programming to your creative arsenal.</p>
 
-                      if (progress >= 100) {
-                        clearInterval(interval);
-                        setTimeout(function () {
-                          preloader.style.display = "none";
-                          preloaderBackground.style.opacity = 0;
-                          experienceIframe.style.opacity = 1;
-                          experienceIframe.style.zIndex = 10000;
-                          experienceIframe.srcdoc = experienceContent;
-                        }, 1000);
-                      }
-                    }, 50); // Reduced interval for faster loading
-                  })
-                  .start();
-              }, 3000);
-            })
-            .start();
-        })
-        .start();
-    })
-    .start();
-    }
-  </script>
+                            <h2>Web Programming</h2>
+                            <p>
+                                Our coding expertise is designed to make your creative visions come alive on the web.
+                                Whether you specialize in minimalist designs or intricate web architectures,
+                                we ensure a smooth transition from design to functionality across platforms like Webflow, WordPress, and more.
+                            </p>
+                            <button class="btn btn-action">Bring Your Designs to Life with APT</button>
+
+                            <h2>Custom Integrations</h2>
+                            <p>
+                                Today's web users expect more. With our custom integration services,
+                                your websites will not just look good but will also offer functionalities tailored for your client's specific audience,
+                                ensuring memorable user experiences.
+                            </p>
+                            <button class="btn btn-action">Go Beyond the Ordinary; Integrate with Precision</button>
+
+                            <h2>Ongoing Maintenance</h2>
+                            <p>
+                                In the digital realm, consistency is key.
+                                Our maintenance services ensure that your client's websites remain updated,
+                                secure, and high-performing, reflecting the quality your agency stands for.
+                            </p>
+
+                            <button class="btn btn-action">Maintain Excellence with APT's Expertise</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="why-us">
+            <div class="content">
+                <div class="content-container">
+                    <h1>Why Us</h1>
+
+                    <div class="flip-container">
+                        <h2 class="flip-title">Seeking a tech partner who gets America?</h2>
+                        <h2 class="flip-title">We're homegrown!</h2>
+                        <div>
+                            <h2>Why Partner with APT for Your Programming Needs?</h2>
+                            <p>
+                                Beyond just coding, we understand the nuances of turning creative concepts into digital realities.
+                                We are constantly updated with the latest web trends and technologies,
+                                ensuring that your agency remains at the forefront of innovation.
+                                With APT, you get more than a service provider; you gain a partner dedicated to your success.
+                            </p>
+                            <button class="btn btn-action">Connect with Us and Transform Your Web Offerings</button>
+
+                            <h2>Programming Pioneers at Your Service</h2>
+                            <p>
+                                Behind every successful project at APT is a team of seasoned programmers, each bringing specialized skills and experiences.
+                                With a collaborative approach, we ensure that your designs are translated into code
+                                that's both efficient and effective, meeting the high standards of today's digital landscape.
+                            </p>
+                            <button class="btn btn-action">Discover Our Team and Expand Your Capabilities</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="faq">
+            <div class="content">
+                <div class="content-container">
+                    <h1>FAQ</h1>
+
+                    <div class="faq-section">
+                        <h2>Q: What programming languages and platforms does APT support?</h2>
+                        <p>
+                            From the foundational trio of HTML, CSS, and JavaScript to the rhythmic beats of WordPress and Webflow,
+                            we dance to all the digital tunes. What's your jam? Let's jam together!
+                        </p>
+                    </div>
+
+                    <div class="faq-section">
+                        <h2>Q: How can APT amplify my agency's web offerings?</h2>
+                        <p>
+                            Think of APT as the backstage crew to your rockstar agency.
+                            We set the stage, handle the tech, and let you take the spotlight.
+                            Together, we'll make sure your agency's web gig is a sold-out show!
+                        </p>
+                    </div>
+
+                    <div class="faq-section">
+                        <h2>Q: What's the process once we partner with APT?</h2>
+                        <p>
+                            Picture this: a cozy coffee chat to understand your dreams,
+                            followed by a master plan handcrafted just for you.
+                            We're all about harmonizing our code with your creativity.
+                        </p>
+                    </div>
+
+                    <div class="faq-section">
+                        <h2>Q: Do you offer support post-launch?</h2>
+                        <p>
+                            The show must go on, right?
+                            Even after the curtains drop, we're behind the scenes,
+                            ensuring your digital masterpiece keeps getting standing ovations!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="contact">
+            <h1>Contact Us</h1>
+            <div class="content">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div id="contact-form">
+                            <form action="https://formspree.io/f/xgejzznn" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter your message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
+                            <div id="form-result">
+                                <div>
+                                    <span></span>
+                                    <button id="closeButton">×</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Feel free to contact me at: <a href="mailto:ryan@agencypt.com" target="_blank">ryan@agencypt.com</a></h2>
+                    </div>
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <div class="flip-container" data-flip-loop="true">
+                            <h2 class="flip-title">Want more creative vision, less tech hassle?</h2>
+                            <h2 class="flip-title">Free your creativity with us!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><b>Copyright</b>: © <?php echo date("Y"); ?> APT. All rights reserved</p>
+    </footer>
+</div>
+
+<div id="particles-js"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
+<script src="scripts/particles.min.js" defer></script>
+<script src="scripts/part.js" defer></script>
+<script src="scripts/main.js?time=<?php echo time() ?>" defer></script>
 </body>
 </html>
