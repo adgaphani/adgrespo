@@ -189,12 +189,12 @@ header {
     @for $i from 2 through 6 {
         $color: nth($colors, $i);
         .menu li:nth-child(#{$i}).active ~ .slider {
-            left: $width * ($i - 2); // - 2 since home url is hidden
+            left: $width * ($i - 1);
             background-color: $color;
         }
 
         .menu li:nth-child(#{$i}):hover ~ .slider {
-            left: $width * ($i - 2) !important; // - 2 since home url is hidden
+            left: $width * ($i - 1) !important;
             background-color: $color !important;
         }
     }
